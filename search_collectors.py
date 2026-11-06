@@ -179,8 +179,20 @@ def search_google_news_rss(rule: SearchRule) -> List[FoundItem]:
             pub_date = (item.findtext("pubDate") or "").strip()
             if not link or not title:
                 continue
-            if "vietnam.vn" in title.lower():
+            norm_t = normalize_turkic(title)
+            if "vietnam.vn" in norm_t or "esri vietnam" in norm_t:
                 continue
+            if any(ex in norm_t for ex in rule.haric_kelimeler if ex):
+                continue
+            norm_dil = normalize_turkic(rule.dil)
+            norm_konum = normalize_turkic(rule.konum)
+            if norm_dil in ("ingilizce", "english"):
+                if norm_konum in ("türkiye", "turkiye") and not re.search(r"turk|türk|istanbul|ankara|izmir|anatolia", norm_t):
+                    continue
+                if norm_konum == "azerbaycan" and not re.search(r"azerbaijan|baku|karabakh|caucasus", norm_t):
+                    continue
+                if norm_konum in ("özbekistan", "ozbekistan") and not re.search(r"uzbek|tashkent|karakalpak|samarkand|central asia", norm_t):
+                    continue
 
             results.append(
                 FoundItem(
