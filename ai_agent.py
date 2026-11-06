@@ -218,14 +218,14 @@ def collect_direct_fresh_sources(rules: List[SearchRule]) -> List[FoundItem]:
         norm_dil = normalize_turkic(rule.dil)
 
         loc_q = ""
-        if norm_dil == "ingilizce":
+        if norm_dil in ("ingilizce", "english"):
             gl = "US"
             lang_code = "en"
-            if norm_konum == "turkiye":
+            if norm_konum in ("türkiye", "turkiye"):
                 loc_q = " (Turkey OR Türkiye OR Istanbul OR Ankara)"
             elif norm_konum == "azerbaycan":
                 loc_q = " (Azerbaijan OR Baku)"
-            elif norm_konum == "ozbekistan":
+            elif norm_konum in ("özbekistan", "ozbekistan"):
                 loc_q = " (Uzbekistan OR Tashkent OR Karakalpakstan)"
 
         kw = rule.kelime.strip()
@@ -252,12 +252,12 @@ def collect_direct_fresh_sources(rules: List[SearchRule]) -> List[FoundItem]:
                     continue
                 if any(ex in norm_t for ex in rule.haric_kelimeler if ex):
                     continue
-                if norm_dil == "ingilizce":
-                    if norm_konum == "turkiye" and not re.search(r"turk|istanbul|ankara|izmir|anatolia", norm_t):
+                if norm_dil in ("ingilizce", "english"):
+                    if norm_konum in ("türkiye", "turkiye") and not re.search(r"turk|türk|istanbul|ankara|izmir|anatolia", norm_t):
                         continue
                     if norm_konum == "azerbaycan" and not re.search(r"azerbaijan|baku|karabakh|caucasus", norm_t):
                         continue
-                    if norm_konum == "ozbekistan" and not re.search(r"uzbek|tashkent|karakalpak|samarkand|central asia", norm_t):
+                    if norm_konum in ("özbekistan", "ozbekistan") and not re.search(r"uzbek|tashkent|karakalpak|samarkand|central asia", norm_t):
                         continue
 
                 items.append(
