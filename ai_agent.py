@@ -6,12 +6,13 @@ import os
 import re
 import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 from dataclasses import asdict
-from typing import Dict, List, Set
+from typing import Dict, List, Set, Tuple
 
 from main import send_email_report
-from rule_engine import SearchRule, is_static_or_homepage_url, load_rules
-from search_collectors import FoundItem, collect_for_rule
+from rule_engine import COUNTRY_SETTINGS, LANGUAGE_CODES, SearchRule, build_search_query, is_static_or_homepage_url, load_rules, normalize_turkic, verify_content_against_rule
+from search_collectors import FoundItem, fetch_url, strip_html_tags
 
 AGENT_REPORTS_FILE = "agent_reports.json"
 AGENT_SEEN_FILE = "agent_seen_urls.json"
@@ -36,38 +37,50 @@ def save_json_file(path: str, data) -> None:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def call_gemini_api(prompt: str, use_google_search: bool = False) -> str:
+def call_gemini_api(prompt: str, use_google_search: bool = False) -> Tuple[str, List[dict]]:
     """
-    Google Gemini API (gemini-2.5-flash) çağrısı yapar.
-    use_google_search=True olduğunda Gemini'nin yerleşik Canlı Google Arama (Grounding) aracını kullanır.
+    Google Gemini API çağrısı yapar.
+    Dönüş: (metin_yanıtı, grounding_web_linkleri)
     """
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
     if not api_key:
-        return ""
+        print("[AI AJAN BİLGİ] GEMINI_API_KEY tanımlı değil.")
+        return "", []
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
-    payload: dict = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": 0.2},
-    }
-    if use_google_search:
-        payload["tools"] = [{"google_search": {}}]
+    models_to_try = ["gemini-2.5-flash", "gemini-2.0-flash"]
+    for model_name in models_to_try:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}"
+        payload: dict = {
+            "contents": [{"parts": [{"text": prompt}]}],
+            "generationConfig": {"temperature": 0.2},
+        }
+        if use_google_search:
+            payload["tools"] = [{"google_search": {}}]
 
-    req = urllib.request.Request(
-        url,
-        data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
-    )
-    with urllib.request.urlopen(req, timeout=45) as resp:
-        raw = json.loads(resp.read().decode("utf-8", errors="replace"))
-        parts = raw.get("candidates", [{}])[0].get("content", {}).get("parts", [])
-        text_out = "\n".join(p.get("text", "") for p in parts if "text" in p)
-        return text_out.strip()
+        try:
+            req = urllib.request.Request(
+                url,
+                data=json.dumps(payload).encode("utf-8"),
+                headers={"Content-Type": "application/json"},
+            )
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                raw = json.loads(resp.read().decode("utf-8", errors="replace"))
+                cand = raw.get("candidates", [{}])[0]
+                parts = cand.get("content", {}).get("parts", [])
+                text_out = "\n".join(p.get("text", "") for p in parts if "text" in p).strip()
+
+                grounding_chunks = cand.get("groundingMetadata", {}).get("groundingChunks", [])
+                web_chunks = [c.get("web", {}) for c in grounding_chunks if "web" in c]
+                return text_out, web_chunks
+        except Exception as exc:
+            print(f"[AI AJAN MODEL UYARISI - {model_name}] {exc}")
+
+    return "", []
 
 
 def gemini_autonomous_web_research(rules: List[SearchRule]) -> List[FoundItem]:
     """
-    Gemini Yapay Zeka Ajanının Canlı Google Arama (Google Search Grounding) yeteneğini kullanarak
+    Gemini Yapay Zeka Ajanının Canlı Google Arama (Google Search Grounding) aracını kullanarak
     Türkiye, Azerbaycan ve Özbekistan için insan gibi internette araştırma yapmasını sağlar.
     """
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
@@ -82,39 +95,40 @@ def gemini_autonomous_web_research(rules: List[SearchRule]) -> List[FoundItem]:
     today_str = now_tr().strftime("%d.%m.%Y")
 
     for konum, c_rules in by_country.items():
-        kw_descriptions = "\n".join(
-            f"- Kelime: \"{r.kelime}\" | Dil: {r.dil} | Kural: {r.kural_tipi}"
-            for r in c_rules
-        )
+        kw_list_str = ", ".join(f'"{r.kelime}" ({r.dil})' for r in c_rules)
         prompt = f"""Sen uzman bir Coğrafi Bilgi Sistemleri (CBS / GIS) internet araştırma ajanısın.
-Bugünün tarihi: {today_str}. Hedef ülke/konum: {konum}.
+Bugünün tarihi: {today_str}. Hedef ülke: {konum}.
 
-Aşağıdaki anahtar kelimeler ve kurallar için Google'da canlı arama yaparak SON GÜNLERDE yayınlanmış YENİ içerikleri (iş ilanları, kurum/belediye/bakanlık duyuruları, Resmi Gazete/mevzuat haberleri, ihaleler, LinkedIn/X/Reddit/sosyal medya paylaşımları, sektörel haberler) bul:
-{kw_descriptions}
+Google Arama aracını kullanarak {konum} için şu anahtar kelimelerle ilgili son günlerde yayınlanmış YENİ haberleri, iş ilanlarını, kurum/belediye duyurularını, Resmi Gazete kararlarını, ihaleleri ve sosyal medya (LinkedIn, X, Reddit, Instagram, Facebook) paylaşımlarını araştır:
+{kw_list_str}
 
-KESİN KURALLAR:
-1. Kurumların yıllardır sabit duran kök ana sayfalarını (örn: cbs.tkgm.gov.tr/, cbs.ibb.gov.tr/, wikipedia.org, esri.com/what-is-gis) KESİNLİKLE DAHİL ETME. Sadece spesifik yeni haber, duyuru, ilan veya gönderi alt sayfalarını al.
-2. TAM_ESLESTIRME olan kelimelerde tüm kelimeler metinde yan yana geçmelidir.
-3. Tek başına 'CBS' veya 'GIS' kısaltmalarında yalnızca Coğrafi Bilgi Sistemleri / Geographic Information Systems anlamında olanları al (CBS News vb. hariç).
-4. Sonuçları SADECE aşağıdaki JSON dizisi formatında döndür (başka açıklama yazma):
+Kurallar:
+- Yıllardır sabit duran kurum ana sayfalarını (örn: cbs.tkgm.gov.tr/, cbs.ibb.gov.tr/, wikipedia.org) DAHİL ETME.
+- Bulduğun her yeni gelişmeyi aşağıdaki JSON dizisi formatında listele:
 [
   {{
-    "kelime": "Eşleşen kural kelimesi",
-    "dil": "TÜRKÇE veya İNGİLİZCE veya AZERİCE veya ÖZBEKÇE",
-    "kaynak_tipi": "🤖 AI Ajan (Google Web / Sosyal Medya / İlan)",
+    "kelime": "Eşleşen anahtar kelime",
+    "dil": "{c_rules[0].dil}",
+    "kaynak_tipi": "🤖 AI Ajan (Google Canlı Araştırma)",
     "baslik": "İçeriğin başlığı",
-    "ozet": "İçeriğin Türkçe 1-2 cümlelik net özeti ve neden önemli olduğu",
+    "ozet": "🤖 Ajan Özeti: İçeriğin Türkçe 1-2 cümlelik net özeti",
     "url": "https://...",
     "tarih": "Yayın tarihi"
   }}
 ]"""
-        try:
-            resp_text = call_gemini_api(prompt, use_google_search=True)
-            json_match = re.search(r"\[.*\]", resp_text, flags=re.DOTALL)
-            if json_match:
+        resp_text, web_chunks = call_gemini_api(prompt, use_google_search=True)
+        print(f"[AI AJAN ARAŞTIRMA - {konum}] Yanıt uzunluğu: {len(resp_text)}, Grounding kaynak sayısı: {len(web_chunks)}")
+
+        # 1. JSON dizisinden gelen sonuçları ekle
+        json_match = re.search(r"\[.*\]", resp_text, flags=re.DOTALL)
+        if json_match:
+            try:
                 arr = json.loads(json_match.group(0))
-                for obj in arr:
+                for idx, obj in enumerate(arr):
                     u = (obj.get("url") or "").strip()
+                    # Eğer model URL yerine grounding chunk kullandıysa eşleştir
+                    if (not u or not u.startswith("http")) and idx < len(web_chunks):
+                        u = web_chunks[idx].get("uri", "")
                     if not u or is_static_or_homepage_url(u):
                         continue
                     discovered.append(
@@ -122,32 +136,180 @@ KESİN KURALLAR:
                             kelime=obj.get("kelime") or c_rules[0].kelime,
                             dil=obj.get("dil") or c_rules[0].dil,
                             konum=konum,
-                            kaynak_tipi=obj.get("kaynak_tipi") or "🤖 AI Ajan Araştırması",
+                            kaynak_tipi="🤖 AI Ajan (Google Canlı Araştırma)",
                             baslik=obj.get("baslik") or "Yeni İçerik",
                             ozet=obj.get("ozet") or "",
                             url=u,
                             tarih=obj.get("tarih") or today_str,
                         )
                     )
-        except Exception as exc:
-            print(f"[AI AJAN ARAMA UYARISI - {konum}] {exc}")
+            except Exception as exc:
+                print(f"[AI AJAN JSON AYRIŞTIRMA UYARISI - {konum}] {exc}")
+
+        # 2. Grounding Chunks içindeki doğrulanmış Google kaynaklarını da değerlendir
+        for ch in web_chunks:
+            uri = (ch.get("uri") or "").strip()
+            title = (ch.get("title") or "").strip()
+            if not uri or not title or is_static_or_homepage_url(uri):
+                continue
+            if any(d.url == uri for d in discovered):
+                continue
+            discovered.append(
+                FoundItem(
+                    kelime=c_rules[0].kelime,
+                    dil=c_rules[0].dil,
+                    konum=konum,
+                    kaynak_tipi="🤖 AI Ajan (Google Web Kaynağı)",
+                    baslik=title,
+                    ozet=f"🤖 Ajan Özeti: Google canlı araştırmasında '{konum}' bölgesi için tespit edilen yeni CBS/GIS kaynağı: {title}",
+                    url=uri,
+                    tarih=today_str,
+                )
+            )
 
     return discovered
 
 
+def collect_direct_fresh_sources(rules: List[SearchRule]) -> List[FoundItem]:
+    """
+    Google News RSS (tam metin eşleşmeli), LinkedIn Uygulama İçi İlanlar (tam metin doğrulamalı)
+    ve Reddit yeni gönderilerini doğrudan toplar.
+    """
+    items: List[FoundItem] = []
+
+    # A) Google News RSS (Son 14 Gün - Tam Metin Eşleşmeli)
+    for rule in rules:
+        country_cfg = COUNTRY_SETTINGS.get(rule.konum, COUNTRY_SETTINGS["TÜRKİYE"])
+        lang_code = LANGUAGE_CODES.get(rule.dil, "tr")
+        gl = country_cfg["gl"].upper()
+        norm_konum = normalize_turkic(rule.konum)
+        norm_dil = normalize_turkic(rule.dil)
+
+        loc_q = ""
+        if norm_dil == "ingilizce":
+            gl = "US"
+            lang_code = "en"
+            if norm_konum == "turkiye":
+                loc_q = " (Turkey OR Türkiye OR Istanbul OR Ankara)"
+            elif norm_konum == "azerbaycan":
+                loc_q = " (Azerbaijan OR Baku)"
+            elif norm_konum == "ozbekistan":
+                loc_q = " (Uzbekistan OR Tashkent OR Karakalpakstan)"
+
+        kw = rule.kelime.strip()
+        if kw.upper() == "CBS":
+            q_str = '"CBS" ("Coğrafi Bilgi Sistemleri" OR "CBS Uzmanı" OR belediye OR bakanlık OR harita) -"CBS News" -"CBS Sports" when:14d'
+        elif kw.upper() == "GIS":
+            q_str = f'"GIS" ("Geographic Information" OR ArcGIS OR spatial OR mapping){loc_q} when:14d'
+        else:
+            q_str = f'"{kw}"{loc_q} when:14d'
+
+        params = urllib.parse.urlencode({"q": q_str, "hl": lang_code, "gl": gl})
+        url = f"https://news.google.com/rss/search?{params}"
+        try:
+            xml_text = fetch_url(url)
+            root = ET.fromstring(xml_text)
+            for node in root.findall(".//item")[:5]:
+                title = strip_html_tags(node.findtext("title") or "")
+                link = (node.findtext("link") or "").strip()
+                pub_date = (node.findtext("pubDate") or "").strip()
+                if not link or not title:
+                    continue
+                norm_t = normalize_turkic(title)
+                if "vietnam.vn" in norm_t or "esri vietnam" in norm_t:
+                    continue
+                if any(ex in norm_t for ex in rule.haric_kelimeler if ex):
+                    continue
+                if norm_dil == "ingilizce":
+                    if norm_konum == "turkiye" and not re.search(r"turk|istanbul|ankara|izmir|anatolia", norm_t):
+                        continue
+                    if norm_konum == "azerbaycan" and not re.search(r"azerbaijan|baku|karabakh|caucasus", norm_t):
+                        continue
+                    if norm_konum == "ozbekistan" and not re.search(r"uzbek|tashkent|karakalpak|samarkand|central asia", norm_t):
+                        continue
+
+                items.append(
+                    FoundItem(
+                        kelime=rule.kelime,
+                        dil=rule.dil,
+                        konum=rule.konum,
+                        kaynak_tipi="Google Haber / Basın Duyurusu",
+                        baslik=title,
+                        ozet=f"Haber içeriğinde '{rule.kelime}' ifadesi tam eşleşme olarak geçmektedir: {title}",
+                        url=link,
+                        tarih=pub_date,
+                    )
+                )
+        except Exception:
+            pass
+
+    # B) LinkedIn Uygulama İçi Doğrudan Yeni İş İlanları (TR / AZ / UZ)
+    country_queries = [
+        ("TÜRKİYE", "Turkey", '"CBS" OR "Coğrafi Bilgi Sistemleri" OR "GIS" OR "Geographic Information Systems"'),
+        ("AZERBAYCAN", "Azerbaijan", '"GIS" OR "Geographic Information Systems" OR "CİS"'),
+        ("ÖZBEKİSTAN", "Uzbekistan", '"GIS" OR "Geographic Information Systems" OR "GAT"'),
+    ]
+    for konum_label, loc_param, q_kw in country_queries:
+        c_rules = [r for r in rules if r.konum == konum_label]
+        if not c_rules:
+            continue
+        params = urllib.parse.urlencode({
+            "keywords": q_kw,
+            "location": loc_param,
+            "f_TPR": "r604800",  # Son 7 gün
+            "start": 0,
+        })
+        li_url = f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?{params}"
+        try:
+            raw_html = fetch_url(li_url)
+            cards = re.findall(r'<div class="base-card[^>]*>(.*?)</div>\s*</li>', raw_html, flags=re.DOTALL)
+            for card in cards[:6]:
+                title_m = re.search(r'base-search-card__title[^>]*>(.*?)</h3>', card, flags=re.DOTALL)
+                comp_m = re.search(r'base-search-card__subtitle[^>]*>(.*?)</h4>', card, flags=re.DOTALL)
+                link_m = re.search(r'href="(https://[^"?]+)', card)
+                date_m = re.search(r'datetime="([^"]+)"', card)
+                if not link_m:
+                    continue
+                link = link_m.group(1).strip()
+                title = strip_html_tags(title_m.group(1) if title_m else "")
+                comp = strip_html_tags(comp_m.group(1) if comp_m else "")
+                date_str = date_m.group(1).strip() if date_m else ""
+
+                job_id_m = re.search(r"-(\d+)$", link)
+                if job_id_m:
+                    job_id = job_id_m.group(1)
+                    detail_html = fetch_url(f"https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/{job_id}")
+                    desc_m = re.search(r'<div class="show-more-less-html__markup[^>]*>(.*?)</div>', detail_html, flags=re.DOTALL)
+                    desc_text = strip_html_tags(desc_m.group(1) if desc_m else "")
+                    for r in c_rules:
+                        ok, matched_ctx = verify_content_against_rule(r, f"{title} ({comp})", desc_text, link)
+                        if ok:
+                            items.append(
+                                FoundItem(
+                                    kelime=r.kelime,
+                                    dil=r.dil,
+                                    konum=r.konum,
+                                    kaynak_tipi="LinkedIn (Uygulama İçi Yeni İlan)",
+                                    baslik=f"{title} — {comp}",
+                                    ozet=matched_ctx,
+                                    url=link,
+                                    tarih=f"Yayın Tarihi: {date_str}",
+                                )
+                            )
+                            break
+        except Exception:
+            pass
+
+    return items
+
+
 def gemini_filter_and_summarize_candidates(candidates: List[FoundItem]) -> List[FoundItem]:
-    """
-    Toplanan aday içerikleri Gemini Yapay Zeka Ajanına inceletir:
-    - Alakasız veya sabit/eski ana sayfa olanları eler,
-    - Kalan gerçek sonuçların özetini anlaşılır Türkçe yönetici özeti haline getirir.
-    """
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
     if not api_key or not candidates:
         return candidates
 
-    # Zaten AI Ajan tarafından özetlenmiş olanları ayır, diğerlerini topluca doğrulat/özetlet
-    to_verify = [c for c in candidates if not c.kaynak_tipi.startswith("🤖")]
-    already_ai = [c for c in candidates if c.kaynak_tipi.startswith("🤖")]
+    to_verify = [c for c in candidates if not c.ozet.startswith("🤖")]
+    already_ai = [c for c in candidates if c.ozet.startswith("🤖")]
 
     if not to_verify:
         return already_ai
@@ -168,7 +330,7 @@ def gemini_filter_and_summarize_candidates(candidates: List[FoundItem]) -> List[
 {json.dumps(batch_input, ensure_ascii=False, indent=2)}
 
 Görevlerin:
-1. İçerik gerçekten Coğrafi Bilgi Sistemleri (CBS/GIS) ile ilgiliyse, hedef konum ({batch_input[0]['konum']} vb.) ile uyumluysa ve sabit bir kurum ana sayfası değilse "uygun": true yap; aksi halde "uygun": false yap.
+1. İçerik gerçekten Coğrafi Bilgi Sistemleri (CBS/GIS/harita/mekansal veri) ile ilgiliyse "uygun": true yap; tamamen alakasızsa (örn: elektrik kesintisi listesi veya CBS TV kanalı vb.) "uygun": false yap.
 2. Uygun olan her içerik için (İngilizce, Azerice veya Özbekçe olsa bile) 1-2 cümlelik çok net bir Türkçe yönetici özeti ("turkce_ajan_ozeti") yaz.
 3. Yalnızca şu JSON formatında yanıt ver:
 [
@@ -176,7 +338,7 @@ Görevlerin:
 ]"""
 
     try:
-        resp_text = call_gemini_api(prompt, use_google_search=False)
+        resp_text, _ = call_gemini_api(prompt, use_google_search=False)
         json_match = re.search(r"\[.*\]", resp_text, flags=re.DOTALL)
         if json_match:
             decisions = {d["id"]: d for d in json.loads(json_match.group(0)) if isinstance(d, dict) and "id" in d}
@@ -269,7 +431,6 @@ def run_agent_scheduled_job(slot_label: str = "Otomatik Ajan Öğünü", csv_pat
     date_str = dt.strftime("%d.%m.%Y")
     time_str = dt.strftime("%H:%M")
 
-    # Öğün saatini netleştir (08:00 / 13:00 / 18:00)
     hour = dt.hour
     if 6 <= hour < 11:
         ogun_etiketi = "08:00 Sabah Maili"
@@ -292,13 +453,14 @@ def run_agent_scheduled_job(slot_label: str = "Otomatik Ajan Öğünü", csv_pat
         if item.url and item.url not in seen_urls:
             candidates[item.url] = item
 
-    # 2. Doğrudan Kaynak Taraması (Google News, LinkedIn, Reddit, DuckDuckGo)
+    # 2. Doğrudan Kaynak Taraması (Tam metin Google News + LinkedIn Uygulama İçi İlanlar)
     print(f"[AI AJAN] {len(rules)} kural için doğrudan kaynaklar taranıyor...")
-    for rule in rules:
-        for item in collect_for_rule(rule):
-            u = item.url.strip()
-            if u and u not in seen_urls and u not in candidates:
-                candidates[u] = item
+    for item in collect_direct_fresh_sources(rules):
+        u = item.url.strip()
+        if u and u not in seen_urls and u not in candidates:
+            candidates[u] = item
+
+    print(f"[AI AJAN] Toplam {len(candidates)} aday içerik bulundu, yapay zeka süzgecinden geçiriliyor...")
 
     # 3. Yapay Zeka Ajanı ile Eleme ve Türkçe Yönetici Özeti Çıkarma
     raw_list = list(candidates.values())
@@ -331,7 +493,6 @@ def run_agent_scheduled_job(slot_label: str = "Otomatik Ajan Öğünü", csv_pat
             "sonuclar": [asdict(x) for x in final_items],
         },
     )
-    # Son 45 öğün raporunu (15 gün x 3 öğün) sakla
     reports_data["reports"] = reports_list[:45]
     save_json_file(AGENT_REPORTS_FILE, reports_data)
     print(f"[AI AJAN TAMAMLANDI] {date_str} {time_str} ({ogun_etiketi}) -> {len(final_items)} sonuç arşivlendi.")
