@@ -1,6 +1,26 @@
 {
   "reports": [
     {
+      "id": "20261106_164117",
+      "gun": "06.11.2026",
+      "saat": "16:41",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 1,
+      "sonuclar": [
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Haber / Duyuru (Yeni)",
+          "baslik": "Büyükşehir’in coğrafi bilgi sistemleri uluslararası arenada tanıtıldı - Gazetecin",
+          "ozet": "Büyükşehir’in coğrafi bilgi sistemleri uluslararası arenada tanıtıldı - Gazetecin — Büyükşehir’in coğrafi bilgi sistemleri ulusl...",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZHhjRS1yYnNiWVhEbmZDVk8yTlBRQ3lhR0Z1eXJISDlUOXFJbFFXRkt0cFJzZkMxOWwtekstQU5KcHVXMVFaVTBVZk1qNFJmbHQwazgteURLQXJpYlpXc3UtWG1xenpPRk9TLWxZMTA4QUtCZGthMWxSaW0xRlRUc1h4STd5Tmg0M0ZQYVBUdlRCYVgzWnd4cUlTRTRaUmNQei1KU3RTWENjY2tpZUlDVlh3aF8?oc=5",
+          "tarih": "Wed, 04 Nov 2026 14:44:00 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261106_130000",
       "gun": "06.11.2026",
       "saat": "13:00",
