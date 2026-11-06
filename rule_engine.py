@@ -160,23 +160,68 @@ def load_rules(csv_path: str = "rules.csv") -> List[SearchRule]:
     return [r for r in rules if r.aktif]
 
 
+def is_strictly_in_target_country(konum: str, dil: str, title: str, snippet: str = "", url: str = "") -> bool:
+    """
+    Özellikle İNGİLİZCE aramalarda (GIS, GEOGRAPHIC INFORMATION SYSTEMS vb.)
+    ABD, Meksika, Avrupa gibi alakasız ülkelerden gelen sonuçları kesin olarak engeller.
+    Yalnızca TÜRKİYE, AZERBAYCAN ve ÖZBEKİSTAN kaynaklı veya bu ülkelerle doğrudan ilgili
+    sonuçlara izin verir.
+    """
+    combined = normalize_turkic(f"{title} {snippet} {url}")
+    url_low = (url or "").lower()
+    norm_konum = normalize_turkic(konum)
+    norm_dil = normalize_turkic(dil)
+
+    # ABD / yabancı belediye ve üniversite bültenlerini kesin olarak engelle (.gov olup .gov.tr/.gov.az/.gov.uz olmayanlar vb.)
+    if re.search(r"\.gov(/|$)", url_low) and not re.search(r"\.gov\.(tr|az|uz)", url_low):
+        return False
+
+    if norm_konum in ("türkiye", "turkiye"):
+        if norm_dil in ("türkçe", "turkce") and not any(bad in combined for bad in ("vietnam.vn", "esri vietnam")):
+            return True
+        return bool(
+            re.search(
+                r"(\b(turkey|türkiye|turkiye|turkish|istanbul|ankara|izmir|antalya|bursa|adana|konya|gaziantep|kayseri|trabzon|anatolia|anadolu)\b|tr\.linkedin\.com|\.(gov|edu|com|org|bel|pol|tsk)\.tr|\b[a-z0-9\-]+\.tr/)",
+                combined,
+            )
+        )
+
+    if norm_konum == "azerbaycan":
+        if norm_dil in ("azerice", "azərice") and not any(bad in combined for bad in ("vietnam.vn", "esri vietnam")):
+            return True
+        return bool(
+            re.search(
+                r"(\b(azerbaijan|azərbaycan|azerbaycan|azeri|baku|bakı|baki|sumqayit|sumqayıt|ganja|gəncə|karabakh|qarabağ|shusha|şuşa|nakhchivan|naxçıvan)\b|az\.linkedin\.com|\.(gov|edu|com|org)\.az|\b[a-z0-9\-]+\.az/)",
+                combined,
+            )
+        )
+
+    if norm_konum in ("özbekistan", "ozbekistan"):
+        if norm_dil in ("özbekçe", "ozbekce") and not any(bad in combined for bad in ("vietnam.vn", "esri vietnam")):
+            return True
+        return bool(
+            re.search(
+                r"(\b(uzbekistan|uzbek|o'zbekiston|ozbekiston|tashkent|toshkent|samarkand|samarqand|bukhara|buxoro|khiva|xiva|fergana|andijan|namangan|karakalpak|qoraqalpog|nukus)\b|uz\.linkedin\.com|\.(gov|edu|com|org)\.uz|\b[a-z0-9\-]+\.uz/)",
+                combined,
+            )
+        )
+
+    return False
+
+
 def verify_content_against_rule(
     rule: SearchRule, title: str, snippet: str, url: str = ""
 ) -> Tuple[bool, str]:
     if is_static_or_homepage_url(url):
         return False, "Statik ana sayfa / portal girişi elendi"
 
+    if not is_strictly_in_target_country(rule.konum, rule.dil, title, snippet, url):
+        return False, f"Hedef ülke ({rule.konum}) dışında içerik elendi"
+
     combined_raw = f"{title} — {snippet}"
     norm_text = normalize_turkic(combined_raw)
     norm_url = normalize_turkic(url)
     norm_kw = normalize_turkic(rule.kelime)
-
-    # Ülke/Konum doğrulaması (İngilizce veya kısaltma aramalarında ABD/küresel genel sayfaları eler)
-    if rule.dil == "İNGİLİZCE" or rule.kural_tipi == "KISALTMA_BAGLAMSAL":
-        country_cfg = COUNTRY_SETTINGS.get(rule.konum, COUNTRY_SETTINGS["TÜRKİYE"])
-        signals = [normalize_turkic(s) for s in country_cfg["location_signals"]]
-        if not any(sig in norm_text or sig in norm_url for sig in signals):
-            return False, f"Hedef konum ({rule.konum}) sinyali bulunamadı"
 
     for excluded in rule.haric_kelimeler:
         if excluded and excluded in norm_text:
