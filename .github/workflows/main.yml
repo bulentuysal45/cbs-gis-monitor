@@ -1,0 +1,44 @@
+name: CBS / GIS Gunluk 3 Ogun Takip Otomasyonu (08:00 - 13:00 - 18:00 TSI)
+
+on:
+  schedule:
+    - cron: '0 5 * * *'   # 08:00 TSI
+    - cron: '0 10 * * *'  # 13:00 TSI
+    - cron: '0 15 * * *'  # 18:00 TSI
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scan-and-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Depoyu Indir
+        uses: actions/checkout@v4
+
+      - name: Python Kurulumu
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Taramayi Calistir ve E-posta Gonder
+        env:
+          SMTP_HOST: 'smtp.gmail.com'
+          SMTP_PORT: '587'
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          REPORT_TO_EMAIL: ${{ secrets.REPORT_TO_EMAIL }}
+          MARK_SEEN_WITHOUT_SMTP: '1'
+        run: |
+          python main.py --slot "Otomatik Bulut Taramasi (08:00 / 13:00 / 18:00)"
+
+      - name: Gonderilen Linklerin Hafizasini (seen_urls.json) Guncelle
+        run: |
+          if [ -f seen_urls.json ]; then
+            git config user.name "cbs-gis-bot"
+            git config user.email "cbs-gis-bot@users.noreply.github.com"
+            git add seen_urls.json
+            git diff --staged --quiet || git commit -m "chore: gonderilen icerik hafizasi guncellendi [skip ci]"
+            git push
+          fi
