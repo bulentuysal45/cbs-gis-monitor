@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CBS / GIS İnternet & Sosyal Medya Takip Paneli</title>
+  <title>CBS / GIS Küresel İçerik ve Medya Takip Merkezi</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-100 text-slate-800 min-h-screen">
@@ -13,239 +13,269 @@
     <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
       <div>
         <h1 class="text-xl font-bold flex items-center gap-2">
-          🛰️ CBS / GIS İnternet & Sosyal Medya Takip Paneli
+          🛰️ CBS / GIS Küresel İçerik ve Medya Takip Merkezi
         </h1>
         <p class="text-xs text-slate-300 mt-1">
-          Otomatik E-posta Saatleri: <strong>08:00 • 13:00 • 18:00 (TSİ)</strong> | Kaynaklar: <strong>Google + Bing/DDG + LinkedIn + Reddit</strong>
+          Türkiye • Azerbaycan • Özbekistan &nbsp;|&nbsp; Otonom Yapay Zeka Mail Raporları &amp; Canlı Web Tarama
         </p>
       </div>
       <div class="flex flex-wrap items-center gap-2 text-xs">
-        <span id="server-badge" class="bg-emerald-900/60 border border-emerald-600 text-emerald-300 px-3 py-1.5 rounded-lg">
-          🟢 Sistem Aktif
+        <span class="bg-indigo-900/70 border border-indigo-500 text-indigo-200 px-3 py-1.5 rounded-lg">
+          🤖 Otomatik Mail Saatleri: <strong>08:00 • 13:00 • 18:00</strong>
         </span>
-        <span class="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-lg">
-          📩 Son Mail / Sıfırlama: <strong id="lbl-last-email" class="text-sky-400">Henüz gönderilmedi</strong>
-        </span>
-        <span class="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-lg">
-          🔍 Son Sorgu: <strong id="lbl-last-query" class="text-emerald-400">Henüz sorgulanmadı</strong>
+        <span class="bg-emerald-900/60 border border-emerald-600 text-emerald-300 px-3 py-1.5 rounded-lg">
+          🟢 Canlı Arama Motoru: <strong>Aktif</strong>
         </span>
       </div>
+    </div>
+
+    <!-- Ana Sekme Menüsü -->
+    <div class="max-w-6xl mx-auto px-4 pt-2 flex flex-wrap gap-2 border-t border-slate-800">
+      <button id="tab-btn-agent" onclick="switchTab('agent')"
+        class="px-4 py-2.5 text-sm font-bold rounded-t-lg bg-indigo-600 text-white flex items-center gap-2 cursor-pointer transition">
+        <span>🤖 Günlük Yapay Zeka Bültenleri (Gönderilen Mail Arşivi)</span>
+      </button>
+      <button id="tab-btn-manual" onclick="switchTab('manual')"
+        class="px-4 py-2.5 text-sm font-bold rounded-t-lg bg-slate-800 text-slate-300 hover:bg-slate-700 flex items-center gap-2 cursor-pointer transition">
+        <span>🔍 Canlı Web &amp; Sosyal Medya Sorgulama (Anlık Tarama)</span>
+      </button>
+      <button id="tab-btn-rules" onclick="switchTab('rules')"
+        class="px-4 py-2.5 text-sm font-bold rounded-t-lg bg-slate-800 text-slate-300 hover:bg-slate-700 flex items-center gap-2 cursor-pointer transition">
+        <span>⚙️ Anahtar Kelime ve Kural Yönetimi</span>
+      </button>
     </div>
   </header>
 
   <main class="max-w-6xl mx-auto px-4 py-6 space-y-6">
 
-    <!-- Canlı Sorgulama Kartı -->
-    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 sm:p-6">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>
-          <h2 class="text-lg font-bold text-slate-900">
-            📡 Son Mailden İtibaren Çıkan Sonuçları Sorgula
-          </h2>
-          <p class="text-sm text-slate-600 mt-0.5">
-            Son gönderilen mailden (<strong id="lbl-last-email-inline">Henüz gönderilmedi</strong>) bu yana kurallarınıza uyan tüm yeni içerikleri tarayın.
-          </p>
+    <!-- ========================================================================= -->
+    <!-- BÖLÜM 1: GÜNLÜK YAPAY ZEKA BÜLTENLERİ (GÖNDERİLEN MAİL ARŞİVİ)            -->
+    <!-- ========================================================================= -->
+    <div id="view-agent" class="space-y-6">
+      <section class="bg-gradient-to-r from-indigo-950 to-slate-900 text-white rounded-xl shadow-sm p-5 sm:p-6">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <span class="bg-indigo-500/30 border border-indigo-400/40 text-indigo-200 text-xs font-semibold px-2.5 py-1 rounded-full">
+              OTONOM YAPAY ZEKA ARAŞTIRMA BÜLTENLERİ (08:00 • 13:00 • 18:00)
+            </span>
+            <h2 class="text-lg sm:text-xl font-bold mt-2">
+              🤖 Gönderilen E-posta Raporları ve Yapay Zeka Özetleri
+            </h2>
+            <p class="text-xs sm:text-sm text-indigo-200 mt-1">
+              Arka planda çalışan Yapay Zeka Ajanının her gün <strong>08:00, 13:00 ve 18:00</strong> saatlerinde tarayıp özetlediği ve e-posta adresinize gönderdiği bültenlerin gün/saat bazlı arşividir.
+            </p>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <button onclick="loadAgentReports(true)"
+              class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-4 py-2.5 rounded-lg text-sm transition flex items-center gap-2 cursor-pointer shadow">
+              <span>🔄 Bülten Arşivini Yenile</span>
+            </button>
+          </div>
         </div>
-        <div class="flex flex-wrap items-center gap-2">
-          <select id="scan-days" class="border border-slate-300 rounded-lg px-3 py-2.5 text-sm bg-slate-50 font-medium text-slate-700">
-            <option value="1">🕒 Son 24 Saat (Günlük Rutin)</option>
-            <option value="3" selected>📅 Son 3 Gün</option>
-            <option value="7">🗓️ Son 7 Gün</option>
-            <option value="30">📆 Son 30 Gün (Geniş Tarama)</option>
-          </select>
-          <button id="btn-scan" onclick="runLiveScan()"
-            class="bg-sky-600 hover:bg-sky-700 text-white font-semibold px-4 py-2.5 rounded-lg text-sm transition flex items-center gap-2 shadow-sm cursor-pointer">
-            <span>🔍 Şimdi Sorgula</span>
-          </button>
-          <button id="btn-mark-seen" onclick="markAllSeen()"
-            class="bg-slate-700 hover:bg-slate-800 text-white font-semibold px-3.5 py-2.5 rounded-lg text-sm transition flex items-center gap-1.5 shadow-sm cursor-pointer"
-            title="Ekrandaki mevcut sonuçları okundu olarak hafızaya kaydeder; bundan sonraki sorgulamalarda bir daha çıkmazlar.">
-            <span>✓ Okundu İşaretle (Sıfırla)</span>
-          </button>
-          <button id="btn-send-mail" onclick="sendEmailNow()"
-            class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 py-2.5 rounded-lg text-sm transition flex items-center gap-2 shadow-sm cursor-pointer">
-            <span>📧 Şimdi Mail Gönder</span>
-          </button>
-        </div>
-      </div>
+      </section>
 
-      <!-- Yükleniyor Göstergesi -->
-      <div id="scan-status" class="hidden mt-4 p-3 bg-sky-50 border border-sky-200 text-sky-800 rounded-lg text-sm flex items-center gap-3">
-        <svg class="animate-spin h-5 w-5 text-sky-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
-        </svg>
-        <span id="scan-status-text">Arama motorları ve sosyal medya platformları taranıyor, lütfen bekleyin...</span>
-      </div>
+      <!-- Gün / Saat Öğün Seçici ve Rapor Listesi -->
+      <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 sm:p-6">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4 pb-3 border-b border-slate-100">
+          <h3 class="font-bold text-slate-900 text-base">
+            📬 Gün ve Saat Bazında Gönderilen Mail İçerikleri
+          </h3>
+          <div class="flex items-center gap-2">
+            <label class="text-xs font-semibold text-slate-500">Bülten Dönemi Seç:</label>
+            <select id="agent-report-selector" onchange="renderSelectedAgentReport()"
+              class="border border-slate-300 rounded-lg px-3 py-1.5 text-sm bg-slate-50 font-medium text-slate-800">
+              <option value="all">Tüm Gönderilen Bültenler</option>
+            </select>
+          </div>
+        </div>
 
-      <!-- Filtre Çubuğu -->
-      <div class="mt-5 pt-4 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-4 gap-3">
-        <div>
-          <label class="block text-xs font-semibold text-slate-500 mb-1">Konum Filtresi</label>
-          <select id="filter-konum" onchange="applyClientFilters()" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white">
-            <option value="">Tüm Konumlar (TR / AZ / UZ)</option>
-            <option value="TÜRKİYE">TÜRKİYE</option>
-            <option value="AZERBAYCAN">AZERBAYCAN</option>
-            <option value="ÖZBEKİSTAN">ÖZBEKİSTAN</option>
-          </select>
+        <div id="agent-reports-container" class="space-y-6">
+          <div class="text-center py-8 text-slate-500 text-sm">
+            Bülten arşivi yükleniyor...
+          </div>
         </div>
-        <div>
-          <label class="block text-xs font-semibold text-slate-500 mb-1">Kaynak / Platform</label>
-          <select id="filter-platform" onchange="applyClientFilters()" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white">
-            <option value="">Tüm Platformlar</option>
-            <option value="Haber">Google Haber / Basın Duyurusu</option>
-            <option value="Web">Web (Bing / DuckDuckGo)</option>
-            <option value="LinkedIn">LinkedIn (Uygulama İçi)</option>
-            <option value="Reddit">Reddit (Son Gönderiler)</option>
-            <option value="X (Twitter)">X (Twitter)</option>
-            <option value="Instagram">Instagram</option>
-            <option value="Facebook">Facebook</option>
-          </select>
-        </div>
-        <div class="sm:col-span-2">
-          <label class="block text-xs font-semibold text-slate-500 mb-1">Sonuçlar İçinde Ara (Kelime / Başlık)</label>
-          <input id="filter-search" oninput="applyClientFilters()" type="text" placeholder="Örn: CBS Uzmanı, ArcGIS, ihale, Bakı..."
-            class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm" />
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
-    <!-- Son Mailden İtibaren Bulunan Sonuçlar Listesi -->
-    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 sm:p-6">
-      <div class="flex items-center justify-between mb-4">
-        <h3 class="font-bold text-slate-900 text-base">
-          📋 Son Mailden İtibaren Çıkan Yeni Sonuçlar (<span id="result-count">0</span> adet)
-        </h3>
-      </div>
+    <!-- ========================================================================= -->
+    <!-- BÖLÜM 2: CANLI WEB & SOSYAL MEDYA SORGULAMA (ANLIK TARAMA)                -->
+    <!-- ========================================================================= -->
+    <div id="view-manual" class="hidden space-y-6">
+      <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 sm:p-6">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <span class="bg-sky-100 text-sky-800 text-xs font-bold px-2.5 py-0.5 rounded-full">
+              İSTEĞE BAĞLI ANLIK HIZLI TARAMA
+            </span>
+            <h2 class="text-lg font-bold text-slate-900 mt-1.5">
+              🔍 Canlı Web, Haber ve Sosyal Medya Sorgulama
+            </h2>
+            <p class="text-sm text-slate-600 mt-0.5">
+              Öğün saatlerini beklemeden, dilediğiniz anda doğrudan haber kaynaklarını, LinkedIn iş ilanlarını ve Reddit gönderilerini hızlıca tarayın.
+              (Son sıfırlama: <strong id="lbl-last-email-inline">Henüz sıfırlanmadı</strong> | Son sorgu: <strong id="lbl-last-query">Henüz sorgulanmadı</strong>)
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <select id="scan-days" class="border border-slate-300 rounded-lg px-3 py-2.5 text-sm bg-slate-50 font-medium text-slate-700">
+              <option value="1">🕒 Son 24 Saat</option>
+              <option value="3" selected>📅 Son 3 Gün</option>
+              <option value="7">🗓️ Son 7 Gün</option>
+              <option value="30">📆 Son 30 Gün</option>
+            </select>
+            <button id="btn-scan" onclick="runLiveScan()"
+              class="bg-sky-600 hover:bg-sky-700 text-white font-semibold px-4 py-2.5 rounded-lg text-sm transition flex items-center gap-2 shadow-sm cursor-pointer">
+              <span>🔍 Şimdi Sorgula</span>
+            </button>
+            <button id="btn-mark-seen" onclick="markAllSeen()"
+              class="bg-slate-700 hover:bg-slate-800 text-white font-semibold px-3.5 py-2.5 rounded-lg text-sm transition flex items-center gap-1.5 shadow-sm cursor-pointer">
+              <span>✓ Okundu İşaretle (Sıfırla)</span>
+            </button>
+          </div>
+        </div>
 
-      <div id="results-container" class="space-y-3">
-        <div class="text-center py-8 text-slate-500 text-sm">
-          Henüz listelenen yeni sonuç yok. Canlı tarama başlatmak için yukarıdaki <strong>"🔍 Şimdi Sorgula"</strong> butonuna tıklayın.
+        <!-- Yükleniyor Göstergesi -->
+        <div id="scan-status" class="hidden mt-4 p-3 bg-sky-50 border border-sky-200 text-sky-800 rounded-lg text-sm flex items-center gap-3">
+          <svg class="animate-spin h-5 w-5 text-sky-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+          </svg>
+          <span id="scan-status-text">Canlı kaynaklar taranıyor, lütfen bekleyin...</span>
         </div>
-      </div>
-    </section>
 
-    <!-- Kelime ve Kural Yönetimi -->
-    <section id="rules-tab" class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 sm:p-6">
-      <h2 class="text-lg font-bold text-slate-900 mb-1">⚙️ Kelime ve Kural Yönetimi (Ekle / Çıkar)</h2>
-      <p class="text-xs text-slate-500 mb-4">
-        Buradan istediğiniz zaman yeni kelime/cümle ekleyebilir, mevcut kelimeleri silebilir veya geçici olarak durdurabilirsiniz.
-      </p>
+        <!-- Filtre Çubuğu -->
+        <div class="mt-5 pt-4 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-4 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 mb-1">Konum Filtresi</label>
+            <select id="filter-konum" onchange="applyClientFilters()" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white">
+              <option value="">Tüm Konumlar (TR / AZ / UZ)</option>
+              <option value="TÜRKİYE">TÜRKİYE</option>
+              <option value="AZERBAYCAN">AZERBAYCAN</option>
+              <option value="ÖZBEKİSTAN">ÖZBEKİSTAN</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 mb-1">Kaynak / Platform</label>
+            <select id="filter-platform" onchange="applyClientFilters()" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white">
+              <option value="">Tüm Platformlar</option>
+              <option value="Haber">Google Haber / Basın Duyurusu</option>
+              <option value="Web">Web (Bing / DuckDuckGo)</option>
+              <option value="LinkedIn">LinkedIn (Uygulama İçi)</option>
+              <option value="Reddit">Reddit (Son Gönderiler)</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-semibold text-slate-500 mb-1">Sonuçlar İçinde Ara (Kelime / Başlık)</label>
+            <input id="filter-search" oninput="applyClientFilters()" type="text" placeholder="Örn: CBS Uzmanı, ArcGIS, ihale, Bakı..."
+              class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm" />
+          </div>
+        </div>
+      </section>
 
-      <!-- Yeni Kelime Ekleme Formu -->
-      <form onsubmit="handleAddRule(event)" class="bg-slate-50 border border-slate-200 rounded-lg p-4 mb-6 grid grid-cols-1 sm:grid-cols-6 gap-3">
-        <div class="sm:col-span-2">
-          <label class="block text-xs font-semibold text-slate-600 mb-1">Kelime veya Cümle *</label>
-          <input id="new-kelime" required type="text" placeholder="Örn: HARİTA MÜHENDİSİ"
-            class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white" />
+      <!-- Canlı Arama Sonuçları -->
+      <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 sm:p-6">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="font-bold text-slate-900 text-base">
+            📋 Canlı Sorgulama Sonuçları (<span id="result-count">0</span> adet)
+          </h3>
         </div>
-        <div>
-          <label class="block text-xs font-semibold text-slate-600 mb-1">Kural Tipi</label>
-          <select id="new-kural-tipi" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white">
-            <option value="TAM_ESLESTIRME">Yan Yana Tam Eşleşme</option>
-            <option value="KISALTMA_BAGLAMSAL">Bağlamsal Kısaltma</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-xs font-semibold text-slate-600 mb-1">Dil</label>
-          <select id="new-dil" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white">
-            <option value="TÜRKÇE">TÜRKÇE</option>
-            <option value="İNGİLİZCE">İNGİLİZCE</option>
-            <option value="AZERİCE">AZERİCE</option>
-            <option value="ÖZBEKÇE">ÖZBEKÇE</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-xs font-semibold text-slate-600 mb-1">Konum</label>
-          <select id="new-konum" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white">
-            <option value="TÜRKİYE">TÜRKİYE</option>
-            <option value="AZERBAYCAN">AZERBAYCAN</option>
-            <option value="ÖZBEKİSTAN">ÖZBEKİSTAN</option>
-          </select>
-        </div>
-        <div class="flex items-end">
-          <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-2 px-3 rounded-lg text-sm cursor-pointer">
-            ➕ Kural Ekle
-          </button>
-        </div>
-      </form>
 
-      <!-- Mevcut Kurallar Tablosu -->
-      <div class="overflow-x-auto">
-        <table class="w-full text-left border-collapse text-sm">
-          <thead>
-            <tr class="border-b border-slate-200 text-xs text-slate-500 uppercase">
-              <th class="py-2 px-2">#</th>
-              <th class="py-2 px-2">Durum</th>
-              <th class="py-2 px-2">Kelime / Cümle</th>
-              <th class="py-2 px-2">Kural</th>
-              <th class="py-2 px-2">Dil</th>
-              <th class="py-2 px-2">Konum</th>
-              <th class="py-2 px-2 text-right">İşlem</th>
-            </tr>
-          </thead>
-          <tbody id="rules-tbody" class="divide-y divide-slate-100"></tbody>
-        </table>
-      </div>
-    </section>
+        <div id="results-container" class="space-y-3">
+          <div class="text-center py-8 text-slate-500 text-sm">
+            Canlı tarama başlatmak için yukarıdaki <strong>"🔍 Şimdi Sorgula"</strong> butonuna tıklayın.
+          </div>
+        </div>
+      </section>
+    </div>
 
-    <!-- E-posta Ayarları Bölümü -->
-    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 sm:p-6">
-      <h2 class="text-lg font-bold text-slate-900 mb-1">📬 E-posta Bildirim Ayarları (08:00 - 13:00 - 18:00)</h2>
-      <p class="text-xs text-slate-500 mb-4">
-        Raporların gönderileceği alıcı e-posta adresini ve gönderici Gmail (Uygulama Şifresi) bilgilerini buradan kaydedebilirsiniz.
-      </p>
-      <form onsubmit="handleSaveEmailConfig(event)" class="grid grid-cols-1 sm:grid-cols-4 gap-3">
-        <div>
-          <label class="block text-xs font-semibold text-slate-600 mb-1">Alıcı E-posta Adresi (Rapor Kime Gelsin?)</label>
-          <input id="cfg-to-email" type="email" placeholder="ornek@gmail.com"
-            class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm" />
+    <!-- ========================================================================= -->
+    <!-- BÖLÜM 3: ANAHTAR KELİME VE KURAL YÖNETİMİ                                 -->
+    <!-- ========================================================================= -->
+    <div id="view-rules" class="hidden space-y-6">
+      <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 sm:p-6">
+        <h2 class="text-lg font-bold text-slate-900 mb-1">⚙️ Anahtar Kelime ve Kural Yönetimi</h2>
+        <p class="text-xs text-slate-500 mb-4">
+          Burada tanımladığınız anahtar kelimeler ve kurallar hem <strong>Günlük Yapay Zeka Bültenleri</strong> hem de <strong>Canlı Web Sorgulama</strong> tarafından ortak kullanılır.
+        </p>
+
+        <form onsubmit="handleAddRule(event)" class="bg-slate-50 border border-slate-200 rounded-lg p-4 mb-6 grid grid-cols-1 sm:grid-cols-6 gap-3">
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-semibold text-slate-600 mb-1">Kelime veya Cümle *</label>
+            <input id="new-kelime" required type="text" placeholder="Örn: HARİTA MÜHENDİSİ"
+              class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1">Kural Tipi</label>
+            <select id="new-kural-tipi" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white">
+              <option value="TAM_ESLESTIRME">Yan Yana Tam Eşleşme</option>
+              <option value="KISALTMA_BAGLAMSAL">Bağlamsal Kısaltma</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1">Dil</label>
+            <select id="new-dil" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white">
+              <option value="TÜRKÇE">TÜRKÇE</option>
+              <option value="İNGİLİZCE">İNGİLİZCE</option>
+              <option value="AZERİCE">AZERİCE</option>
+              <option value="ÖZBEKÇE">ÖZBEKÇE</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1">Konum</label>
+            <select id="new-konum" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white">
+              <option value="TÜRKİYE">TÜRKİYE</option>
+              <option value="AZERBAYCAN">AZERBAYCAN</option>
+              <option value="ÖZBEKİSTAN">ÖZBEKİSTAN</option>
+            </select>
+          </div>
+          <div class="flex items-end">
+            <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-2 px-3 rounded-lg text-sm cursor-pointer">
+              ➕ Kural Ekle
+            </button>
+          </div>
+        </form>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-slate-200 text-xs text-slate-500 uppercase">
+                <th class="py-2 px-2">#</th>
+                <th class="py-2 px-2">Durum</th>
+                <th class="py-2 px-2">Kelime / Cümle</th>
+                <th class="py-2 px-2">Kural</th>
+                <th class="py-2 px-2">Dil</th>
+                <th class="py-2 px-2">Konum</th>
+                <th class="py-2 px-2 text-right">İşlem</th>
+              </tr>
+            </thead>
+            <tbody id="rules-tbody" class="divide-y divide-slate-100"></tbody>
+          </table>
         </div>
-        <div>
-          <label class="block text-xs font-semibold text-slate-600 mb-1">Gönderici Gmail Adresi</label>
-          <input id="cfg-smtp-user" type="email" placeholder="gonderici@gmail.com"
-            class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm" />
-        </div>
-        <div>
-          <label class="block text-xs font-semibold text-slate-600 mb-1">Gmail 16 Haneli Uygulama Şifresi</label>
-          <input id="cfg-smtp-pass" type="password" placeholder="xxxx xxxx xxxx xxxx"
-            class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm" />
-        </div>
-        <div class="flex items-end">
-          <button type="submit" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-2 px-3 rounded-lg text-sm cursor-pointer">
-            💾 Mail Ayarlarını Kaydet
-          </button>
-        </div>
-      </form>
-    </section>
+      </section>
+    </div>
 
   </main>
 
   <script>
     const API_BASE = window.location.protocol === 'file:' ? 'http://localhost:5000' : '';
+    const GITHUB_RAW_AGENT_REPORTS = 'https://raw.githubusercontent.com/bulentuysal45/cbs-gis-monitor/main/agent_reports.json';
 
-    const DEFAULT_RULES = [
-      { aktif: "1", kelime: "CBS", kural_tipi: "KISALTMA_BAGLAMSAL", dil: "TÜRKÇE", konum: "TÜRKİYE" },
-      { aktif: "1", kelime: "CBS UZMANI", kural_tipi: "TAM_ESLESTIRME", dil: "TÜRKÇE", konum: "TÜRKİYE" },
-      { aktif: "1", kelime: "COĞRAFİ BİLGİ SİSTEMLERİ", kural_tipi: "TAM_ESLESTIRME", dil: "TÜRKÇE", konum: "TÜRKİYE" },
-      { aktif: "1", kelime: "COĞRAFİ BİLGİ SİSTEMLERİ UZMANI", kural_tipi: "TAM_ESLESTIRME", dil: "TÜRKÇE", konum: "TÜRKİYE" },
-      { aktif: "1", kelime: "COĞRAFİ VERİ İZİNLERİ", kural_tipi: "TAM_ESLESTIRME", dil: "TÜRKÇE", konum: "TÜRKİYE" },
-      { aktif: "1", kelime: "GEOGRAPHIC INFORMATION SYSTEMS", kural_tipi: "TAM_ESLESTIRME", dil: "İNGİLİZCE", konum: "TÜRKİYE" },
-      { aktif: "1", kelime: "GEOGRAPHIC INFORMATION SYSTEMS", kural_tipi: "TAM_ESLESTIRME", dil: "İNGİLİZCE", konum: "AZERBAYCAN" },
-      { aktif: "1", kelime: "GEOGRAPHIC INFORMATION SYSTEMS", kural_tipi: "TAM_ESLESTIRME", dil: "İNGİLİZCE", konum: "ÖZBEKİSTAN" },
-      { aktif: "1", kelime: "GIS", kural_tipi: "KISALTMA_BAGLAMSAL", dil: "İNGİLİZCE", konum: "TÜRKİYE" },
-      { aktif: "1", kelime: "GIS", kural_tipi: "KISALTMA_BAGLAMSAL", dil: "İNGİLİZCE", konum: "AZERBAYCAN" },
-      { aktif: "1", kelime: "GIS", kural_tipi: "KISALTMA_BAGLAMSAL", dil: "İNGİLİZCE", konum: "ÖZBEKİSTAN" },
-      { aktif: "1", kelime: "CİS MÜTƏXƏSSİSİ", kural_tipi: "TAM_ESLESTIRME", dil: "AZERİCE", konum: "AZERBAYCAN" },
-      { aktif: "1", kelime: "COĞRAFİ İNFORMASİYA SİSTEMLƏRİ", kural_tipi: "TAM_ESLESTIRME", dil: "AZERİCE", konum: "AZERBAYCAN" },
-      { aktif: "1", kelime: "GIS EKSPERTI", kural_tipi: "TAM_ESLESTIRME", dil: "ÖZBEKÇE", konum: "ÖZBEKİSTAN" },
-      { aktif: "1", kelime: "GIS MUTAXASSISI", kural_tipi: "TAM_ESLESTIRME", dil: "ÖZBEKÇE", konum: "ÖZBEKİSTAN" },
-      { aktif: "1", kelime: "GEOGRAFIK AXBOROT TIZIMLARI", kural_tipi: "TAM_ESLESTIRME", dil: "ÖZBEKÇE", konum: "ÖZBEKİSTAN" },
-      { aktif: "1", kelime: "GAT MUTAXASSISI", kural_tipi: "TAM_ESLESTIRME", dil: "ÖZBEKÇE", konum: "ÖZBEKİSTAN" },
-      { aktif: "1", kelime: "GAT EXPERTI", kural_tipi: "TAM_ESLESTIRME", dil: "ÖZBEKÇE", konum: "ÖZBEKİSTAN" }
-    ];
+    let agentReports = [];
+    let allManualItems = [];
 
-    let allItems = [];
+    function switchTab(tabName) {
+      const views = ['agent', 'manual', 'rules'];
+      views.forEach(v => {
+        const el = document.getElementById('view-' + v);
+        const btn = document.getElementById('tab-btn-' + v);
+        if (v === tabName) {
+          el.classList.remove('hidden');
+          btn.className = 'px-4 py-2.5 text-sm font-bold rounded-t-lg bg-indigo-600 text-white flex items-center gap-2 cursor-pointer transition';
+        } else {
+          el.classList.add('hidden');
+          btn.className = 'px-4 py-2.5 text-sm font-bold rounded-t-lg bg-slate-800 text-slate-300 hover:bg-slate-700 flex items-center gap-2 cursor-pointer transition';
+        }
+      });
+    }
 
     function esc(str) {
       const div = document.createElement('div');
@@ -253,9 +283,153 @@
       return div.innerHTML;
     }
 
+    async function loadAgentReports(showToast = false) {
+      let reports = [];
+      try {
+        const resGh = await fetch(GITHUB_RAW_AGENT_REPORTS + '?t=' + Date.now());
+        if (resGh.ok) {
+          const dataGh = await resGh.json();
+          if (dataGh && Array.isArray(dataGh.reports)) {
+            reports = dataGh.reports;
+          }
+        }
+      } catch (e) {}
+
+      try {
+        const resLocal = await fetch(API_BASE + '/api/agent-reports');
+        if (resLocal.ok) {
+          const dataLocal = await resLocal.json();
+          if (dataLocal && Array.isArray(dataLocal.reports) && dataLocal.reports.length > reports.length) {
+            reports = dataLocal.reports;
+          }
+        }
+      } catch (e) {}
+
+      agentReports = reports;
+      populateAgentReportSelector();
+      renderSelectedAgentReport();
+      if (showToast) {
+        alert('Bülten arşivi güncellendi!');
+      }
+    }
+
+    function populateAgentReportSelector() {
+      const sel = document.getElementById('agent-report-selector');
+      let html = `<option value="all">Tüm Gönderilen Bültenler (${agentReports.length} Rapor)</option>`;
+      agentReports.forEach((rep, idx) => {
+        html += `<option value="${idx}">📅 ${esc(rep.gun)} — 🕒 ${esc(rep.saat)} (${esc(rep.ogun)}) [${rep.toplam_sonuc} sonuç]</option>`;
+      });
+      sel.innerHTML = html;
+    }
+
+    function renderSelectedAgentReport() {
+      const container = document.getElementById('agent-reports-container');
+      const selVal = document.getElementById('agent-report-selector').value;
+
+      if (!agentReports.length) {
+        container.innerHTML = `
+          <div class="bg-indigo-50/60 border border-indigo-200 rounded-xl p-6 text-center">
+            <div class="text-2xl mb-2">🤖</div>
+            <h4 class="font-bold text-indigo-950 text-base">Yapay Zeka Ajanı İlk Öğün Raporunu Hazırlıyor</h4>
+            <p class="text-sm text-slate-600 mt-1 max-w-xl mx-auto">
+              Arka plan Yapay Zeka Ajanı her gün <strong>08:00, 13:00 ve 18:00</strong> saatlerinde çalışıp mail gönderdiğinde,
+              o mailde gelen tüm sonuçlar <strong>Gün ve Saat</strong> başlığıyla otomatik olarak burada listelenir.
+            </p>
+          </div>
+        `;
+        return;
+      }
+
+      const toShow = selVal === 'all' ? agentReports : [agentReports[parseInt(selVal, 10)]];
+      container.innerHTML = toShow.map(rep => {
+        const items = rep.sonuclar || [];
+        const itemsHtml = items.length
+          ? items.map(it => `
+              <div class="border border-slate-200 rounded-lg p-4 bg-white hover:border-indigo-400 transition">
+                <div class="flex flex-wrap items-center gap-2 text-xs mb-1.5">
+                  <span class="bg-indigo-100 text-indigo-800 font-bold px-2.5 py-0.5 rounded">🎯 ${esc(it.kelime)}</span>
+                  <span class="bg-slate-200 text-slate-700 font-medium px-2 py-0.5 rounded">🌍 ${esc(it.konum)} (${esc(it.dil)})</span>
+                  <span class="bg-emerald-100 text-emerald-800 font-medium px-2 py-0.5 rounded">📡 ${esc(it.kaynak_tipi)}</span>
+                  ${it.tarih ? `<span class="text-slate-400 ml-auto">🕒 ${esc(it.tarih)}</span>` : ''}
+                </div>
+                <a href="${esc(it.url)}" target="_blank" class="text-base font-semibold text-indigo-700 hover:underline block">
+                  ${esc(it.baslik || 'Başlıksız İçerik')}
+                </a>
+                <p class="text-sm text-slate-700 mt-1.5 bg-indigo-50/50 p-2.5 rounded border-l-4 border-indigo-500">
+                  ${esc(it.ozet)}
+                </p>
+                <div class="mt-2 text-xs text-slate-400 truncate">
+                  🔗 <a href="${esc(it.url)}" target="_blank" class="hover:text-slate-600">${esc(it.url)}</a>
+                </div>
+              </div>
+            `).join('')
+          : `<div class="text-sm text-slate-500 italic py-3">Bu öğünde daha önce gönderilmemiş yeni bir içerik çıkmadı.</div>`;
+
+        return `
+          <div class="border-2 border-indigo-100 rounded-xl overflow-hidden bg-slate-50/60">
+            <div class="bg-indigo-950 text-white px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="text-lg">📩</span>
+                <div>
+                  <span class="font-bold text-sm sm:text-base">📅 ${esc(rep.gun)} — Saat: ${esc(rep.saat)}</span>
+                  <span class="ml-2 bg-indigo-700 text-indigo-100 text-xs px-2.5 py-0.5 rounded-full font-semibold">${esc(rep.ogun)}</span>
+                </div>
+              </div>
+              <span class="text-xs bg-indigo-900 border border-indigo-700 px-3 py-1 rounded-lg">
+                Bu Mailde Gelen Sonuç: <strong>${items.length} adet</strong>
+              </span>
+            </div>
+            <div class="p-4 space-y-3">
+              ${itemsHtml}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderManualItems(items) {
+      allManualItems = items || [];
+      const container = document.getElementById('results-container');
+      document.getElementById('result-count').textContent = allManualItems.length;
+
+      if (!allManualItems.length) {
+        container.innerHTML = `
+          <div class="text-center py-8 text-slate-500 text-sm">
+            Seçilen zaman aralığında henüz yeni sonuç yok. Yukarıdan tarih aralığını seçip <strong>"🔍 Şimdi Sorgula"</strong> butonuna tıklayabilirsiniz.
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = allManualItems.map(item => `
+        <div class="result-card border border-slate-200 rounded-lg p-4 hover:border-sky-400 transition bg-slate-50/40"
+             data-konum="${esc(item.konum)}"
+             data-platform="${esc(item.kaynak_tipi)}"
+             data-text="${esc((item.kelime || '') + ' ' + (item.baslik || '') + ' ' + (item.ozet || ''))}">
+          <div class="flex flex-wrap items-center gap-2 text-xs mb-1.5">
+            <span class="bg-sky-100 text-sky-800 font-bold px-2.5 py-0.5 rounded">🎯 ${esc(item.kelime)}</span>
+            <span class="bg-slate-200 text-slate-700 font-medium px-2 py-0.5 rounded">🌍 ${esc(item.konum)} (${esc(item.dil)})</span>
+            <span class="bg-indigo-100 text-indigo-800 font-medium px-2 py-0.5 rounded">📡 ${esc(item.kaynak_tipi)}</span>
+            ${item.tarih ? `<span class="text-slate-400 ml-auto">🕒 ${esc(item.tarih)}</span>` : ''}
+          </div>
+          <a href="${esc(item.url)}" target="_blank" class="text-base font-semibold text-blue-700 hover:underline block">
+            ${esc(item.baslik || 'Başlıksız İçerik')}
+          </a>
+          <p class="text-sm text-slate-700 mt-1.5 bg-white p-2.5 rounded border border-slate-100">
+            ${esc(item.ozet)}
+          </p>
+          <div class="mt-2 text-xs text-slate-400 truncate">
+            🔗 <a href="${esc(item.url)}" target="_blank" class="hover:text-slate-600">${esc(item.url)}</a>
+          </div>
+        </div>
+      `).join('');
+
+      applyClientFilters();
+    }
+
     function renderRules(rules) {
       const tbody = document.getElementById('rules-tbody');
-      tbody.innerHTML = rules.map((r, idx) => {
+      tbody.innerHTML = (rules || []).map((r, idx) => {
         const isAktif = String(r.aktif) === '1';
         return `
           <tr class="hover:bg-slate-50">
@@ -282,65 +456,18 @@
       }).join('');
     }
 
-    function renderItems(items) {
-      allItems = items || [];
-      const container = document.getElementById('results-container');
-      document.getElementById('result-count').textContent = allItems.length;
-
-      if (!allItems.length) {
-        container.innerHTML = `
-          <div class="text-center py-8 text-slate-500 text-sm">
-            Seçilen zaman aralığında henüz yeni (daha önce görülmemiş) sonuç yok. Yukarıdan tarih aralığını seçip <strong>"🔍 Şimdi Sorgula"</strong> butonuna tıklayabilirsiniz.
-          </div>
-        `;
-        return;
-      }
-
-      container.innerHTML = allItems.map(item => `
-        <div class="result-card border border-slate-200 rounded-lg p-4 hover:border-sky-400 transition bg-slate-50/40"
-             data-konum="${esc(item.konum)}"
-             data-platform="${esc(item.kaynak_tipi)}"
-             data-text="${esc((item.kelime || '') + ' ' + (item.baslik || '') + ' ' + (item.ozet || ''))}">
-          <div class="flex flex-wrap items-center gap-2 text-xs mb-1.5">
-            <span class="bg-sky-100 text-sky-800 font-bold px-2.5 py-0.5 rounded">🎯 ${esc(item.kelime)}</span>
-            <span class="bg-slate-200 text-slate-700 font-medium px-2 py-0.5 rounded">🌍 ${esc(item.konum)} (${esc(item.dil)})</span>
-            <span class="bg-indigo-100 text-indigo-800 font-medium px-2 py-0.5 rounded">📡 ${esc(item.kaynak_tipi)}</span>
-            ${item.tarih ? `<span class="text-slate-400 ml-auto">🕒 ${esc(item.tarih)}</span>` : ''}
-          </div>
-          <a href="${esc(item.url)}" target="_blank" class="text-base font-semibold text-blue-700 hover:underline block">
-            ${esc(item.baslik || 'Başlıksız İçerik')}
-          </a>
-          <p class="text-sm text-slate-700 mt-1.5 bg-white p-2.5 rounded border border-slate-100">
-            ${esc(item.ozet)}
-          </p>
-          <div class="mt-2 text-xs text-slate-400 truncate">
-            🔗 <a href="${esc(item.url)}" target="_blank" class="hover:text-slate-600">${esc(item.url)}</a>
-          </div>
-        </div>
-      `).join('');
-
-      applyClientFilters();
-    }
-
     async function loadInitialState() {
-      renderRules(DEFAULT_RULES);
+      await loadAgentReports(false);
       try {
         const res = await fetch(API_BASE + '/api/state');
         const data = await res.json();
         if (data.ok) {
-          document.getElementById('lbl-last-email').textContent = data.last_email_at || 'Henüz gönderilmedi';
-          document.getElementById('lbl-last-email-inline').textContent = data.last_email_at || 'Henüz gönderilmedi';
+          document.getElementById('lbl-last-email-inline').textContent = data.last_email_at || 'Henüz sıfırlanmadı';
           document.getElementById('lbl-last-query').textContent = data.last_query_at || 'Henüz sorgulanmadı';
           if (data.rules && data.rules.length) renderRules(data.rules);
-          if (data.items) renderItems(data.items);
-          if (data.email_config) {
-            document.getElementById('cfg-to-email').value = data.email_config.to_email || '';
-            document.getElementById('cfg-smtp-user').value = data.email_config.smtp_user || '';
-          }
+          if (data.items) renderManualItems(data.items);
         }
-      } catch (e) {
-        console.warn('Sunucu durumu bekleniyor:', e);
-      }
+      } catch (e) {}
     }
 
     async function runLiveScan() {
@@ -353,7 +480,7 @@
       btn.disabled = true;
       btn.classList.add('opacity-60');
       statusBox.classList.remove('hidden');
-      statusText.textContent = `Son ${days} gün içinde çıkan yeni içerikler tüm motorlarda ve sosyal medyada taranıyor...`;
+      statusText.textContent = `Canlı kaynaklar taranıyor (Son ${days} gün)...`;
 
       try {
         const res = await fetch(API_BASE + '/api/scan', {
@@ -363,10 +490,9 @@
         });
         const data = await res.json();
         if (data.ok) {
-          document.getElementById('lbl-last-email').textContent = data.last_email_at || 'Henüz gönderilmedi';
-          document.getElementById('lbl-last-email-inline').textContent = data.last_email_at || 'Henüz gönderilmedi';
+          document.getElementById('lbl-last-email-inline').textContent = data.last_email_at || 'Henüz sıfırlanmadı';
           document.getElementById('lbl-last-query').textContent = data.last_query_at || 'Şimdi';
-          renderItems(data.items || []);
+          renderManualItems(data.items || []);
         }
       } catch (e) {
         alert('Tarama sırasında bağlantı hatası oluştu: ' + e);
@@ -378,31 +504,11 @@
     }
 
     async function markAllSeen() {
-      if (!confirm('Ekrandaki mevcut sonuçlar "okundu / gönderildi" olarak hafızaya kaydedilsin ve liste yeni içerikler için sıfırlansın mı?')) return;
+      if (!confirm('Canlı sorgulama ekranındaki mevcut sonuçlar "okundu" olarak işaretlensin ve ekran sıfırlansın mı?')) return;
       const res = await fetch(API_BASE + '/api/mark-seen', { method: 'POST' });
       const data = await res.json();
       if (data.ok) {
         await loadInitialState();
-      }
-    }
-
-    async function sendEmailNow() {
-      const statusBox = document.getElementById('scan-status');
-      const statusText = document.getElementById('scan-status-text');
-      statusBox.classList.remove('hidden');
-      statusText.textContent = 'E-posta raporu hazırlanıyor ve gönderiliyor...';
-
-      try {
-        const res = await fetch(API_BASE + '/api/send-email-now', { method: 'POST' });
-        const data = await res.json();
-        alert(data.message || (data.sent
-          ? `Başarılı! ${data.count} sonuç e-posta adresinize gönderildi.`
-          : `Rapor hazırlandı (${data.count} sonuç). Otomatik mail gönderimi için sayfanın altındaki E-posta Bildirim Ayarları bölümünü doldurun.`));
-        await loadInitialState();
-      } catch (e) {
-        alert('Hata: ' + e);
-      } finally {
-        statusBox.classList.add('hidden');
       }
     }
 
@@ -437,24 +543,6 @@
       const res = await fetch(API_BASE + '/api/rules/delete/' + idx, { method: 'POST' });
       const data = await res.json();
       if (data.ok && data.rules) renderRules(data.rules);
-    }
-
-    async function handleSaveEmailConfig(e) {
-      e.preventDefault();
-      const payload = {
-        to_email: document.getElementById('cfg-to-email').value,
-        smtp_user: document.getElementById('cfg-smtp-user').value,
-        smtp_pass: document.getElementById('cfg-smtp-pass').value
-      };
-      const res = await fetch(API_BASE + '/api/email-config', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      const data = await res.json();
-      if (data.ok) {
-        alert('E-posta bildirim ayarları kaydedildi!');
-      }
     }
 
     function applyClientFilters() {
