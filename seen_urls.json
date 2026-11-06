@@ -1,159 +1,18 @@
-﻿{
-    "emailed_urls":  [
-
-                     ],
-    "pending_items":  [
-                          {
-                              "konum":  "TÜRKİYE",
-                              "kaynak_tipi":  "Haber / Basın Duyurusu (Yeni)",
-                              "kelime":  "COĞRAFİ BİLGİ SİSTEMLERİ",
-                              "ozet":  "Haber içeriğinde \u0027COĞRAFİ BİLGİ SİSTEMLERİ\u0027 ifadesi tam eşleşme olarak yer almaktadır. Kaynak: Coğrafi Veri İzinleri Yönetmeliği - Hukuki Haber",
-                              "url":  "https://news.google.com/rss/articles/CBMibkFVX3lxTE1waWMxczZEZkpzZjRhRExycjdmUHd2VXJsZmNKenhCM2xhY2l5bDhLQTZUNzZHYVZVbkFzYXQxOGZEZDljWXdXc1dsX3JkNW9ScmxGajBYWHJLMWdhdVhBS1RvNE1rX3ZTZDZ0MlR3?oc=5",
-                              "tarih":  "Wed, 14 Oct 2026 07:00:00 GMT",
-                              "dil":  "TÜRKÇE",
-                              "baslik":  "Coğrafi Veri İzinleri Yönetmeliği - Hukuki Haber"
-                          },
-                          {
-                              "konum":  "TÜRKİYE",
-                              "kaynak_tipi":  "Haber / Basın Duyurusu (Yeni)",
-                              "kelime":  "COĞRAFİ BİLGİ SİSTEMLERİ",
-                              "ozet":  "Haber içeriğinde \u0027COĞRAFİ BİLGİ SİSTEMLERİ\u0027 ifadesi tam eşleşme olarak yer almaktadır. Kaynak: Kırklareli Fen Lisesi Öğrencilerine Coğrafi Bilgi Sistemleri Anlatıldı - Yeşilyurt Gazetesi",
-                              "url":  "https://news.google.com/rss/articles/CBMirgFBVV95cUxOMzBKTEVVaHlmTzFmbnpMZGRtNC1jVm9jQkhXbE45RGp3LTR3NkNibFRZd1ppZTFPWks1ai11M0hwNWdxVWhPR2t0clY0R1VOY3hrOHVSbl8tZlRVWWpLZVpyUm1tNEVhX1NNdmNiLUJxUC1VbklFM1VkTVlwUGRqS1pFMS1ncnZRaU1ld21DTldoWW8xNk9MZF9ibHZ0TTdqcHdnb3hRLThrLWNITUE?oc=5",
-                              "tarih":  "Fri, 16 Oct 2026 07:30:29 GMT",
-                              "dil":  "TÜRKÇE",
-                              "baslik":  "Kırklareli Fen Lisesi Öğrencilerine Coğrafi Bilgi Sistemleri Anlatıldı - Yeşilyurt Gazetesi"
-                          },
-                          {
-                              "konum":  "TÜRKİYE",
-                              "kaynak_tipi":  "LinkedIn (Yeni İş İlanı)",
-                              "kelime":  "CBS",
-                              "ozet":  "...lmak üzere; saha ölçümleri, haritalama çalışmaları ve Coğrafi Bilgi Sistemleri (CBS) uygulamalarını yürütecek, teknik süreçlerin etkin şekilde yönetilmesine katkı sağlayacak Harita Mühendisi arayışımız bulunmaktadır. İş Tanımı Proje, yapım,...",
-                              "url":  "https://tr.linkedin.com/jobs/view/harita-m%C3%BChendisi-at-gizli-4482748106",
-                              "tarih":  "Yayın Tarihi: 2026-10-22",
-                              "dil":  "TÜRKÇE",
-                              "baslik":  "Harita Mühendisi — Gizli"
-                          },
-                          {
-                              "konum":  "TÜRKİYE",
-                              "kaynak_tipi":  "LinkedIn (Yeni İş İlanı)",
-                              "kelime":  "GIS",
-                              "ozet":  "...and ensuring data quality and control. Analyzing and mapping spatial data using GIS software. Preparing and analyzing drilling and surface data using GIS software. Ensuring that data is always up to date and accessible. Digitizing non-digit...",
-                              "url":  "https://tr.linkedin.com/jobs/view/veri-taban%C4%B1-ve-%C3%A7izim-uzman-yard%C4%B1mc%C4%B1s%C4%B1-at-lidya-madencilik-4480613996",
-                              "tarih":  "Yayın Tarihi: 2026-10-23",
-                              "dil":  "İNGİLİZCE",
-                              "baslik":  "Veri Tabanı ve Çizim Uzman Yardımcısı — Lidya Madencilik"
-                          },
-                          {
-                              "konum":  "TÜRKİYE",
-                              "kaynak_tipi":  "Haber / Basın Duyurusu (Yeni)",
-                              "kelime":  "GIS",
-                              "ozet":  "Haber içeriğinde \u0027GIS\u0027 ifadesi tam eşleşme olarak yer almaktadır. Kaynak: Su Kaynakları Üniversitesi, Esri Vietnam ile işbirliği yaparak GIS ve GeoBIM teknolojilerinin eğitimi ve uygulaması alanında iş birliğini teşvik etmektedir. - Vietnam.vn",
-                              "url":  "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPa3FfYmhCUUw1UDlLVGtnM0RDYWNaRE1tQXlaZzM5QnhoTU5xOXpzSTZ1Zk9kQ0s4WEJoQ05BTWdYMW9ibW9PSUtTOGlTMkU1bTNJblY3Q0oyRFNiTEExU0poV05EWjcwanB6UVBSNjFxVWhUS3JIQzQ3WVBNTGFkZGMwdjNYb1EzN2IyalRueGR6a3hmZXNSZVNCZUd0YXJRNFZKWnlWdDlBMGZ1TnhGdXVRazBYM3JkMzdmRWFDUExZQTNxWWlZZTlIX0pjM2FaS0ZzTjhoMWxfZw?oc=5",
-                              "tarih":  "Thu, 08 Oct 2026 07:00:00 GMT",
-                              "dil":  "İNGİLİZCE",
-                              "baslik":  "Su Kaynakları Üniversitesi, Esri Vietnam ile işbirliği yaparak GIS ve GeoBIM teknolojilerinin eğitimi ve uygulaması alanında iş birliğini teşvik etmektedir. - Vietnam.vn"
-                          },
-                          {
-                              "konum":  "TÜRKİYE",
-                              "kaynak_tipi":  "Haber / Basın Duyurusu (Yeni)",
-                              "kelime":  "CBS UZMANI",
-                              "ozet":  "Haber içeriğinde \u0027CBS UZMANI\u0027 ifadesi tam eşleşme olarak yer almaktadır. Kaynak: Malatya’da izinsiz imar ve zemin tespiti yapanlara kırmızı kart: Bakanlıktan ağır ceza - Bu Sabah Malatya",
-                              "url":  "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRGN0d1V5MGwzanpXbXRQd1hBSTZSR2VPazhLVjVVSTBpVjdfWENFbnF0Wi12c0YtWVduU3g3cnJ0MW9aV2hSRGxobHJWVDVaaUtTRzlPLXdUbXpmd09URVFRVnhSaDFMdG5JUU0xVjhqQWVVWHFzYVlCTG8zc0Q5WjV2WXd1M3ctRjN6dGFNUDlfMFJuVGF4aVp2V0lfSnBpWVRKcEJ4MmNDQ216QnpSZk42LUI2Zw?oc=5",
-                              "tarih":  "Wed, 14 Oct 2026 07:00:00 GMT",
-                              "dil":  "TÜRKÇE",
-                              "baslik":  "Malatya’da izinsiz imar ve zemin tespiti yapanlara kırmızı kart: Bakanlıktan ağır ceza - Bu Sabah Malatya"
-                          },
-                          {
-                              "konum":  "TÜRKİYE",
-                              "kaynak_tipi":  "LinkedIn (Yeni İş İlanı)",
-                              "kelime":  "GIS",
-                              "ozet":  "...experience of QGIS • Understanding of Geospatial concepts and familiarity with GIS technologies • Understanding of imagery data, its processing, storage, and retrieval • Experience with geospatial data (vector, raster, geojson, shapefile e...",
-                              "url":  "https://tr.linkedin.com/jobs/view/full-stack-engineer-at-calico-teknoloji-4484670889",
-                              "tarih":  "Yayın Tarihi: 2026-11-03",
-                              "dil":  "İNGİLİZCE",
-                              "baslik":  "Full Stack Engineer — Calico Teknoloji"
-                          },
-                          {
-                              "konum":  "TÜRKİYE",
-                              "kaynak_tipi":  "Haber / Basın Duyurusu (Yeni)",
-                              "kelime":  "COĞRAFİ VERİ İZİNLERİ",
-                              "ozet":  "Haber içeriğinde \u0027COĞRAFİ VERİ İZİNLERİ\u0027 ifadesi tam eşleşme olarak yer almaktadır. Kaynak: Coğrafi Veri İzinleri Yönetmeliği - Alomaliye",
-                              "url":  "https://news.google.com/rss/articles/CBMiggFBVV95cUxPazhaRUwzcVAweGlzU3RNMXpxYVJaam54TVdvQ3haWFdWZ2hFM0VUMmNHVEdOMXprSjZDSGo4elB2UmZ0WVBsNnlIN2M4bHJDMGNDcHFyMWY4Y0hqdjNvRTBDOVpBVmR1bHlVcS1CTTYzZlR1M0U5UFFPNE5HOUJJSjZB?oc=5",
-                              "tarih":  "Wed, 14 Oct 2026 07:00:00 GMT",
-                              "dil":  "TÜRKÇE",
-                              "baslik":  "Coğrafi Veri İzinleri Yönetmeliği - Alomaliye"
-                          },
-                          {
-                              "konum":  "TÜRKİYE",
-                              "kaynak_tipi":  "Haber / Basın Duyurusu (Yeni)",
-                              "kelime":  "COĞRAFİ VERİ İZİNLERİ",
-                              "ozet":  "Haber içeriğinde \u0027COĞRAFİ VERİ İZİNLERİ\u0027 ifadesi tam eşleşme olarak yer almaktadır. Kaynak: Coğrafi Veri İzinleri Yönetmeliği Resmi Gazete\u0027de yayımlanarak yürürlüğe girdi - Nirvana Haber",
-                              "url":  "https://news.google.com/rss/articles/CBMirgFBVV95cUxQdDJwYnVRbU56T2dFNU9xb2tueHBvS0RSNWQ2MU5nbTVTbGo3eXlkZlpWSUlSSTNiNGtjNHlENG5lUFlsMVY5YTRHRVlxaU9qU3NPSHFtd3FLUjFYaXFnVDZXVVNRYTFJcm0tYlpTVVQwNFR2LUlraHp3QzlHeHdrTVItQ19feGxidk93dnVSLW16WDVHdnljQkhyVnBySnZFazA1UndwZWdnaENOVWc?oc=5",
-                              "tarih":  "Wed, 14 Oct 2026 07:00:00 GMT",
-                              "dil":  "TÜRKÇE",
-                              "baslik":  "Coğrafi Veri İzinleri Yönetmeliği Resmi Gazete\u0027de yayımlanarak yürürlüğe girdi - Nirvana Haber"
-                          },
-                          {
-                              "konum":  "TÜRKİYE",
-                              "kaynak_tipi":  "Haber / Basın Duyurusu (Yeni)",
-                              "kelime":  "COĞRAFİ BİLGİ SİSTEMLERİ",
-                              "ozet":  "Haber içeriğinde \u0027COĞRAFİ BİLGİ SİSTEMLERİ\u0027 ifadesi tam eşleşme olarak yer almaktadır. Kaynak: Coğrafi Veri İzinleri Yönetmeliği Resmi Gazete\u0027de yayımlandı - Anadolu Ajansı",
-                              "url":  "https://news.google.com/rss/articles/CBMioAFBVV95cUxPMWdjbDdNeHFqMXVrV2JmVlN4bmk3SkVYZWNIRHhkaFhDV1puQVc4UmdiZzhuZEFnejBGTG5fdWxvUE01dkRwRHJnQ3k5RE5wMmhfSmVWR1pzTVh4TDdFVnRrekcwbmhkYUxwWkFWTlI3RzRibVRKVlJBQkczZGFfdzFWeGxmajc2dGt2d2FsTzBsa3hCLS1kejBlNFpYZFlQ?oc=5",
-                              "tarih":  "Wed, 14 Oct 2026 07:00:00 GMT",
-                              "dil":  "TÜRKÇE",
-                              "baslik":  "Coğrafi Veri İzinleri Yönetmeliği Resmi Gazete\u0027de yayımlandı - Anadolu Ajansı"
-                          },
-                          {
-                              "konum":  "TÜRKİYE",
-                              "kaynak_tipi":  "Haber / Duyuru (Yeni)",
-                              "kelime":  "COĞRAFİ BİLGİ SİSTEMLERİ",
-                              "ozet":  "Büyükşehir’in coğrafi bilgi sistemleri uluslararası arenada tanıtıldı Gazetecin",
-                              "url":  "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZHhjRS1yYnNiWVhEbmZDVk8yTlBRQ3lhR0Z1eXJISDlUOXFJbFFXRkt0cFJzZkMxOWwtekstQU5KcHVXMVFaVTBVZk1qNFJmbHQwazgteURLQXJpYlpXc3UtWG1xenpPRk9TLWxZMTA4QUtCZGthMWxSaW0xRlRUc1h4STd5Tmg0M0ZQYVBUdlRCYVgzWnd4cUlTRTRaUmNQei1KU3RTWENjY2tpZUlDVlh3aF8?oc=5",
-                              "tarih":  "Wed, 04 Nov 2026 14:44:00 GMT",
-                              "dil":  "TÜRKÇE",
-                              "baslik":  "Büyükşehir’in coğrafi bilgi sistemleri uluslararası arenada tanıtıldı - Gazetecin"
-                          },
-                          {
-                              "konum":  "TÜRKİYE",
-                              "kaynak_tipi":  "Haber / Basın Duyurusu (Yeni)",
-                              "kelime":  "COĞRAFİ VERİ İZİNLERİ",
-                              "ozet":  "Haber içeriğinde \u0027COĞRAFİ VERİ İZİNLERİ\u0027 ifadesi tam eşleşme olarak yer almaktadır. Kaynak: Coğrafi verilerin ticari kullanımına yeni düzenleme: Resmi Gazete\u0027de yayımlandı - birgun.net",
-                              "url":  "https://news.google.com/rss/articles/CBMitAFBVV95cUxOT3VkNE0wLTgtMnRLSDdNa1hLM2NrdS1ZdzdmcVVFSzlQVnVpNkZFZW5LOVhtQ3k2UjNadmp1VkowcGxROVJHelBtRGN6WGIxYWh0YW1CaGwtUkdVaHpiUVBtTS1IS3lEN3RlT2pqel9wcnktRTBmZUh3ZlBIY2F3OHVnQ0VTNXdMOEY3SDB0ZkU4QXhxbEN1VUhpZHRFTXFxVGxyVXJQeVk1ejh3RVZxVWVHVjg?oc=5",
-                              "tarih":  "Wed, 14 Oct 2026 07:00:00 GMT",
-                              "dil":  "TÜRKÇE",
-                              "baslik":  "Coğrafi verilerin ticari kullanımına yeni düzenleme: Resmi Gazete\u0027de yayımlandı - birgun.net"
-                          },
-                          {
-                              "konum":  "TÜRKİYE",
-                              "kaynak_tipi":  "Haber / Basın Duyurusu (Yeni)",
-                              "kelime":  "CBS",
-                              "ozet":  "Haber içeriğinde \u0027CBS\u0027 ifadesi tam eşleşme olarak yer almaktadır. Kaynak: Bugün Şanlıurfa’da elektrikler kesiliyor! DEDAŞ ilçe ilçe listeyi açıkladı - Urfa Değişim",
-                              "url":  "https://news.google.com/rss/articles/CBMirwFBVV95cUxOWnBneEg3VWh4MHd2UF8zY0JJdGlWSnltTlEwSDV3cXg2QjJJa0ZBNnVCZVQ1ZEZ2OEhlanlpSGxCM0RsLUoxR0Jqa0hyQ0lDT1FaQ3BhMFAtSUI5OVhpeWtSdzBWQm82OTFlR2p6M0ZncEExeHVBOVFOMFVrc1VXU2R3S1F3ak5uRWpYMWU4aEZRcXI1SXpKeEFGTnUxMWgzWTg5NkF0RnlXMUFLcnNR?oc=5",
-                              "tarih":  "Wed, 04 Nov 2026 06:53:25 GMT",
-                              "dil":  "TÜRKÇE",
-                              "baslik":  "Bugün Şanlıurfa’da elektrikler kesiliyor! DEDAŞ ilçe ilçe listeyi açıkladı - Urfa Değişim"
-                          },
-                          {
-                              "konum":  "TÜRKİYE",
-                              "kaynak_tipi":  "Haber / Basın Duyurusu (Yeni)",
-                              "kelime":  "CBS UZMANI",
-                              "ozet":  "Haber içeriğinde \u0027CBS UZMANI\u0027 ifadesi tam eşleşme olarak yer almaktadır. Kaynak: 2026 yılında en düşük işsizlik oranlarına sahip çalışma alanları - Vietnam.vn",
-                              "url":  "https://news.google.com/rss/articles/CBMigAFBVV95cUxQMVR5OXlKNzdGRGttZF9VR0t0S3o5WUtKUkJqYVpwaHRsQUg5QnVtR0Y4cloyYjd6cVZ4MmVtUjhmeGhteGRWYUJnSlZGYzRCUW1fSHhOcWcxNVdYSGRTaHlHZ2RJWURpRVpYSWg5N2drVmd6RVJIRm5JaVd1TnlPNg?oc=5",
-                              "tarih":  "Thu, 05 Nov 2026 04:59:06 GMT",
-                              "dil":  "TÜRKÇE",
-                              "baslik":  "2026 yılında en düşük işsizlik oranlarına sahip çalışma alanları - Vietnam.vn"
-                          },
-                          {
-                              "konum":  "TÜRKİYE",
-                              "kaynak_tipi":  "Haber / Basın Duyurusu (Yeni)",
-                              "kelime":  "COĞRAFİ BİLGİ SİSTEMLERİ UZMANI",
-                              "ozet":  "Haber içeriğinde \u0027COĞRAFİ BİLGİ SİSTEMLERİ UZMANI\u0027 ifadesi tam eşleşme olarak yer almaktadır. Kaynak: Afyon’ın sanayi lideri belli oldu!.. Komşu iİlerde hangi firmalar öne çıkıyor? - Afyon Haber",
-                              "url":  "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMklkNXVUUk5xZ2pLU3VxVktNclFfQU1wWllWWGhlWTQzWGtDTEhndFRnNEt3NU9KQmVzOHgzdDAxQVZJYUxWSVpGa0JGMVFHSVp5dFBBdlI2SVVvYVBSXzZVSHYzWmRnQ3pKMWR4Tm0zam9HZmVCZmNfUmpkdFQ5RW9RN1ZvRjJBYVdWNl84UnFNQXRHT3F5R1kxLVd5cF9nY3c?oc=5",
-                              "tarih":  "Thu, 08 Oct 2026 07:00:00 GMT",
-                              "dil":  "TÜRKÇE",
-                              "baslik":  "Afyon’ın sanayi lideri belli oldu!.. Komşu iİlerde hangi firmalar öne çıkıyor? - Afyon Haber"
-                          }
-                      ],
-    "last_query_at":  "06.11.2026 14:13",
-    "last_email_at":  "Henuz gonderilmedi"
+{
+  "last_email_at": "06.11.2026 14:56",
+  "last_query_at": "06.11.2026 14:56",
+  "emailed_urls": [
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZHhjRS1yYnNiWVhEbmZDVk8yTlBRQ3lhR0Z1eXJISDlUOXFJbFFXRkt0cFJzZkMxOWwtekstQU5KcHVXMVFaVTBVZk1qNFJmbHQwazgteURLQXJpYlpXc3UtWG1xenpPRk9TLWxZMTA4QUtCZGthMWxSaW0xRlRUc1h4STd5Tmg0M0ZQYVBUdlRCYVgzWnd4cUlTRTRaUmNQei1KU3RTWENjY2tpZUlDVlh3aF8?oc=5"
+  ],
+  "pending_items": [],
+  "history_reports": [
+    {
+      "tarih": "06.11.2026 14:56",
+      "slot": "Otomatik Bulut Taramasi (08:00 / 13:00 / 18:00)",
+      "adet": 1,
+      "ornek_basliklar": [
+        "Büyükşehir’in coğrafi bilgi sistemleri uluslararası arenada tanıtıldı - Gazetecin"
+      ]
+    }
+  ]
 }
