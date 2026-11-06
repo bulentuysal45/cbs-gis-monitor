@@ -1,6 +1,76 @@
 {
   "reports": [
     {
+      "id": "20261106_234800",
+      "gun": "06.11.2026",
+      "saat": "23:48",
+      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 6,
+      "sonuclar": [
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "TÜBİTAK UZAY’dan GEZGİN hamlesi - Defence Turk",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: TÜBİTAK UZAY’dan GEZGİN hamlesi - Defence Turk",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE14NU5sUmdxa1NGbWtIYUhveTdUcFVjQjJTbGFfR0tYWnRySHRHRFJ0dGF0ZENMNU1USkk1WGVlN2p4aHY2WnR3UEVlMzBrUW8zeFRWOE5sek56RUpPajU3M3E1QWZ2S1J5ZUE?oc=5",
+          "tarih": "Fri, 06 Nov 2026 10:07:24 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Kahramanmaraş’ın Coğrafi Bilgi Sistemleri Uluslararası Kongrede Tanıtıldı - Kahramanmaraş Manşet Gazetesi",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Kahramanmaraş’ın Coğrafi Bilgi Sistemleri Uluslararası Kongrede Tanıtıldı - Kahramanmaraş Manşet Gazetesi",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNVmZKcVpOWGtlcXFOeDBzQXVVbWdwNzU0dXAxeGVzY0NIRUJVQVZ1QnltV05wZ0x3NkJVUFg3NWRmSnR5aDVYa1pLaXJoNVgwTFVROXg1NERNWjFxU1pXdGRlc2ticHJrcEtwUnktTXFKd1BYSWdqY2xPcjRfRDNmV1BGR09HYmljUU9yaTU2ZWdzU2d6UTBmZmpNQUFCZ3IyS1E?oc=5",
+          "tarih": "Wed, 04 Nov 2026 09:05:00 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Gümüşhane Üniversitesi, Harşit Zaferi’nin Tarihî Mirasını Gün Yüzüne Çıkarmak İçin Harekete Geçti - Gümüşhane Üniversitesi",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Gümüşhane Üniversitesi, Harşit Zaferi’nin Tarihî Mirasını Gün Yüzüne Çıkarmak İçin Harekete Geçti - Gümüşhane Üniversitesi",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNMG5zdTJkUkk5SEN1RVNMWkZrYUtEY1pmMjl1REV2R00ta2Z5Xzd4V1poNGoxcG5QMjczTlVSVXZrTkI2UVh0Z2RKdENWaTdoWTdENG5lV0J6RkdPQkFoY1NQMXNOVlBMd050RHdLVm9Qa2ZiY19hRlNKSXhJQ0xiWkw1Rk1hSk80c3JPNE53TTJWN19waVlYeXpNYjAtN1VxN2tNOWhUY2U1TUVzVkV4LXE2VmQ4MHBoVGpKeGJZclhCMTNNVzhwVGhOeF80M2NR?oc=5",
+          "tarih": "Mon, 26 Oct 2026 07:00:00 GMT"
+        },
+        {
+          "kelime": "GEOGRAPHIC INFORMATION SYSTEMS",
+          "dil": "İNGİLİZCE",
+          "konum": "ÖZBEKİSTAN",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Uzbekistan, World Bank Discuss Digital Farming Projects - UzDaily.uz",
+          "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: Uzbekistan, World Bank Discuss Digital Farming Projects - UzDaily.uz",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQSEtDZzNkWFAybjE3NjMxcTg2dFVGMVJtdlhHNmhjdGhCZnA1dkEta2l6SWpZV3BUTUZ3M0M3T3FXQ1Z4QTh6OWpQR21XaEluZ1NFODZHWVpiMnNWSXE2Z2JSQXhmVC03S0VzeU5VYmxCdkZydnZ1U3pldlRKZlhpVnlRQ0hJZVJ4?oc=5",
+          "tarih": "Fri, 30 Oct 2026 07:20:00 GMT"
+        },
+        {
+          "kelime": "GIS",
+          "dil": "İNGİLİZCE",
+          "konum": "ÖZBEKİSTAN",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Ronaldo to Sit Out Al Nassr's AFC Champions League Match in Uzbekistan - Lokmat Times",
+          "ozet": "Haber içeriğinde 'GIS' ifadesi tam eşleşme olarak geçmektedir: Ronaldo to Sit Out Al Nassr's AFC Champions League Match in Uzbekistan - Lokmat Times",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPNEV0eDNCYmNFTTdYUkttUklBWkVxWkZGczNQOTdfeXRUWmM5SU9hRHRhVDA4NXdkenp6RU9ZTnBkODhkTDlyZmxUbk9GV2FrQTlGTTQ1ZnpRRGFfTjh2a1M0Wmp2U2xtbUtUaFl3YkRoNTBoTC1sbkNPQTVPamxmQVJnMTJPMkViSkxmcXJ5b2hVM0NlQmFJdEtfRHRyRGdmU3BTcXpLWHVNdndMQjB6LVZRYzdVSlnSAbwBQVVfeXFMTlhCbVpVVWxvWm0wQUc4V0hvOFRaT2hpdmR4LXQ5eEpmd0lkSG9OdzlrN2RJdzVpRGJ2WDZRemZGaURKSUdCcE9aZVU2M3VmYWVKeF9NSGdCT2tjb25yNUthYU9taEl3UEc4V2xIOEVTUzBKRm1EbmtudU02ZXk4WWV3VUJZc25vWU0yeFdvWUNfQm1NakNmQ2NFYk0xU3pMbVpON21OX2lPMmRzT3J4eUtrdkN0UG82Mmx6ekM?oc=5",
+          "tarih": "Sat, 31 Oct 2026 02:55:16 GMT"
+        },
+        {
+          "kelime": "GIS",
+          "dil": "İNGİLİZCE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "LinkedIn (Uygulama İçi Yeni İlan)",
+          "baslik": "Full Stack Engineer — Calico Teknoloji",
+          "ozet": "...• Previous experience of QGIS • Understanding of Geospatial concepts and familiarity with GIS technologies • Understanding of imagery data, its processing, storage, and retrieval • Ex...",
+          "url": "https://tr.linkedin.com/jobs/view/full-stack-engineer-at-calico-teknoloji-4484670889",
+          "tarih": "Yayın Tarihi: 2026-11-03"
+        }
+      ]
+    },
+    {
       "id": "20261106_165443",
       "gun": "06.11.2026",
       "saat": "16:54",
