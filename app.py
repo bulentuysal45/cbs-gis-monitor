@@ -41,6 +41,19 @@ def index():
     return send_from_directory("templates", "index.html")
 
 
+@app.route("/api/agent-reports", methods=["GET"])
+def api_agent_reports():
+    import json
+    if os.path.exists("agent_reports.json"):
+        try:
+            with open("agent_reports.json", "r", encoding="utf-8") as f:
+                data = json.load(f)
+                return jsonify({"ok": True, "reports": data.get("reports", [])})
+        except Exception:
+            pass
+    return jsonify({"ok": True, "reports": []})
+
+
 @app.route("/api/state", methods=["GET"])
 def api_state():
     state = load_state()
