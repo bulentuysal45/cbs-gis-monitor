@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBS / GIS İnternet & Sosyal Medya Takip Paneli</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen">
+
+  <!-- Üst Başlık -->
+  <header class="bg-slate-900 text-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+      <div>
+        <h1 class="text-xl font-bold flex items-center gap-2">
+          🛰️ CBS / GIS İnternet & Sosyal Medya Takip Paneli
+        </h1>
+        <p class="text-xs text-slate-300 mt-1">
+          Otomatik E-posta Saatleri: <strong>08:00 • 13:00 • 18:00 (TSİ)</strong> | Kaynaklar: <strong>Google + Bing/DDG + LinkedIn + Reddit</strong>
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-2 text-xs">
+        <span id="server-badge" class="bg-emerald-900/60 border border-emerald-600 text-emerald-300 px-3 py-1.5 rounded-lg">
+          🟢 Sistem Aktif
+        </span>
+        <span class="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-lg">
+          📩 Son Mail / Sıfırlama: <strong id="lbl-last-email" class="text-sky-400">Henüz gönderilmedi</strong>
+        </span>
+        <span class="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-lg">
+          🔍 Son Sorgu: <strong id="lbl-last-query" class="text-emerald-400">Henüz sorgulanmadı</strong>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-6 space-y-6">
+
+    <!-- Canlı Sorgulama Kartı -->
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 sm:p-6">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <h2 class="text-lg font-bold text-slate-900">
+            📡 Son Mailden İtibaren Çıkan Sonuçları Sorgula
+          </h2>
+          <p class="text-sm text-slate-600 mt-0.5">
+            Son gönderilen mailden (<strong id="lbl-last-email-inline">Henüz gönderilmedi</strong>) bu yana kurallarınıza uyan tüm yeni içerikleri tarayın.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <select id="scan-days" class="border border-slate-300 rounded-lg px-3 py-2.5 text-sm bg-slate-50 font-medium text-slate-700">
+            <option value="1">🕒 Son 24 Saat (Günlük Rutin)</option>
+            <option value="3" selected>📅 Son 3 Gün</option>
+            <option value="7">🗓️ Son 7 Gün</option>
+            <option value="30">📆 Son 30 Gün (Geniş Tarama)</option>
+          </select>
+          <button id="btn-scan" onclick="runLiveScan()"
+            class="bg-sky-600 hover:bg-sky-700 text-white font-semibold px-4 py-2.5 rounded-lg text-sm transition flex items-center gap-2 shadow-sm cursor-pointer">
+            <span>🔍 Şimdi Sorgula</span>
+          </button>
+          <button id="btn-mark-seen" onclick="markAllSeen()"
+            class="bg-slate-700 hover:bg-slate-800 text-white font-semibold px-3.5 py-2.5 rounded-lg text-sm transition flex items-center gap-1.5 shadow-sm cursor-pointer"
+            title="Ekrandaki mevcut sonuçları okundu olarak hafızaya kaydeder; bundan sonraki sorgulamalarda bir daha çıkmazlar.">
+            <span>✓ Okundu İşaretle (Sıfırla)</span>
+          </button>
+          <button id="btn-send-mail" onclick="sendEmailNow()"
+            class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 py-2.5 rounded-lg text-sm transition flex items-center gap-2 shadow-sm cursor-pointer">
+            <span>📧 Şimdi Mail Gönder</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Yükleniyor Göstergesi -->
+      <div id="scan-status" class="hidden mt-4 p-3 bg-sky-50 border border-sky-200 text-sky-800 rounded-lg text-sm flex items-center gap-3">
+        <svg class="animate-spin h-5 w-5 text-sky-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+        </svg>
+        <span id="scan-status-text">Arama motorları ve sosyal medya platformları taranıyor, lütfen bekleyin...</span>
+      </div>
+
+      <!-- Filtre Çubuğu -->
+      <div class="mt-5 pt-4 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-4 gap-3">
+        <div>
+          <label class="block text-xs font-semibold text-slate-500 mb-1">Konum Filtresi</label>
+          <select id="filter-konum" onchange="applyClientFilters()" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white">
+            <option value="">Tüm Konumlar (TR / AZ / UZ)</option>
+            <option value="TÜRKİYE">TÜRKİYE</option>
+            <option value="AZERBAYCAN">AZERBAYCAN</option>
+            <option value="ÖZBEKİSTAN">ÖZBEKİSTAN</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-500 mb-1">Kaynak / Platform</label>
+          <select id="filter-platform" onchange="applyClientFilters()" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white">
+            <option value="">Tüm Platformlar</option>
+            <option value="Haber">Google Haber / Basın Duyurusu</option>
+            <option value="Web">Web (Bing / DuckDuckGo)</option>
+            <option value="LinkedIn">LinkedIn (Uygulama İçi)</option>
+            <option value="Reddit">Reddit (Son Gönderiler)</option>
+            <option value="X (Twitter)">X (Twitter)</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Facebook">Facebook</option>
+          </select>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="block text-xs font-semibold text-slate-500 mb-1">Sonuçlar İçinde Ara (Kelime / Başlık)</label>
+          <input id="filter-search" oninput="applyClientFilters()" type="text" placeholder="Örn: CBS Uzmanı, ArcGIS, ihale, Bakı..."
+            class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Son Mailden İtibaren Bulunan Sonuçlar Listesi -->
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 sm:p-6">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="font-bold text-slate-900 text-base">
+          📋 Son Mailden İtibaren Çıkan Yeni Sonuçlar (<span id="result-count">0</span> adet)
+        </h3>
+      </div>
+
+      <div id="results-container" class="space-y-3">
+        <div class="text-center py-8 text-slate-500 text-sm">
+          Henüz listelenen yeni sonuç yok. Canlı tarama başlatmak için yukarıdaki <strong>"🔍 Şimdi Sorgula"</strong> butonuna tıklayın.
+        </div>
+      </div>
+    </section>
+
+    <!-- Kelime ve Kural Yönetimi -->
+    <section id="rules-tab" class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 sm:p-6">
+      <h2 class="text-lg font-bold text-slate-900 mb-1">⚙️ Kelime ve Kural Yönetimi (Ekle / Çıkar)</h2>
+      <p class="text-xs text-slate-500 mb-4">
+        Buradan istediğiniz zaman yeni kelime/cümle ekleyebilir, mevcut kelimeleri silebilir veya geçici olarak durdurabilirsiniz.
+      </p>
+
+      <!-- Yeni Kelime Ekleme Formu -->
+      <form onsubmit="handleAddRule(event)" class="bg-slate-50 border border-slate-200 rounded-lg p-4 mb-6 grid grid-cols-1 sm:grid-cols-6 gap-3">
+        <div class="sm:col-span-2">
+          <label class="block text-xs font-semibold text-slate-600 mb-1">Kelime veya Cümle *</label>
+          <input id="new-kelime" required type="text" placeholder="Örn: HARİTA MÜHENDİSİ"
+            class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-600 mb-1">Kural Tipi</label>
+          <select id="new-kural-tipi" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white">
+            <option value="TAM_ESLESTIRME">Yan Yana Tam Eşleşme</option>
+            <option value="KISALTMA_BAGLAMSAL">Bağlamsal Kısaltma</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-600 mb-1">Dil</label>
+          <select id="new-dil" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white">
+            <option value="TÜRKÇE">TÜRKÇE</option>
+            <option value="İNGİLİZCE">İNGİLİZCE</option>
+            <option value="AZERİCE">AZERİCE</option>
+            <option value="ÖZBEKÇE">ÖZBEKÇE</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-600 mb-1">Konum</label>
+          <select id="new-konum" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm bg-white">
+            <option value="TÜRKİYE">TÜRKİYE</option>
+            <option value="AZERBAYCAN">AZERBAYCAN</option>
+            <option value="ÖZBEKİSTAN">ÖZBEKİSTAN</option>
+          </select>
+        </div>
+        <div class="flex items-end">
+          <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-2 px-3 rounded-lg text-sm cursor-pointer">
+            ➕ Kural Ekle
+          </button>
+        </div>
+      </form>
+
+      <!-- Mevcut Kurallar Tablosu -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="border-b border-slate-200 text-xs text-slate-500 uppercase">
+              <th class="py-2 px-2">#</th>
+              <th class="py-2 px-2">Durum</th>
+              <th class="py-2 px-2">Kelime / Cümle</th>
+              <th class="py-2 px-2">Kural</th>
+              <th class="py-2 px-2">Dil</th>
+              <th class="py-2 px-2">Konum</th>
+              <th class="py-2 px-2 text-right">İşlem</th>
+            </tr>
+          </thead>
+          <tbody id="rules-tbody" class="divide-y divide-slate-100"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- E-posta Ayarları Bölümü -->
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 sm:p-6">
+      <h2 class="text-lg font-bold text-slate-900 mb-1">📬 E-posta Bildirim Ayarları (08:00 - 13:00 - 18:00)</h2>
+      <p class="text-xs text-slate-500 mb-4">
+        Raporların gönderileceği alıcı e-posta adresini ve gönderici Gmail (Uygulama Şifresi) bilgilerini buradan kaydedebilirsiniz.
+      </p>
+      <form onsubmit="handleSaveEmailConfig(event)" class="grid grid-cols-1 sm:grid-cols-4 gap-3">
+        <div>
+          <label class="block text-xs font-semibold text-slate-600 mb-1">Alıcı E-posta Adresi (Rapor Kime Gelsin?)</label>
+          <input id="cfg-to-email" type="email" placeholder="ornek@gmail.com"
+            class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-600 mb-1">Gönderici Gmail Adresi</label>
+          <input id="cfg-smtp-user" type="email" placeholder="gonderici@gmail.com"
+            class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-600 mb-1">Gmail 16 Haneli Uygulama Şifresi</label>
+          <input id="cfg-smtp-pass" type="password" placeholder="xxxx xxxx xxxx xxxx"
+            class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm" />
+        </div>
+        <div class="flex items-end">
+          <button type="submit" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-2 px-3 rounded-lg text-sm cursor-pointer">
+            💾 Mail Ayarlarını Kaydet
+          </button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <script>
+    const API_BASE = window.location.protocol === 'file:' ? 'http://localhost:5000' : '';
+
+    const DEFAULT_RULES = [
+      { aktif: "1", kelime: "CBS", kural_tipi: "KISALTMA_BAGLAMSAL", dil: "TÜRKÇE", konum: "TÜRKİYE" },
+      { aktif: "1", kelime: "CBS UZMANI", kural_tipi: "TAM_ESLESTIRME", dil: "TÜRKÇE", konum: "TÜRKİYE" },
+      { aktif: "1", kelime: "COĞRAFİ BİLGİ SİSTEMLERİ", kural_tipi: "TAM_ESLESTIRME", dil: "TÜRKÇE", konum: "TÜRKİYE" },
+      { aktif: "1", kelime: "COĞRAFİ BİLGİ SİSTEMLERİ UZMANI", kural_tipi: "TAM_ESLESTIRME", dil: "TÜRKÇE", konum: "TÜRKİYE" },
+      { aktif: "1", kelime: "COĞRAFİ VERİ İZİNLERİ", kural_tipi: "TAM_ESLESTIRME", dil: "TÜRKÇE", konum: "TÜRKİYE" },
+      { aktif: "1", kelime: "GEOGRAPHIC INFORMATION SYSTEMS", kural_tipi: "TAM_ESLESTIRME", dil: "İNGİLİZCE", konum: "TÜRKİYE" },
+      { aktif: "1", kelime: "GEOGRAPHIC INFORMATION SYSTEMS", kural_tipi: "TAM_ESLESTIRME", dil: "İNGİLİZCE", konum: "AZERBAYCAN" },
+      { aktif: "1", kelime: "GEOGRAPHIC INFORMATION SYSTEMS", kural_tipi: "TAM_ESLESTIRME", dil: "İNGİLİZCE", konum: "ÖZBEKİSTAN" },
+      { aktif: "1", kelime: "GIS", kural_tipi: "KISALTMA_BAGLAMSAL", dil: "İNGİLİZCE", konum: "TÜRKİYE" },
+      { aktif: "1", kelime: "GIS", kural_tipi: "KISALTMA_BAGLAMSAL", dil: "İNGİLİZCE", konum: "AZERBAYCAN" },
+      { aktif: "1", kelime: "GIS", kural_tipi: "KISALTMA_BAGLAMSAL", dil: "İNGİLİZCE", konum: "ÖZBEKİSTAN" },
+      { aktif: "1", kelime: "CİS MÜTƏXƏSSİSİ", kural_tipi: "TAM_ESLESTIRME", dil: "AZERİCE", konum: "AZERBAYCAN" },
+      { aktif: "1", kelime: "COĞRAFİ İNFORMASİYA SİSTEMLƏRİ", kural_tipi: "TAM_ESLESTIRME", dil: "AZERİCE", konum: "AZERBAYCAN" },
+      { aktif: "1", kelime: "GIS EKSPERTI", kural_tipi: "TAM_ESLESTIRME", dil: "ÖZBEKÇE", konum: "ÖZBEKİSTAN" },
+      { aktif: "1", kelime: "GIS MUTAXASSISI", kural_tipi: "TAM_ESLESTIRME", dil: "ÖZBEKÇE", konum: "ÖZBEKİSTAN" },
+      { aktif: "1", kelime: "GEOGRAFIK AXBOROT TIZIMLARI", kural_tipi: "TAM_ESLESTIRME", dil: "ÖZBEKÇE", konum: "ÖZBEKİSTAN" },
+      { aktif: "1", kelime: "GAT MUTAXASSISI", kural_tipi: "TAM_ESLESTIRME", dil: "ÖZBEKÇE", konum: "ÖZBEKİSTAN" },
+      { aktif: "1", kelime: "GAT EXPERTI", kural_tipi: "TAM_ESLESTIRME", dil: "ÖZBEKÇE", konum: "ÖZBEKİSTAN" }
+    ];
+
+    let allItems = [];
+
+    function esc(str) {
+      const div = document.createElement('div');
+      div.textContent = str || '';
+      return div.innerHTML;
+    }
+
+    function renderRules(rules) {
+      const tbody = document.getElementById('rules-tbody');
+      tbody.innerHTML = rules.map((r, idx) => {
+        const isAktif = String(r.aktif) === '1';
+        return `
+          <tr class="hover:bg-slate-50">
+            <td class="py-2.5 px-2 text-xs text-slate-400">${idx + 1}</td>
+            <td class="py-2.5 px-2">
+              ${isAktif
+                ? '<span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2 py-0.5 rounded">Aktif</span>'
+                : '<span class="bg-slate-200 text-slate-600 text-xs font-semibold px-2 py-0.5 rounded">Pasif</span>'}
+            </td>
+            <td class="py-2.5 px-2 font-semibold text-slate-900">${esc(r.kelime)}</td>
+            <td class="py-2.5 px-2 text-xs text-slate-600">${esc(r.kural_tipi)}</td>
+            <td class="py-2.5 px-2 text-xs">${esc(r.dil)}</td>
+            <td class="py-2.5 px-2 text-xs font-medium">${esc(r.konum)}</td>
+            <td class="py-2.5 px-2 text-right space-x-1 whitespace-nowrap">
+              <button onclick="toggleRule(${idx + 1})" class="text-xs px-2 py-1 rounded border border-slate-300 hover:bg-slate-100 cursor-pointer">
+                ${isAktif ? 'Durdur' : 'Aktif Et'}
+              </button>
+              <button onclick="deleteRule(${idx + 1})" class="text-xs px-2 py-1 rounded border border-red-200 text-red-600 hover:bg-red-50 cursor-pointer">
+                Sil
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function renderItems(items) {
+      allItems = items || [];
+      const container = document.getElementById('results-container');
+      document.getElementById('result-count').textContent = allItems.length;
+
+      if (!allItems.length) {
+        container.innerHTML = `
+          <div class="text-center py-8 text-slate-500 text-sm">
+            Seçilen zaman aralığında henüz yeni (daha önce görülmemiş) sonuç yok. Yukarıdan tarih aralığını seçip <strong>"🔍 Şimdi Sorgula"</strong> butonuna tıklayabilirsiniz.
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = allItems.map(item => `
+        <div class="result-card border border-slate-200 rounded-lg p-4 hover:border-sky-400 transition bg-slate-50/40"
+             data-konum="${esc(item.konum)}"
+             data-platform="${esc(item.kaynak_tipi)}"
+             data-text="${esc((item.kelime || '') + ' ' + (item.baslik || '') + ' ' + (item.ozet || ''))}">
+          <div class="flex flex-wrap items-center gap-2 text-xs mb-1.5">
+            <span class="bg-sky-100 text-sky-800 font-bold px-2.5 py-0.5 rounded">🎯 ${esc(item.kelime)}</span>
+            <span class="bg-slate-200 text-slate-700 font-medium px-2 py-0.5 rounded">🌍 ${esc(item.konum)} (${esc(item.dil)})</span>
+            <span class="bg-indigo-100 text-indigo-800 font-medium px-2 py-0.5 rounded">📡 ${esc(item.kaynak_tipi)}</span>
+            ${item.tarih ? `<span class="text-slate-400 ml-auto">🕒 ${esc(item.tarih)}</span>` : ''}
+          </div>
+          <a href="${esc(item.url)}" target="_blank" class="text-base font-semibold text-blue-700 hover:underline block">
+            ${esc(item.baslik || 'Başlıksız İçerik')}
+          </a>
+          <p class="text-sm text-slate-700 mt-1.5 bg-white p-2.5 rounded border border-slate-100">
+            ${esc(item.ozet)}
+          </p>
+          <div class="mt-2 text-xs text-slate-400 truncate">
+            🔗 <a href="${esc(item.url)}" target="_blank" class="hover:text-slate-600">${esc(item.url)}</a>
+          </div>
+        </div>
+      `).join('');
+
+      applyClientFilters();
+    }
+
+    async function loadInitialState() {
+      renderRules(DEFAULT_RULES);
+      try {
+        const res = await fetch(API_BASE + '/api/state');
+        const data = await res.json();
+        if (data.ok) {
+          document.getElementById('lbl-last-email').textContent = data.last_email_at || 'Henüz gönderilmedi';
+          document.getElementById('lbl-last-email-inline').textContent = data.last_email_at || 'Henüz gönderilmedi';
+          document.getElementById('lbl-last-query').textContent = data.last_query_at || 'Henüz sorgulanmadı';
+          if (data.rules && data.rules.length) renderRules(data.rules);
+          if (data.items) renderItems(data.items);
+          if (data.email_config) {
+            document.getElementById('cfg-to-email').value = data.email_config.to_email || '';
+            document.getElementById('cfg-smtp-user').value = data.email_config.smtp_user || '';
+          }
+        }
+      } catch (e) {
+        console.warn('Sunucu durumu bekleniyor:', e);
+      }
+    }
+
+    async function runLiveScan() {
+      const btn = document.getElementById('btn-scan');
+      const statusBox = document.getElementById('scan-status');
+      const statusText = document.getElementById('scan-status-text');
+      const konum = document.getElementById('filter-konum').value;
+      const days = parseInt(document.getElementById('scan-days').value || '3', 10);
+
+      btn.disabled = true;
+      btn.classList.add('opacity-60');
+      statusBox.classList.remove('hidden');
+      statusText.textContent = `Son ${days} gün içinde çıkan yeni içerikler tüm motorlarda ve sosyal medyada taranıyor...`;
+
+      try {
+        const res = await fetch(API_BASE + '/api/scan', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ konum: konum, days: days })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          document.getElementById('lbl-last-email').textContent = data.last_email_at || 'Henüz gönderilmedi';
+          document.getElementById('lbl-last-email-inline').textContent = data.last_email_at || 'Henüz gönderilmedi';
+          document.getElementById('lbl-last-query').textContent = data.last_query_at || 'Şimdi';
+          renderItems(data.items || []);
+        }
+      } catch (e) {
+        alert('Tarama sırasında bağlantı hatası oluştu: ' + e);
+      } finally {
+        btn.disabled = false;
+        btn.classList.remove('opacity-60');
+        statusBox.classList.add('hidden');
+      }
+    }
+
+    async function markAllSeen() {
+      if (!confirm('Ekrandaki mevcut sonuçlar "okundu / gönderildi" olarak hafızaya kaydedilsin ve liste yeni içerikler için sıfırlansın mı?')) return;
+      const res = await fetch(API_BASE + '/api/mark-seen', { method: 'POST' });
+      const data = await res.json();
+      if (data.ok) {
+        await loadInitialState();
+      }
+    }
+
+    async function sendEmailNow() {
+      const statusBox = document.getElementById('scan-status');
+      const statusText = document.getElementById('scan-status-text');
+      statusBox.classList.remove('hidden');
+      statusText.textContent = 'E-posta raporu hazırlanıyor ve gönderiliyor...';
+
+      try {
+        const res = await fetch(API_BASE + '/api/send-email-now', { method: 'POST' });
+        const data = await res.json();
+        alert(data.message || (data.sent
+          ? `Başarılı! ${data.count} sonuç e-posta adresinize gönderildi.`
+          : `Rapor hazırlandı (${data.count} sonuç). Otomatik mail gönderimi için sayfanın altındaki E-posta Bildirim Ayarları bölümünü doldurun.`));
+        await loadInitialState();
+      } catch (e) {
+        alert('Hata: ' + e);
+      } finally {
+        statusBox.classList.add('hidden');
+      }
+    }
+
+    async function handleAddRule(e) {
+      e.preventDefault();
+      const payload = {
+        kelime: document.getElementById('new-kelime').value,
+        kural_tipi: document.getElementById('new-kural-tipi').value,
+        dil: document.getElementById('new-dil').value,
+        konum: document.getElementById('new-konum').value
+      };
+      const res = await fetch(API_BASE + '/api/rules/add', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await res.json();
+      if (data.ok && data.rules) {
+        document.getElementById('new-kelime').value = '';
+        renderRules(data.rules);
+      }
+    }
+
+    async function toggleRule(idx) {
+      const res = await fetch(API_BASE + '/api/rules/toggle/' + idx, { method: 'POST' });
+      const data = await res.json();
+      if (data.ok && data.rules) renderRules(data.rules);
+    }
+
+    async function deleteRule(idx) {
+      if (!confirm('Bu kuralı silmek istediğinize emin misiniz?')) return;
+      const res = await fetch(API_BASE + '/api/rules/delete/' + idx, { method: 'POST' });
+      const data = await res.json();
+      if (data.ok && data.rules) renderRules(data.rules);
+    }
+
+    async function handleSaveEmailConfig(e) {
+      e.preventDefault();
+      const payload = {
+        to_email: document.getElementById('cfg-to-email').value,
+        smtp_user: document.getElementById('cfg-smtp-user').value,
+        smtp_pass: document.getElementById('cfg-smtp-pass').value
+      };
+      const res = await fetch(API_BASE + '/api/email-config', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await res.json();
+      if (data.ok) {
+        alert('E-posta bildirim ayarları kaydedildi!');
+      }
+    }
+
+    function applyClientFilters() {
+      const konum = document.getElementById('filter-konum').value.toUpperCase();
+      const platform = document.getElementById('filter-platform').value.toUpperCase();
+      const search = document.getElementById('filter-search').value.toLowerCase();
+      const cards = document.querySelectorAll('.result-card');
+      let visible = 0;
+
+      cards.forEach(card => {
+        const cKonum = (card.getAttribute('data-konum') || '').toUpperCase();
+        const cPlat = (card.getAttribute('data-platform') || '').toUpperCase();
+        const cText = (card.getAttribute('data-text') || '').toLowerCase();
+
+        const matchKonum = !konum || cKonum === konum;
+        const matchPlat = !platform || cPlat.includes(platform);
+        const matchSearch = !search || cText.includes(search);
+
+        if (matchKonum && matchPlat && matchSearch) {
+          card.classList.remove('hidden');
+          visible++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      document.getElementById('result-count').textContent = visible;
+    }
+
+    window.addEventListener('DOMContentLoaded', loadInitialState);
+  </script>
+</body>
+</html>

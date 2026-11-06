@@ -1,0 +1,19 @@
+aktif,kelime,kural_tipi,dil,konum,baglam_kelimeleri,haric_kelimeler
+1,CBS,KISALTMA_BAGLAMSAL,TÜRKÇE,TÜRKİYE,coğrafi|harita|mekansal|konumsal|arcgis|qgis|netcad|veri|katman|kadastro|parsel|belediye|bakanlık|uzman|mühendis|planlama|uzaktan algılama|kent bilgi|koordinat|altyapı,cbs news|cbs sports|cbs mornings|cbs evening|cbs studios|cbs television|paramount|60 minutes|nfl on cbs|cbs boya|cbs izle
+1,CBS UZMANI,TAM_ESLESTIRME,TÜRKÇE,TÜRKİYE,,cbs news|cbs sports
+1,COĞRAFİ BİLGİ SİSTEMLERİ,TAM_ESLESTIRME,TÜRKÇE,TÜRKİYE,,
+1,COĞRAFİ BİLGİ SİSTEMLERİ UZMANI,TAM_ESLESTIRME,TÜRKÇE,TÜRKİYE,,
+1,COĞRAFİ VERİ İZİNLERİ,TAM_ESLESTIRME,TÜRKÇE,TÜRKİYE,,
+1,GEOGRAPHIC INFORMATION SYSTEMS,TAM_ESLESTIRME,İNGİLİZCE,TÜRKİYE,,
+1,GEOGRAPHIC INFORMATION SYSTEMS,TAM_ESLESTIRME,İNGİLİZCE,AZERBAYCAN,,
+1,GEOGRAPHIC INFORMATION SYSTEMS,TAM_ESLESTIRME,İNGİLİZCE,ÖZBEKİSTAN,,
+1,GIS,KISALTMA_BAGLAMSAL,İNGİLİZCE,TÜRKİYE,geographic|spatial|geospatial|mapping|map|arcgis|qgis|esri|specialist|analyst|engineer|developer|remote sensing|data|coordinate|cadastre|turkey|türkiye|istanbul|ankara,gastrointestinal|giselle|general Mills
+1,GIS,KISALTMA_BAGLAMSAL,İNGİLİZCE,AZERBAYCAN,geographic|spatial|geospatial|mapping|map|arcgis|qgis|esri|specialist|analyst|engineer|developer|remote sensing|data|azerbaijan|azərbaycan|baku|bakı,gastrointestinal|giselle
+1,GIS,KISALTMA_BAGLAMSAL,İNGİLİZCE,ÖZBEKİSTAN,geographic|spatial|geospatial|mapping|map|arcgis|qgis|esri|specialist|analyst|engineer|developer|remote sensing|data|uzbekistan|o'zbekiston|tashkent|toshkent,gastrointestinal|giselle
+1,CİS MÜTƏXƏSSİSİ,TAM_ESLESTIRME,AZERİCE,AZERBAYCAN,,
+1,COĞRAFİ İNFORMASİYA SİSTEMLƏRİ,TAM_ESLESTIRME,AZERİCE,AZERBAYCAN,,
+1,GIS EKSPERTI,TAM_ESLESTIRME,ÖZBEKÇE,ÖZBEKİSTAN,,
+1,GIS MUTAXASSISI,TAM_ESLESTIRME,ÖZBEKÇE,ÖZBEKİSTAN,,
+1,GEOGRAFIK AXBOROT TIZIMLARI,TAM_ESLESTIRME,ÖZBEKÇE,ÖZBEKİSTAN,,
+1,GAT MUTAXASSISI,TAM_ESLESTIRME,ÖZBEKÇE,ÖZBEKİSTAN,,
+1,GAT EXPERTI,TAM_ESLESTIRME,ÖZBEKÇE,ÖZBEKİSTAN,,
