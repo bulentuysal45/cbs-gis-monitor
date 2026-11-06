@@ -256,13 +256,23 @@
   </main>
 
   <script>
-    const API_BASE = window.location.protocol === 'file:' ? 'http://localhost:5000' : '';
+    const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? '' : 'http://localhost:5000';
     const GITHUB_RAW_AGENT_REPORTS = 'https://raw.githubusercontent.com/bulentuysal45/cbs-gis-monitor/main/agent_reports.json';
     const GITHUB_RAW_RULES_CSV = 'https://raw.githubusercontent.com/bulentuysal45/cbs-gis-monitor/main/rules.csv';
 
     let agentReports = [];
     let allManualItems = [];
     let activeRulesList = [];
+
+    async function fetchWithTimeout(url, options = {}, timeoutMs = 4500) {
+      const ctrl = new AbortController();
+      const id = setTimeout(() => ctrl.abort(), timeoutMs);
+      try {
+        return await fetch(url, { ...options, signal: ctrl.signal });
+      } finally {
+        clearTimeout(id);
+      }
+    }
 
     function switchTab(tabName) {
       const views = ['agent', 'manual', 'rules'];
@@ -523,7 +533,7 @@
     async function loadInitialState() {
       await loadAgentReports(false);
       try {
-        const res = await fetch(API_BASE + '/api/state');
+        const res = await fetchWithTimeout(API_BASE + '/api/state', {}, 2000);
         const data = await res.json();
         if (data.ok) {
           document.getElementById('lbl-last-email-inline').textContent = data.last_email_at || 'Henüz sıfırlanmadı';
@@ -556,7 +566,8 @@
       const rules = activeRulesList.filter(r => String(r.aktif) === '1' && (!konumFilter || r.konum === konumFilter));
       const cutoffMs = Date.now() - (days + 1) * 86400 * 1000;
 
-      for (const r of rules) {
+      // Tüm kuralları paralel (aynı anda) ve 5 saniye zaman aşımı ile hızlıca tara
+      await Promise.all(rules.map(async (r) => {
         const nk = normTr(r.konum);
         const nd = normTr(r.dil);
         let hl = 'tr', gl = 'TR', locQ = '';
@@ -578,19 +589,21 @@
         }
 
         const rssUrl = `https://news.google.com/rss/search?q=${encodeURIComponent(q)}&hl=${hl}&gl=${gl}`;
-        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(rssUrl)}`;
+        const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
         try {
-          const res = await fetch(proxyUrl);
+          const res = await fetchWithTimeout(apiUrl, {}, 5500);
           if (res.ok) {
-            const xmlText = await res.text();
-            const doc = new DOMParser().parseFromString(xmlText, 'text/xml');
-            const items = Array.from(doc.querySelectorAll('item')).slice(0, 4);
+            const data = await res.json();
+            const items = (data.items || []).slice(0, 5);
             for (const it of items) {
-              const title = (it.querySelector('title')?.textContent || '').trim();
-              const link = (it.querySelector('link')?.textContent || '').trim();
-              const pubDate = (it.querySelector('pubDate')?.textContent || '').trim();
+              const title = (it.title || '').trim();
+              const link = (it.link || '').trim();
+              const pubDate = (it.pubDate || '').trim();
               if (!title || !link || seenUrls.has(link)) continue;
-              if (pubDate && Date.parse(pubDate) && Date.parse(pubDate) < cutoffMs) continue;
+              if (pubDate) {
+                const parsed = Date.parse(pubDate.replace(' ', 'T') + 'Z') || Date.parse(pubDate);
+                if (parsed && parsed < cutoffMs) continue;
+              }
               if (!isStrictlyInTargetCountryJS(r.konum, r.dil, title, '', link)) continue;
               if (found.some(f => f.url === link)) continue;
               found.push({
@@ -606,6 +619,18 @@
             }
           }
         } catch (e) {}
+      }));
+
+      // Ayrıca GitHub'daki son ajan raporlarında yer alan LinkedIn / Haber sonuçlarından tarih ve konum filtresine uyanları da ekle
+      if (agentReports && agentReports.length) {
+        for (const rep of agentReports.slice(0, 3)) {
+          for (const it of (rep.sonuclar || [])) {
+            if (konumFilter && it.konum !== konumFilter) continue;
+            if (!it.url || seenUrls.has(it.url) || found.some(f => f.url === it.url)) continue;
+            if (!isStrictlyInTargetCountryJS(it.konum, it.dil, it.baslik, it.ozet, it.url)) continue;
+            found.push(it);
+          }
+        }
       }
 
       const nowStr = new Date().toLocaleString('tr-TR');
@@ -628,20 +653,21 @@
       statusText.textContent = `Canlı kaynaklar taranıyor (Son ${days} gün)...`;
 
       try {
-        const res = await fetch(API_BASE + '/api/scan', {
+        const res = await fetchWithTimeout(API_BASE + '/api/scan', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ konum: konum, days: days })
-        });
+        }, 12000);
         const data = await res.json();
-        if (data.ok) {
+        if (data && data.ok) {
           document.getElementById('lbl-last-email-inline').textContent = data.last_email_at || 'Henüz sıfırlanmadı';
           document.getElementById('lbl-last-query').textContent = data.last_query_at || 'Şimdi';
           renderManualItems(data.items || []);
           return;
         }
+        await runBrowserDirectScan(konum, days);
       } catch (e) {
-        // Mobil / GitHub Pages üzerinden doğrudan tarama
+        // Mobil / GitHub Pages üzerinden doğrudan paralel tarama
         await runBrowserDirectScan(konum, days);
       } finally {
         btn.disabled = false;
