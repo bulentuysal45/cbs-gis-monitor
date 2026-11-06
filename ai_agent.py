@@ -11,7 +11,17 @@ from dataclasses import asdict
 from typing import Dict, List, Set, Tuple
 
 from main import send_email_report
-from rule_engine import COUNTRY_SETTINGS, LANGUAGE_CODES, SearchRule, build_search_query, is_static_or_homepage_url, load_rules, normalize_turkic, verify_content_against_rule
+from rule_engine import (
+    COUNTRY_SETTINGS,
+    LANGUAGE_CODES,
+    SearchRule,
+    build_search_query,
+    is_static_or_homepage_url,
+    is_strictly_in_target_country,
+    load_rules,
+    normalize_turkic,
+    verify_content_against_rule,
+)
 from search_collectors import FoundItem, fetch_url, strip_html_tags
 
 AGENT_REPORTS_FILE = "agent_reports.json"
@@ -495,8 +505,14 @@ def run_agent_scheduled_job(slot_label: str = "Otomatik Ajan Öğünü", csv_pat
     print(f"[AI AJAN] Toplam {len(candidates)} aday içerik bulundu, yapay zeka süzgecinden geçiriliyor...")
 
     # 3. Yapay Zeka Ajanı ile Eleme ve Türkçe Yönetici Özeti Çıkarma
-    raw_list = list(candidates.values())
-    final_items = gemini_filter_and_summarize_candidates(raw_list)
+    raw_list = [
+        c for c in candidates.values()
+        if is_strictly_in_target_country(c.konum, c.dil, c.baslik, c.ozet, c.url)
+    ]
+    final_items = [
+        c for c in gemini_filter_and_summarize_candidates(raw_list)
+        if is_strictly_in_target_country(c.konum, c.dil, c.baslik, c.ozet, c.url)
+    ]
 
     # 4. E-posta Gönderimi
     html_body = build_agent_email_html(final_items, len(rules), date_str, time_str, ogun_etiketi)
