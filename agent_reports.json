@@ -1,0 +1,64 @@
+{
+  "reports": [
+    {
+      "id": "20261106_130000",
+      "gun": "06.11.2026",
+      "saat": "13:00",
+      "ogun": "13:00 Öğle Maili (Yapay Zeka Ajanı)",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 5,
+      "sonuclar": [
+        {
+          "kelime": "GIS",
+          "dil": "İNGİLİZCE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "🤖 AI Ajan (LinkedIn Yeni İş İlanı)",
+          "baslik": "Full Stack Engineer (GIS & QGIS) — Calico Teknoloji",
+          "ozet": "🤖 Ajan Özeti: Türkiye'de Calico Teknoloji tarafından yayınlanan yeni iş ilanında QGIS, mekansal veri (vector, raster, GeoJSON, Shapefile) ve GIS teknolojileri uzmanlığı aranmaktadır.",
+          "url": "https://tr.linkedin.com/jobs/view/full-stack-engineer-at-calico-teknoloji-4484670889",
+          "tarih": "Yayın Tarihi: 2026-11-03"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "🤖 AI Ajan (Haber / Duyuru)",
+          "baslik": "Daha yaşanabilir Kayseri için harekete geçildi: Erciyes Üniversitesi o etkinliğe ev sahipliği yaptı! - Kayseri Anadolu Haber",
+          "ozet": "🤖 Ajan Özeti: Erciyes Üniversitesi'nde düzenlenen etkinlikte Coğrafi Bilgi Sistemleri (CBS) tabanlı kentsel planlama ve afet yönetimi uygulamaları ele alındı.",
+          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQcFRhV1JOdUM4MGJnTi1KTXhzRE1ZX3pRMDZzY0VaQ2pZaWE5M1Q5dlVZeDJ4Q0ZvUFNWTmhRMmV1VERGQWhpbmlZaFc1S0pvNWQ0TldpNDZBaGUzVnVDZWVNSzNwVHlWRlp2M0ViZ0M1OXFfUDYyQjJYNDV3WkF6VXRkdDhIYW8yWXFYeFM3THpxMmRYYWVVMEptRk5GVlhyUW8wNUtBRWVDeHNHR0M3TGU2UGJoZjJVRUFac25aYWUxMmRTc1VsZW5Kanl3Q1RobFBzNmROU2pGQldhZVE?oc=5",
+          "tarih": "05.11.2026"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "🤖 AI Ajan (Haber / Duyuru)",
+          "baslik": "Büyükşehir’in coğrafi bilgi sistemleri uluslararası arenada tanıtıldı - Gazetecin",
+          "ozet": "🤖 Ajan Özeti: Büyükşehir Belediyesi'nin geliştirdiği Coğrafi Bilgi Sistemleri (CBS) altyapısı ve akıllı şehir haritalama projeleri uluslararası kongrede sunuldu.",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZHhjRS1yYnNiWVhEbmZDVk8yTlBRQ3lhR0Z1eXJISDlUOXFJbFFXRkt0cFJzZkMxOWwtekstQU5KcHVXMVFaVTBVZk1qNFJmbHQwazgteURLQXJpYlpXc3UtWG1xenpPRk9TLWxZMTA4QUtCZGthMWxSaW0xRlRUc1h4STd5Tmg0M0ZQYVBUdlRCYVgzWnd4cUlTRTRaUmNQei1KU3RTWENjY2tpZUlDVlh3aF8?oc=5",
+          "tarih": "04.11.2026"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "🤖 AI Ajan (Haber / Duyuru)",
+          "baslik": "Kahramanmaraş Büyükşehir ODTÜ Dirençlilik Kongresi'nde Sahne Aldı - Aksu TV Haber",
+          "ozet": "🤖 Ajan Özeti: Kahramanmaraş Büyükşehir Belediyesi, ODTÜ Dirençlilik Kongresi'nde afet sonrası Coğrafi Bilgi Sistemleri (CBS) tabanlı yeniden yapılanma çalışmalarını tanıttı.",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNSHpjXzNxTDBPemlyOVZFdGZ4Q1BOWTJydEx0Uk9RQy10cXhUQmliRXdQb2pvTWlvXzI5cUVuSGNha29vNXlUOHFtdmVDd2hiOUpLMnNFMkpOTURzUEpmYlZaWlBoRzBWUEg2TzlBLXlmdHZPOVdzUVg1YTRSSHlSbnNadDFjcXhhaF9iSUZheHRxQzM1SFVN?oc=5",
+          "tarih": "04.11.2026"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "🤖 AI Ajan (LinkedIn Yeni İş İlanı)",
+          "baslik": "Harita Mühendisi (CBS Uygulamaları) — Gizli",
+          "ozet": "🤖 Ajan Özeti: Saha ölçümleri, haritalama çalışmaları ve Coğrafi Bilgi Sistemleri (CBS) uygulamalarını yürütecek Harita Mühendisi iş ilanı yayınlandı.",
+          "url": "https://tr.linkedin.com/jobs/view/harita-m%C3%BChendisi-at-gizli-4482748106",
+          "tarih": "Yayın Tarihi: 2026-10-22"
+        }
+      ]
+    }
+  ]
+}
