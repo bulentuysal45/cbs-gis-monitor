@@ -37,6 +37,38 @@ def save_json_file(path: str, data) -> None:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
+_CACHED_GEMINI_MODELS: List[str] = []
+
+
+def get_available_gemini_models(api_key: str) -> List[str]:
+    global _CACHED_GEMINI_MODELS
+    if _CACHED_GEMINI_MODELS:
+        return _CACHED_GEMINI_MODELS
+    try:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models?key={api_key}"
+        req = urllib.request.Request(url, headers={"Accept": "application/json"})
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            data = json.loads(resp.read().decode("utf-8", errors="replace"))
+            models = []
+            for m in data.get("models", []):
+                methods = m.get("supportedGenerationMethods", [])
+                name = m.get("name", "")
+                if "generateContent" in methods and "gemini" in name and "vision" not in name and "embedding" not in name:
+                    short_name = name.replace("models/", "")
+                    models.append(short_name)
+            # Flash modellerini öne al
+            flash_models = [m for m in models if "flash" in m and "lite" not in m and "8b" not in m]
+            other_models = [m for m in models if m not in flash_models]
+            _CACHED_GEMINI_MODELS = (flash_models + other_models)[:4]
+            if _CACHED_GEMINI_MODELS:
+                print(f"[AI AJAN BİLGİ] Aktif Gemini modelleri bulundu: {_CACHED_GEMINI_MODELS}")
+                return _CACHED_GEMINI_MODELS
+    except Exception as exc:
+        print(f"[AI AJAN MODEL LİSTELEME UYARISI] {exc}")
+    _CACHED_GEMINI_MODELS = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash-latest", "gemini-1.5-flash"]
+    return _CACHED_GEMINI_MODELS
+
+
 def call_gemini_api(prompt: str, use_google_search: bool = False) -> Tuple[str, List[dict]]:
     """
     Google Gemini API çağrısı yapar.
@@ -47,7 +79,7 @@ def call_gemini_api(prompt: str, use_google_search: bool = False) -> Tuple[str, 
         print("[AI AJAN BİLGİ] GEMINI_API_KEY tanımlı değil.")
         return "", []
 
-    models_to_try = ["gemini-2.5-flash", "gemini-2.0-flash"]
+    models_to_try = get_available_gemini_models(api_key)
     for model_name in models_to_try:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}"
         payload: dict = {
