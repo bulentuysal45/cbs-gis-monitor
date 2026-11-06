@@ -258,9 +258,11 @@
   <script>
     const API_BASE = window.location.protocol === 'file:' ? 'http://localhost:5000' : '';
     const GITHUB_RAW_AGENT_REPORTS = 'https://raw.githubusercontent.com/bulentuysal45/cbs-gis-monitor/main/agent_reports.json';
+    const GITHUB_RAW_RULES_CSV = 'https://raw.githubusercontent.com/bulentuysal45/cbs-gis-monitor/main/rules.csv';
 
     let agentReports = [];
     let allManualItems = [];
+    let activeRulesList = [];
 
     function switchTab(tabName) {
       const views = ['agent', 'manual', 'rules'];
@@ -456,6 +458,68 @@
       }).join('');
     }
 
+    function normTr(s) {
+      if (!s) return '';
+      return s.replace(/İ/g, 'i').replace(/I/g, 'i').replace(/ı/g, 'i').toLowerCase().trim();
+    }
+
+    function isStrictlyInTargetCountryJS(konum, dil, title, snippet, url) {
+      const combined = normTr((title || '') + ' ' + (snippet || '') + ' ' + (url || ''));
+      const urlLow = (url || '').toLowerCase();
+      const nk = normTr(konum);
+      const nd = normTr(dil);
+
+      if (/\.gov(\/|$)/.test(urlLow) && !/\.gov\.(tr|az|uz)/.test(urlLow)) return false;
+
+      if (nk === 'türkiye' || nk === 'turkiye') {
+        if ((nd === 'türkçe' || nd === 'turkce') && !combined.includes('vietnam.vn') && !combined.includes('esri vietnam')) return true;
+        return /(\b(turkey|türkiye|turkiye|turkish|istanbul|ankara|izmir|antalya|bursa|adana|konya|gaziantep|kayseri|trabzon|anatolia|anadolu)\b|tr\.linkedin\.com|\.(gov|edu|com|org|bel|pol|tsk)\.tr|\b[a-z0-9\-]+\.tr\/)/.test(combined);
+      }
+      if (nk === 'azerbaycan') {
+        if ((nd === 'azerice' || nd === 'azərice') && !combined.includes('vietnam.vn') && !combined.includes('esri vietnam')) return true;
+        return /(\b(azerbaijan|azərbaycan|azerbaycan|azeri|baku|bakı|baki|sumqayit|sumqayıt|ganja|gəncə|karabakh|qarabağ|shusha|şuşa|nakhchivan|naxçıvan)\b|az\.linkedin\.com|\.(gov|edu|com|org)\.az|\b[a-z0-9\-]+\.az\/)/.test(combined);
+      }
+      if (nk === 'özbekistan' || nk === 'ozbekistan') {
+        if ((nd === 'özbekçe' || nd === 'ozbekce') && !combined.includes('vietnam.vn') && !combined.includes('esri vietnam')) return true;
+        return /(\b(uzbekistan|uzbek|o'zbekiston|ozbekiston|tashkent|toshkent|samarkand|samarqand|bukhara|buxoro|khiva|xiva|fergana|andijan|namangan|karakalpak|qoraqalpog|nukus)\b|uz\.linkedin\.com|\.(gov|edu|com|org)\.uz|\b[a-z0-9\-]+\.uz\/)/.test(combined);
+      }
+      return false;
+    }
+
+    async function loadRulesFromGitHubFallback() {
+      const savedLocal = localStorage.getItem('cbs_gis_rules_override');
+      if (savedLocal) {
+        try {
+          activeRulesList = JSON.parse(savedLocal);
+          renderRules(activeRulesList);
+          return;
+        } catch (e) {}
+      }
+      try {
+        const res = await fetch(GITHUB_RAW_RULES_CSV + '?t=' + Date.now());
+        if (!res.ok) return;
+        const text = await res.text();
+        const lines = text.split(/\r?\n/).filter(l => l.trim());
+        const rules = [];
+        for (let i = 1; i < lines.length; i++) {
+          const parts = lines[i].split(',');
+          if (parts.length >= 5) {
+            rules.push({
+              aktif: parts[0].trim(),
+              kelime: parts[1].trim(),
+              kural_tipi: parts[2].trim(),
+              dil: parts[3].trim(),
+              konum: parts[4].trim(),
+              baglam_kelimeleri: (parts[5] || '').trim(),
+              haric_kelimeler: (parts[6] || '').trim()
+            });
+          }
+        }
+        activeRulesList = rules;
+        renderRules(activeRulesList);
+      } catch (e) {}
+    }
+
     async function loadInitialState() {
       await loadAgentReports(false);
       try {
@@ -464,10 +528,91 @@
         if (data.ok) {
           document.getElementById('lbl-last-email-inline').textContent = data.last_email_at || 'Henüz sıfırlanmadı';
           document.getElementById('lbl-last-query').textContent = data.last_query_at || 'Henüz sorgulanmadı';
-          if (data.rules && data.rules.length) renderRules(data.rules);
+          if (data.rules && data.rules.length) {
+            activeRulesList = data.rules;
+            renderRules(data.rules);
+          }
           if (data.items) renderManualItems(data.items);
+          return;
         }
       } catch (e) {}
+
+      // Mobil / GitHub Pages Yedek Yükleme
+      await loadRulesFromGitHubFallback();
+      const lastReset = localStorage.getItem('cbs_gis_last_reset') || 'Henüz sıfırlanmadı';
+      const lastQ = localStorage.getItem('cbs_gis_last_query') || 'Henüz sorgulanmadı';
+      document.getElementById('lbl-last-email-inline').textContent = lastReset;
+      document.getElementById('lbl-last-query').textContent = lastQ;
+      const cachedItems = localStorage.getItem('cbs_gis_cached_items');
+      if (cachedItems) {
+        try { renderManualItems(JSON.parse(cachedItems)); } catch (e) {}
+      }
+    }
+
+    async function runBrowserDirectScan(konumFilter, days) {
+      if (!activeRulesList.length) await loadRulesFromGitHubFallback();
+      const seenUrls = new Set(JSON.parse(localStorage.getItem('cbs_gis_seen_urls') || '[]'));
+      const found = [];
+      const rules = activeRulesList.filter(r => String(r.aktif) === '1' && (!konumFilter || r.konum === konumFilter));
+      const cutoffMs = Date.now() - (days + 1) * 86400 * 1000;
+
+      for (const r of rules) {
+        const nk = normTr(r.konum);
+        const nd = normTr(r.dil);
+        let hl = 'tr', gl = 'TR', locQ = '';
+        if (nk === 'türkiye' || nk === 'turkiye') {
+          if (nd === 'ingilizce') { hl = 'en'; gl = 'US'; locQ = ' (Turkey OR Türkiye OR Istanbul OR Ankara)'; }
+        } else if (nk === 'azerbaycan') {
+          hl = 'en'; gl = 'US';
+          if (nd === 'ingilizce') locQ = ' (Azerbaijan OR Baku)';
+        } else if (nk === 'özbekistan' || nk === 'ozbekistan') {
+          hl = 'en'; gl = 'US';
+          if (nd === 'ingilizce') locQ = ' (Uzbekistan OR Tashkent)';
+        }
+
+        let q = `"${r.kelime}"${locQ} when:${days}d`;
+        if (r.kelime === 'CBS') {
+          q = `"CBS" ("Coğrafi Bilgi Sistemleri" OR "CBS Uzmanı" OR belediye OR bakanlık OR harita) -"CBS News" -"CBS Sports" when:${days}d`;
+        } else if (r.kelime === 'GIS') {
+          q = `"GIS" ("Geographic Information" OR ArcGIS OR spatial OR mapping)${locQ} when:${days}d`;
+        }
+
+        const rssUrl = `https://news.google.com/rss/search?q=${encodeURIComponent(q)}&hl=${hl}&gl=${gl}`;
+        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(rssUrl)}`;
+        try {
+          const res = await fetch(proxyUrl);
+          if (res.ok) {
+            const xmlText = await res.text();
+            const doc = new DOMParser().parseFromString(xmlText, 'text/xml');
+            const items = Array.from(doc.querySelectorAll('item')).slice(0, 4);
+            for (const it of items) {
+              const title = (it.querySelector('title')?.textContent || '').trim();
+              const link = (it.querySelector('link')?.textContent || '').trim();
+              const pubDate = (it.querySelector('pubDate')?.textContent || '').trim();
+              if (!title || !link || seenUrls.has(link)) continue;
+              if (pubDate && Date.parse(pubDate) && Date.parse(pubDate) < cutoffMs) continue;
+              if (!isStrictlyInTargetCountryJS(r.konum, r.dil, title, '', link)) continue;
+              if (found.some(f => f.url === link)) continue;
+              found.push({
+                kelime: r.kelime,
+                dil: r.dil,
+                konum: r.konum,
+                kaynak_tipi: 'Google Haber / Basın Duyurusu',
+                baslik: title,
+                ozet: `Haber içeriğinde '${r.kelime}' ifadesi tam eşleşme olarak yer almaktadır: ${title}`,
+                url: link,
+                tarih: pubDate
+              });
+            }
+          }
+        } catch (e) {}
+      }
+
+      const nowStr = new Date().toLocaleString('tr-TR');
+      localStorage.setItem('cbs_gis_last_query', nowStr);
+      localStorage.setItem('cbs_gis_cached_items', JSON.stringify(found));
+      document.getElementById('lbl-last-query').textContent = nowStr;
+      renderManualItems(found);
     }
 
     async function runLiveScan() {
@@ -493,9 +638,11 @@
           document.getElementById('lbl-last-email-inline').textContent = data.last_email_at || 'Henüz sıfırlanmadı';
           document.getElementById('lbl-last-query').textContent = data.last_query_at || 'Şimdi';
           renderManualItems(data.items || []);
+          return;
         }
       } catch (e) {
-        alert('Tarama sırasında bağlantı hatası oluştu: ' + e);
+        // Mobil / GitHub Pages üzerinden doğrudan tarama
+        await runBrowserDirectScan(konum, days);
       } finally {
         btn.disabled = false;
         btn.classList.remove('opacity-60');
@@ -505,11 +652,23 @@
 
     async function markAllSeen() {
       if (!confirm('Canlı sorgulama ekranındaki mevcut sonuçlar "okundu" olarak işaretlensin ve ekran sıfırlansın mı?')) return;
-      const res = await fetch(API_BASE + '/api/mark-seen', { method: 'POST' });
-      const data = await res.json();
-      if (data.ok) {
-        await loadInitialState();
-      }
+      try {
+        const res = await fetch(API_BASE + '/api/mark-seen', { method: 'POST' });
+        const data = await res.json();
+        if (data.ok) {
+          await loadInitialState();
+          return;
+        }
+      } catch (e) {}
+
+      const seenUrls = new Set(JSON.parse(localStorage.getItem('cbs_gis_seen_urls') || '[]'));
+      allManualItems.forEach(it => { if (it.url) seenUrls.add(it.url); });
+      localStorage.setItem('cbs_gis_seen_urls', JSON.stringify(Array.from(seenUrls)));
+      localStorage.setItem('cbs_gis_cached_items', '[]');
+      const nowStr = new Date().toLocaleString('tr-TR');
+      localStorage.setItem('cbs_gis_last_reset', nowStr);
+      document.getElementById('lbl-last-email-inline').textContent = nowStr;
+      renderManualItems([]);
     }
 
     async function handleAddRule(e) {
@@ -520,29 +679,66 @@
         dil: document.getElementById('new-dil').value,
         konum: document.getElementById('new-konum').value
       };
-      const res = await fetch(API_BASE + '/api/rules/add', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
+      try {
+        const res = await fetch(API_BASE + '/api/rules/add', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (data.ok && data.rules) {
+          document.getElementById('new-kelime').value = '';
+          activeRulesList = data.rules;
+          renderRules(data.rules);
+          return;
+        }
+      } catch (e) {}
+
+      activeRulesList.push({
+        aktif: '1',
+        kelime: payload.kelime.toUpperCase().trim(),
+        kural_tipi: payload.kural_tipi,
+        dil: payload.dil,
+        konum: payload.konum,
+        baglam_kelimeleri: '',
+        haric_kelimeler: ''
       });
-      const data = await res.json();
-      if (data.ok && data.rules) {
-        document.getElementById('new-kelime').value = '';
-        renderRules(data.rules);
-      }
+      localStorage.setItem('cbs_gis_rules_override', JSON.stringify(activeRulesList));
+      document.getElementById('new-kelime').value = '';
+      renderRules(activeRulesList);
     }
 
     async function toggleRule(idx) {
-      const res = await fetch(API_BASE + '/api/rules/toggle/' + idx, { method: 'POST' });
-      const data = await res.json();
-      if (data.ok && data.rules) renderRules(data.rules);
+      try {
+        const res = await fetch(API_BASE + '/api/rules/toggle/' + idx, { method: 'POST' });
+        const data = await res.json();
+        if (data.ok && data.rules) {
+          activeRulesList = data.rules;
+          renderRules(data.rules);
+          return;
+        }
+      } catch (e) {}
+      if (activeRulesList[idx - 1]) {
+        activeRulesList[idx - 1].aktif = String(activeRulesList[idx - 1].aktif) === '1' ? '0' : '1';
+        localStorage.setItem('cbs_gis_rules_override', JSON.stringify(activeRulesList));
+        renderRules(activeRulesList);
+      }
     }
 
     async function deleteRule(idx) {
       if (!confirm('Bu kuralı silmek istediğinize emin misiniz?')) return;
-      const res = await fetch(API_BASE + '/api/rules/delete/' + idx, { method: 'POST' });
-      const data = await res.json();
-      if (data.ok && data.rules) renderRules(data.rules);
+      try {
+        const res = await fetch(API_BASE + '/api/rules/delete/' + idx, { method: 'POST' });
+        const data = await res.json();
+        if (data.ok && data.rules) {
+          activeRulesList = data.rules;
+          renderRules(data.rules);
+          return;
+        }
+      } catch (e) {}
+      activeRulesList.splice(idx - 1, 1);
+      localStorage.setItem('cbs_gis_rules_override', JSON.stringify(activeRulesList));
+      renderRules(activeRulesList);
     }
 
     function applyClientFilters() {
