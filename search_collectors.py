@@ -1,5 +1,6 @@
 import html
 import json
+import os
 import re
 import time
 import urllib.parse
@@ -45,6 +46,72 @@ def fetch_url(url: str, headers: dict = None, data: bytes = None, timeout: int =
     req = urllib.request.Request(url, data=data, headers=req_headers)
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read().decode("utf-8", errors="replace")
+
+
+def search_google_web_serper(rule: SearchRule) -> List[FoundItem]:
+    """
+    SERPER_API_KEY tanımlıysa doğrudan Google'ın ana Web İndeksini (google.com/search)
+    son 24 saat / son 1 hafta filtresiyle (tbs=qdr:w) ve hedef ülke/dil ayarlarıyla tarar.
+    """
+    api_key = os.environ.get("SERPER_API_KEY", "").strip()
+    if not api_key:
+        return []
+
+    results: List[FoundItem] = []
+    country_cfg = COUNTRY_SETTINGS.get(rule.konum, COUNTRY_SETTINGS["TÜRKİYE"])
+    lang_code = LANGUAGE_CODES.get(rule.dil, "tr")
+    gl = country_cfg["gl"].lower()
+
+    queries = [
+        (build_search_query(rule, platform="web"), "Google Web Araması (Yeni)"),
+        (
+            f'(site:linkedin.com/posts OR site:x.com OR site:instagram.com OR site:facebook.com) "{rule.kelime}"',
+            "Google Sosyal Medya İndeksi",
+        ),
+    ]
+
+    for q_str, label in queries:
+        payload = json.dumps({
+            "q": q_str,
+            "gl": gl,
+            "hl": lang_code,
+            "tbs": "qdr:w",  # Son 1 hafta içinde Google tarafından indekslenen yeni sayfalar
+            "num": 10,
+        }).encode("utf-8")
+
+        try:
+            raw = fetch_url(
+                "https://google.serper.dev/search",
+                headers={"X-API-KEY": api_key, "Content-Type": "application/json"},
+                data=payload,
+            )
+            data = json.loads(raw)
+            for item in data.get("organic", []):
+                title = item.get("title", "")
+                snippet = item.get("snippet", "")
+                link = item.get("link", "")
+                date_str = item.get("date", "Son 7 Gün (Google Web)")
+                if not link:
+                    continue
+
+                ok, matched_ctx = verify_content_against_rule(rule, title, snippet, link)
+                if ok:
+                    results.append(
+                        FoundItem(
+                            kelime=rule.kelime,
+                            dil=rule.dil,
+                            konum=rule.konum,
+                            kaynak_tipi=decide_source_label(link, label),
+                            baslik=title,
+                            ozet=matched_ctx,
+                            url=link,
+                            tarih=date_str,
+                        )
+                    )
+        except Exception:
+            pass
+
+    return results
 
 
 def search_reddit_latest(rule: SearchRule, max_results: int = 10) -> List[FoundItem]:
@@ -106,28 +173,82 @@ def search_google_news_rss(rule: SearchRule) -> List[FoundItem]:
     try:
         xml_text = fetch_url(url)
         root = ET.fromstring(xml_text)
-        for item in root.findall(".//item")[:10]:
+        for item in root.findall(".//item")[:8]:
             title = strip_html_tags(item.findtext("title") or "")
-            desc = strip_html_tags(item.findtext("description") or "")
             link = (item.findtext("link") or "").strip()
             pub_date = (item.findtext("pubDate") or "").strip()
-            if not link:
+            if not link or not title:
+                continue
+            if "vietnam.vn" in title.lower():
                 continue
 
-            ok, matched_ctx = verify_content_against_rule(rule, title, desc, link)
-            if ok:
-                results.append(
-                    FoundItem(
-                        kelime=rule.kelime,
-                        dil=rule.dil,
-                        konum=rule.konum,
-                        kaynak_tipi="Haber / Duyuru (Yeni)",
-                        baslik=title,
-                        ozet=matched_ctx,
-                        url=link,
-                        tarih=pub_date,
-                    )
+            results.append(
+                FoundItem(
+                    kelime=rule.kelime,
+                    dil=rule.dil,
+                    konum=rule.konum,
+                    kaynak_tipi="Google Haber / Basın Duyurusu",
+                    baslik=title,
+                    ozet=f"Haber metninde '{rule.kelime}' ifadesi tam eşleşme olarak yer almaktadır: {title}",
+                    url=link,
+                    tarih=pub_date,
                 )
+            )
+    except Exception:
+        pass
+    return results
+
+
+def search_linkedin_jobs_direct(rule: SearchRule) -> List[FoundItem]:
+    results: List[FoundItem] = []
+    loc_map = {
+        "TÜRKİYE": "Turkey",
+        "AZERBAYCAN": "Azerbaijan",
+        "ÖZBEKİSTAN": "Uzbekistan",
+    }
+    loc_param = loc_map.get(rule.konum, "Turkey")
+    params = urllib.parse.urlencode({
+        "keywords": f'"{rule.kelime}"',
+        "location": loc_param,
+        "f_TPR": "r604800",  # Son 7 gün
+        "start": 0,
+    })
+    url = f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?{params}"
+    try:
+        raw_html = fetch_url(url)
+        cards = re.findall(r'<div class="base-card[^>]*>(.*?)</div>\s*</li>', raw_html, flags=re.DOTALL)
+        for card in cards[:5]:
+            title_m = re.search(r'base-search-card__title[^>]*>(.*?)</h3>', card, flags=re.DOTALL)
+            comp_m = re.search(r'base-search-card__subtitle[^>]*>(.*?)</h4>', card, flags=re.DOTALL)
+            link_m = re.search(r'href="(https://[^"?]+)', card)
+            date_m = re.search(r'datetime="([^"]+)"', card)
+            if not link_m:
+                continue
+            link = link_m.group(1).strip()
+            title = strip_html_tags(title_m.group(1) if title_m else "")
+            comp = strip_html_tags(comp_m.group(1) if comp_m else "")
+            date_str = date_m.group(1).strip() if date_m else ""
+
+            job_id_m = re.search(r"-(\d+)$", link)
+            if job_id_m:
+                job_id = job_id_m.group(1)
+                detail_html = fetch_url(f"https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/{job_id}")
+                desc_m = re.search(r'<div class="show-more-less-html__markup[^>]*>(.*?)</div>', detail_html, flags=re.DOTALL)
+                desc_text = strip_html_tags(desc_m.group(1) if desc_m else "")
+                ok, matched_ctx = verify_content_against_rule(rule, f"{title} ({comp})", desc_text, link)
+                if ok:
+                    results.append(
+                        FoundItem(
+                            kelime=rule.kelime,
+                            dil=rule.dil,
+                            konum=rule.konum,
+                            kaynak_tipi="LinkedIn (Uygulama İçi Yeni İlan)",
+                            baslik=f"{title} — {comp}",
+                            ozet=matched_ctx,
+                            url=link,
+                            tarih=f"Yayın Tarihi: {date_str}",
+                        )
+                    )
     except Exception:
         pass
     return results
@@ -213,17 +334,19 @@ def decide_source_label(url: str, default_label: str) -> str:
 def collect_for_rule(rule: SearchRule) -> List[FoundItem]:
     collected: List[FoundItem] = []
 
-    # 1. Google News RSS (Son 7 günde yayınlanan gerçek haber ve duyurular)
+    # 1. Google Ana Web İndeksi (SERPER_API_KEY tanımlıysa google.com/search tamamını tarar)
+    collected.extend(search_google_web_serper(rule))
+
+    # 2. Google News RSS (Haberler, Resmi Gazete ve Basın Duyuruları)
     collected.extend(search_google_news_rss(rule))
 
-    # 2. DuckDuckGo Son 1 Hafta (df=w) - Sadece yeni içerikler (statik ana sayfalar elenir)
+    # 3. LinkedIn Uygulama İçi Doğrudan İlan ve İçerik Taraması
+    collected.extend(search_linkedin_jobs_direct(rule))
+
+    # 4. DuckDuckGo Son 1 Hafta (df=w) Web ve Sosyal Medya Taraması
     collected.extend(search_duckduckgo_html(rule, kaynak_etiketi="Web (Son 7 Gün)", df="w"))
 
-    # 3. Sosyal Medya ve İş İlanı Platformları (LinkedIn, X, Instagram, Facebook, Kariyer)
-    social_filter = "(site:linkedin.com/posts OR site:linkedin.com/jobs OR site:x.com OR site:instagram.com OR site:facebook.com OR site:kariyer.net/is-ilani)"
-    collected.extend(search_duckduckgo_html(rule, platform_filter=social_filter, kaynak_etiketi="Sosyal Medya / İlan", df="m"))
-
-    # 4. Reddit Doğrudan Uygulama İçi Arama (sort=new)
+    # 5. Reddit Doğrudan Uygulama İçi Arama (sort=new)
     collected.extend(search_reddit_latest(rule))
     time.sleep(0.25)
 
