@@ -1,6 +1,46 @@
 {
   "reports": [
     {
+      "id": "20261107_142531",
+      "gun": "07.11.2026",
+      "saat": "14:25",
+      "ogun": "13:00 Öğle Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 3,
+      "sonuclar": [
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Daha yaşanabilir Kayseri için harekete geçildi: Erciyes Üniversitesi o etkinliğe ev sahipliği yaptı! - Kayseri Anadolu Haber",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Daha yaşanabilir Kayseri için harekete geçildi: Erciyes Üniversitesi o etkinliğe ev sahipliği yaptı! - Kayseri Anadolu Haber",
+          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQcFRhV1JOdUM4MGJnTi1KTXhzRE1ZX3pRMDZzY0VaQ2pZaWE5M1Q5dlVZeDJ4Q0ZvUFNWTmhRMmV1VERGQWhpbmlZaFc1S0pvNWQ0TldpNDZBaGUzVnVDZWVNSzNwVHlWRlp2M0ViZ0M1OXFfUDYyQjJYNDV3WkF6VXRkdDhIYW8yWXFYeFM3THpxMmRYYWVVMEptRk5GVlhyUW8wNUtBRWVDeHNHR0M3TGU2UGJoZjJVRUFac25aYWUxMmRTc1VsZW5Kanl3Q1RobFBzNmROU2pGQldhZVE?oc=5",
+          "tarih": "Thu, 05 Nov 2026 04:42:52 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Kahramanmaraş’ın afet çalışmaları Ankara’da tanıtıldı - Kahramanmaraş Haber | Son Dakika Maraş Haberleri - Kahramanmaraş Bugün Gazetesi",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Kahramanmaraş’ın afet çalışmaları Ankara’da tanıtıldı - Kahramanmaraş Haber | Son Dakika Maraş Haberleri - Kahramanmaraş Bugün Gazetesi",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTHRvbGtyWGFwZTVHWEk3Y3BqamMzXzJJenlKelRPYnhjVThFMWxKSmUzS2dKMmFralcyR0t4bXRyNURFWkdmWF96YnpQN3Vwc3JhOE5aQzlnaWNaSU9WZU80U0xuME5hek9waTZlQ0hZRktIWkEwaFpYMXBxbXdtVjJIYnJKY01z?oc=5",
+          "tarih": "Wed, 04 Nov 2026 08:24:00 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Ankara’daki Kongrede Kahramanmaraş’ın Afet Teknolojileri Tanıtılıyor - Haber46",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Ankara’daki Kongrede Kahramanmaraş’ın Afet Teknolojileri Tanıtılıyor - Haber46",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOV0FtcWhFOFRvTjlTa05Fc3hHNjd0S2dCYlRid3pSSDR2ZUVSWHF0aEpvLTdJSFRRLXEtRjV4Q3NGMWZlWXJ5Skt0ZFNnV29rQk9xZGFMVEVrdTIxVVkzZEQ5eXFObUg1dU1WQkpmVHBTYmhieXVSaHZGWjRpQVNsZkZtdVVZeVctZ0tocE1DZkhaQVVoenliRA?oc=5",
+          "tarih": "Wed, 04 Nov 2026 09:49:00 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261106_234800",
       "gun": "06.11.2026",
       "saat": "23:48",
