@@ -1,6 +1,46 @@
 {
   "reports": [
     {
+      "id": "20261107_190312",
+      "gun": "07.11.2026",
+      "saat": "19:03",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 3,
+      "sonuclar": [
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Ulusal Coğrafi Bilgi Sistemleri Proje Yarışması 2026: 15 Bin TL Ödül - Bilim Şenliği",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Ulusal Coğrafi Bilgi Sistemleri Proje Yarışması 2026: 15 Bin TL Ödül - Bilim Şenliği",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQSl9NcW1zY19EWDhIZ3ZwX051Z01oTlVwdkxwblpDdUFWU3dDU1czSloweUNKaDdRbmdUdGlSdzJNR1kzQ1B2Wlp6RXdkQ3B2RFJfdC1RMzU1M3JBeGNDaVhSU3RBbkVla0kwTXU3MkRPTXNSWjJmSVJXdUFaVmJRQUVVYUdRN1BOX0pYelRKYw?oc=5",
+          "tarih": "Fri, 30 Oct 2026 23:02:36 GMT"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Büyükşehirin afet yönetimi çalışmaları ODTÜ’de sunuldu - hibya.com",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Büyükşehirin afet yönetimi çalışmaları ODTÜ’de sunuldu - hibya.com",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOVXd0bWVoMWxKcjdZSGhUOGJkOGxIdmw4RUM3VVJfNWFZNFFfb3hwMXRLNmxsdzdMMDQwZnd0bnc1dkNmVktLZHc1Um5oTkYyME53NDBpd0ZHalBzT3hMS3RCQy1fUGo5QXFWTUJvSmw0dkpVbkJlZE8tdTBYTFNTLVBJbF90Zw?oc=5",
+          "tarih": "Sat, 07 Nov 2026 12:28:48 GMT"
+        },
+        {
+          "kelime": "GIS",
+          "dil": "İNGİLİZCE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Geographers Map Multi-Scalar Spatial Dynamics of Turkey’s Menzil Religious Community - Bioengineer.org",
+          "ozet": "Haber içeriğinde 'GIS' ifadesi tam eşleşme olarak geçmektedir: Geographers Map Multi-Scalar Spatial Dynamics of Turkey’s Menzil Religious Community - Bioengineer.org",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQSjZZNzV2MjBrM2QzSXAwRkRWTG5vLWUxX1FmejZfdDJGUmpMNkpEY1JKUGVlUHZiUmtXZzNINHo1cHVGOTJDRlNVZUcteTBPMXptTFBlTzdiMnBLc0g0SkJtWlBNVVR1UUkzV05ZQnpJb0lIZVBoVzdSRkVZVG9Mc3pseFVhT1ZmazBYcHRGeXVTNkxwNVNOVlFiSjlxRVBJd0Nwa2lBOVN0dkRL?oc=5",
+          "tarih": "Sat, 07 Nov 2026 12:54:00 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261107_142531",
       "gun": "07.11.2026",
       "saat": "14:25",
