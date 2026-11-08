@@ -1,6 +1,26 @@
 {
   "reports": [
     {
+      "id": "20261108_143749",
+      "gun": "08.11.2026",
+      "saat": "14:37",
+      "ogun": "13:00 Öğle Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 1,
+      "sonuclar": [
+        {
+          "kelime": "GIS",
+          "dil": "İNGİLİZCE",
+          "konum": "ÖZBEKİSTAN",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Ronaldo to Sit Out Al Nassr's AFC Champions League Match in Uzbekistan - Lokmat",
+          "ozet": "Haber içeriğinde 'GIS' ifadesi tam eşleşme olarak geçmektedir: Ronaldo to Sit Out Al Nassr's AFC Champions League Match in Uzbekistan - Lokmat",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPNEV0eDNCYmNFTTdYUkttUklBWkVxWkZGczNQOTdfeXRUWmM5SU9hRHRhVDA4NXdkenp6RU9ZTnBkODhkTDlyZmxUbk9GV2FrQTlGTTQ1ZnpRRGFfTjh2a1M0Wmp2U2xtbUtUaFl3YkRoNTBoTC1sbkNPQTVPamxmQVJnMTJPMkViSkxmcXJ5b2hVM0NlQmFJdEtfRHRyRGdmU3BTcXpLWHVNdndMQjB6LVZRYzdVSlk?oc=5",
+          "tarih": "Fri, 30 Oct 2026 07:00:00 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261107_222003",
       "gun": "07.11.2026",
       "saat": "22:20",
