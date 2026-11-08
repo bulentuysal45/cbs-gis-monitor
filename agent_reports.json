@@ -1,6 +1,36 @@
 {
   "reports": [
     {
+      "id": "20261108_222759",
+      "gun": "08.11.2026",
+      "saat": "22:27",
+      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 2,
+      "sonuclar": [
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "VAN GÖLÜ GİT GİDE TARIM ALANINA DÖNÜŞÜYOR - Deniz Haber",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: VAN GÖLÜ GİT GİDE TARIM ALANINA DÖNÜŞÜYOR - Deniz Haber",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9mNEpFaDRCN25Na2xQck9HMVMzaVJoQkh1MTQ4d1B5dWd4NGdkRG15S3Q4dGF6U0Z2bk04R3BUOHVMa2FYZGlMZld5RTBLRGd0bWgzWVJVYUM2dGREc3k4b3JvVENoWDhC?oc=5",
+          "tarih": "Fri, 30 Oct 2026 07:00:00 GMT"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Kayseri’nin afetlere direnç çalışmalarında 4 ilçe masaya yatırıldı! - kayserihaber.com",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Kayseri’nin afetlere direnç çalışmalarında 4 ilçe masaya yatırıldı! - kayserihaber.com",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5DYm9LY2xmcklsbW9ieUw3eHF1Zm1FYjJHcnpxNW9EX1JIYldvZ3gyNjZ1XzdRdW1IbXBQQkRKeXhET0t1OXFXY0k1a25YeWpOZllxYjNEc0wwS05aZU1MS3k3UHg?oc=5",
+          "tarih": "Sat, 07 Nov 2026 11:54:00 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261108_192916",
       "gun": "08.11.2026",
       "saat": "19:29",
