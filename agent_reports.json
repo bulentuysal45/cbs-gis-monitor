@@ -1,6 +1,46 @@
 {
   "reports": [
     {
+      "id": "20261109_163043",
+      "gun": "09.11.2026",
+      "saat": "16:30",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 3,
+      "sonuclar": [
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Tarımda dijital denetim dönemi: ÇKS kayıtları yapay zekâ ve uyduyla doğrulanıyor - TarımTR",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Tarımda dijital denetim dönemi: ÇKS kayıtları yapay zekâ ve uyduyla doğrulanıyor - TarımTR",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQUENybWZNdGJkYUo2N3RvQ2luamJ5ekF6czJ1ejhpdXlyWTZwbkN6TUtVYU0ybkJSbzQ2RlNYZTRTd0NtY2JGUzBuNE5zcm13OG54UkxaRG9VNkt2LTdHZE9ZQXRXUTc1cm84TWxaczlrZ0RWNExwUkpQc1dwS1ZuSWZ3enpzNm1mbTRPN25DNFByT0pRSjBOdkk0aXVYQWxHbW00MDd3?oc=5",
+          "tarih": "Mon, 09 Nov 2026 06:26:49 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ UZMANI",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Sapanca'nın geleceği için çok önemli adım - En Kocaeli",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ UZMANI' ifadesi tam eşleşme olarak geçmektedir: Sapanca'nın geleceği için çok önemli adım - En Kocaeli",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNZkwxeVVSdHRTdjJFNEM2WHZ1MTRxNm5YejlPeTRubHpiUnlBQ3d1ekxKc0ttRjF5QTRuYVlhQTJBNDZIcmhVVFU3RExfanNKQ2xvdE5UTEo4cF9WemVteW1WaEdHZnFpdVlYZWpib29pSWFNRXFQcXV4aGNaMEk2QnNqRGViR0U00gGOAUFVX3lxTFBhS3VpMXptdjlzVFdUeU1hU2c1Y2RMM0ZsR3ZKTWpqNEdLVXlDMF9tNklkdlNLY2RWemRCajdNUDR6ZndkUWIyUEpvcEx5TXY2alFEN0ZQdHYxRGJrTGFLRDRtRWg2S0N3ZVgzNmN2MklKajdMRjEtTTNJdmZMNlllTGZUZVpCTkVBZ3JpbWc?oc=5",
+          "tarih": "Mon, 09 Nov 2026 12:14:00 GMT"
+        },
+        {
+          "kelime": "GEOGRAPHIC INFORMATION SYSTEMS",
+          "dil": "İNGİLİZCE",
+          "konum": "AZERBAYCAN",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Azerbaijan eyes hydrogen market with blue production costs below EU green levels - AzerNews",
+          "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: Azerbaijan eyes hydrogen market with blue production costs below EU green levels - AzerNews",
+          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9Denh4ZlFtN1I4T2RLbmoxTnJvMG5ycVJwVnUtMWhwZXVPNUZuS2tmMWpQTG9kUnMyMGVUdUdiUnJIZFJPbHg3QzEydXoyaC0yNVhMSGVjdw?oc=5",
+          "tarih": "Mon, 09 Nov 2026 11:16:00 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261108_222759",
       "gun": "08.11.2026",
       "saat": "22:27",
