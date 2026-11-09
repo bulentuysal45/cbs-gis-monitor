@@ -1,6 +1,26 @@
 {
   "reports": [
     {
+      "id": "20261109_232212",
+      "gun": "09.11.2026",
+      "saat": "23:22",
+      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 1,
+      "sonuclar": [
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ UZMANI",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Sapanca'nın geleceği için çok önemli adım - En Kocaeli",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ UZMANI' ifadesi tam eşleşme olarak geçmektedir: Sapanca'nın geleceği için çok önemli adım - En Kocaeli",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQYUt1aTF6bXY5c1RXVHlNYVNnNWNkTDNGbEd2Sk1qajRHS1V5QzBfbTZJZHZTS2NkVnpkQmo3TVA0emZ3ZFFiMlBKb3BMeU12NmpRRDdGUHR2MURia0xhS0Q0bUVoNktDd2VYMzZjdjJJSmo3TEYxLU0zSXZmTDZZZUxmVGVaQk5FQWdyaW1n0gGOAUFVX3lxTFBhS3VpMXptdjlzVFdUeU1hU2c1Y2RMM0ZsR3ZKTWpqNEdLVXlDMF9tNklkdlNLY2RWemRCajdNUDR6ZndkUWIyUEpvcEx5TXY2alFEN0ZQdHYxRGJrTGFLRDRtRWg2S0N3ZVgzNmN2MklKajdMRjEtTTNJdmZMNlllTGZUZVpCTkVBZ3JpbWc?oc=5",
+          "tarih": "Mon, 09 Nov 2026 12:14:00 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261109_163043",
       "gun": "09.11.2026",
       "saat": "16:30",
