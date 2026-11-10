@@ -1,6 +1,26 @@
 {
   "reports": [
     {
+      "id": "20261111_001525",
+      "gun": "11.11.2026",
+      "saat": "00:15",
+      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 1,
+      "sonuclar": [
+        {
+          "kelime": "GEOGRAPHIC INFORMATION SYSTEMS",
+          "dil": "İNGİLİZCE",
+          "konum": "ÖZBEKİSTAN",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Uzbekistan aims for $10 billion in food exports by 2030: 26 million tonnes of fruit and vegetables to 92 markets - KOHA JONË",
+          "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: Uzbekistan aims for $10 billion in food exports by 2030: 26 million tonnes of fruit and vegetables to 92 markets - KOHA JONË",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFA3dXF2VFFKQWNqYnZoS2ZTZjV3Y2lJZUk5YmVaWVlXdl9jV1R3WXR1d2pzTnNGRzR6Y1ViSHdvUWFMelUxWWlaZUwwTnR4dTR4SmYwMjlnTkVWNlFZdHVyUkJtQ2ljMWk4TDgxUnpjWEQteWZ1emoxYnV2OHFIZw?oc=5",
+          "tarih": "Tue, 10 Nov 2026 14:32:00 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261110_202553",
       "gun": "10.11.2026",
       "saat": "20:25",
