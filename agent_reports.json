@@ -1,6 +1,36 @@
 {
   "reports": [
     {
+      "id": "20261110_161024",
+      "gun": "10.11.2026",
+      "saat": "16:10",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 2,
+      "sonuclar": [
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Kırklareli Belediyesi CBS tabanlı yeni yönetim sistemini uygulamaya aldı - Tek Haber Ajansı",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Kırklareli Belediyesi CBS tabanlı yeni yönetim sistemini uygulamaya aldı - Tek Haber Ajansı",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNWm16Ny1BbVdfQVNBM0EyMWMybHNVcDdkT1JNMUZTMW1rU1EyXzFBbGQyVUloYkNObEZ2V3lWUThZZlZxeEg5MVRjbWR1Wm4wQThLdmtlTXdHcVVjb050X21hQmN6QVhFak9LQ0tTeEtTWTgta28wNTh0NWJrOW1Kb3R4QjNXN1AtOGVCLXR3eFpHaXo1NENPNA?oc=5",
+          "tarih": "Wed, 28 Oct 2026 07:00:00 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Kahramanmaraş Büyükşehir Belediyesi Uluslararası Dirençlilik Kongresi'nde Yerini Aldı - Kanal 46",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Kahramanmaraş Büyükşehir Belediyesi Uluslararası Dirençlilik Kongresi'nde Yerini Aldı - Kanal 46",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOU2hkTnhUeWdMWnFhXzNrSFNlbVlfM0ZmNzI4TjQ2bVRuWXRadnNoc0NManJjUW9rUHplNFZKYUZVWHc3M0JremJBeUx1U2ZSY3hEUWQ0MnRYM2JYOUM5MHNiSnJyMHZGaG85UkFaM2hCMkNvcks2c1VIVC1mTlBGTDNGTmFVZkx0SmxGVlRuVk02Um1xSHpiYlJtSl9SaTN6UGwtRVk5UHFNVmVW?oc=5",
+          "tarih": "Wed, 04 Nov 2026 09:50:00 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261110_024434",
       "gun": "10.11.2026",
       "saat": "02:44",
