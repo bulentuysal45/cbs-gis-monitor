@@ -1,6 +1,26 @@
 {
   "reports": [
     {
+      "id": "20261110_202553",
+      "gun": "10.11.2026",
+      "saat": "20:25",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 1,
+      "sonuclar": [
+        {
+          "kelime": "GEOGRAPHIC INFORMATION SYSTEMS",
+          "dil": "İNGİLİZCE",
+          "konum": "ÖZBEKİSTAN",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Uzbekistan invests in higher-yield farming and food security - Euronews",
+          "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: Uzbekistan invests in higher-yield farming and food security - Euronews",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbGk0TUZuT2p6eGNNcnFiMGJhX2k0cHp3QlpOeTRORGxzT2YySDU4NkVhZzR0MXp3akFuVnhnanRDQXV2LWVJenJZSmQ0bjdMYXdDaFpyNjhKcXZhWkY2bXFGUl9OcEdZREhsU3A1TWpVR2JHaHQxN3A4SHhjbEZVT1J1aDhfbC1QZWJPUmJWanFuMFdJb0w1RDNBN0gzVFZ3MkdfZ1RMREFjNmhaOVhlcldNM0M3WXltX1NLclZkWQ?oc=5",
+          "tarih": "Tue, 10 Nov 2026 14:00:56 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261110_161024",
       "gun": "10.11.2026",
       "saat": "16:10",
