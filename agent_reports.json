@@ -1,6 +1,36 @@
 {
   "reports": [
     {
+      "id": "20261111_203935",
+      "gun": "11.11.2026",
+      "saat": "20:39",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 2,
+      "sonuclar": [
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Denizli’de Isınma Desteği 6 Bin TL’ye Yükseltildi - RayHaber",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Denizli’de Isınma Desteği 6 Bin TL’ye Yükseltildi - RayHaber",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQWjdUYW5kOUFjby1hNExIQTNaN0l4ak4zeHRzcUNvZFp4Z2k2b3FWV3RTTU4xVXoySXdmYTBsNFdQU0ZzRjRqZ3JNVFN3UTdpZW94cTBZZlIxbUpMN1VNalZnYkRmTnNXS2ZIZ0ZrYzlCNWFraXRLYm5ENjRWLWdDR2tISQ?oc=5",
+          "tarih": "Mon, 09 Nov 2026 10:21:25 GMT"
+        },
+        {
+          "kelime": "GIS",
+          "dil": "İNGİLİZCE",
+          "konum": "ÖZBEKİSTAN",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Uzbekistan and GIZ agree to cooperate on statistical data - UzDaily.uz",
+          "ozet": "Haber içeriğinde 'GIS' ifadesi tam eşleşme olarak geçmektedir: Uzbekistan and GIZ agree to cooperate on statistical data - UzDaily.uz",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNX0otczJpMjJ5SUNGeHBOcnhkWEZ6Vld6enBUS0JyVVNGbFlGWXd5bHppZXhweVl2aUhDZ2Ewbm96Ty1pMGg3eEwxWnhOVlJRU2FrbWhVcXd2UUttUDZxSnA5cWNxU3dhX2dJejM2WDlEay1lbHFSZy1NcWJ6d2JnT01Pa1Z0eUNPSm1lZQ?oc=5",
+          "tarih": "Wed, 11 Nov 2026 13:43:52 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261111_151958",
       "gun": "11.11.2026",
       "saat": "15:19",
