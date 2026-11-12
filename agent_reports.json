@@ -1,6 +1,36 @@
 {
   "reports": [
     {
+      "id": "20261112_205139",
+      "gun": "12.11.2026",
+      "saat": "20:51",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 2,
+      "sonuclar": [
+        {
+          "kelime": "GEOGRAPHIC INFORMATION SYSTEMS",
+          "dil": "İNGİLİZCE",
+          "konum": "AZERBAYCAN",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "The Mine Action Agency of the Republic of Azerbaijan (ANAMA) - Report.az",
+          "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: The Mine Action Agency of the Republic of Azerbaijan (ANAMA) - Report.az",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOZkdxaE9pRzhqZDlwNUNzb0tERHZicDBlcndfQ0poNVhiNDdfNV9aeHUxc29hSXhURHpLazVZVGlVc0FfWTA1N19DczRWX29BZWVYS2FBb3RBUWRMWWo2MDBoMy1SU3hQWWFpdC1qX1RUd2pjMXJPdHpnMEhfcFFVMQ?oc=5",
+          "tarih": "Wed, 11 Nov 2026 16:43:32 GMT"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "LinkedIn (Uygulama İçi Yeni İlan)",
+          "baslik": "Harita (Geomatik) Mühendisi — eyerod",
+          "ozet": "...i depolama ve sunum standartlarına hakim, Tercihen bilgisayarlı görü (computer vision) ve CBS (GIS) projelerinde yer almış, Tercihen büyük ölçekli raster ve vektör datalar üzerinde pr...",
+          "url": "https://tr.linkedin.com/jobs/view/harita-geomatik-m%C3%BChendisi-at-eyerod-4488539569",
+          "tarih": "Yayın Tarihi: 2026-11-12"
+        }
+      ]
+    },
+    {
       "id": "20261112_162836",
       "gun": "12.11.2026",
       "saat": "16:28",
