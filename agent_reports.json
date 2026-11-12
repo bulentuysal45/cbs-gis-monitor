@@ -1,6 +1,46 @@
 {
   "reports": [
     {
+      "id": "20261112_162836",
+      "gun": "12.11.2026",
+      "saat": "16:28",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 3,
+      "sonuclar": [
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "İzmir Karşıyaka’ya 664 dönümlük yeni mezarlık: Zemin etüt ihalesine çıkıldı - Erhan Gülenç",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: İzmir Karşıyaka’ya 664 dönümlük yeni mezarlık: Zemin etüt ihalesine çıkıldı - Erhan Gülenç",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdWdfMVU1blhsTXhFXzdqVFZ4cnhuMGx0NGU4Z29rZVhnWTJ3ZDJodGVtWFRGU3p0RGk5czVtNzVYSVk5Q19LZ3BJb3ZralFDLUFwZjNlQUZodjVEQncyMlFSa2gzcW55czZlTnU4elhyNjVTaXFFMURJYUJFWU9mWFplNTM5VVhEcG80b0xOUUxFaUJzbnVlSmhGbDQwMU1ueDhzZDF3UVhyWkda?oc=5",
+          "tarih": "Wed, 11 Nov 2026 22:35:06 GMT"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "124 yıllık deprem araştırmasında Elazığ detayı! - Elazığ Fırat Gazetesi",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: 124 yıllık deprem araştırmasında Elazığ detayı! - Elazığ Fırat Gazetesi",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNSkJUNGhyRjN5aGZvUE8yY3k0cy1weDBBU0xhU0tNM0J4NzJVTmdsSjJ3YzlXRzFRcmx1dXVZOE1feVVKU0cxN3FiZzE0TFE2bktIYzROUGFHYVVZemM2RHJGLThtcnhNZkF1UFpSZlhoZFZ5VnBsZnNFb1Z5UGtqMk5nRlRPQWQydC02MU5vVHVBVUXSAZgBQVVfeXFMT3ViWDA2Q3FfVDk0RXhzZEU3VVg0UXRweXN6SlpNRFZVT0ExTTVrUnI3OXYtZ3VuaHJHT2xnOEpvRy1uZ1BacU9RcDdNYWVHQ0dBSFlUSnBUSHU2dGdGQkFBMEFiNHpMR1RmRVltUlVWcFd1Y3F2V09EZnF2R2tyb045ckNxMTRyVXIwa1E4eFVPY25Bay01czc?oc=5",
+          "tarih": "Thu, 12 Nov 2026 08:10:00 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Bingöl Belediyesi ve üniversiteden kentin geleceğine yön verecek akıllı şehir raporu - Habertürk",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Bingöl Belediyesi ve üniversiteden kentin geleceğine yön verecek akıllı şehir raporu - Habertürk",
+          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNQnpxUGJpY2ZWRU1UNWRwLV9pV1ZQWm53VG02UFhLT29tWFpFRVpFSW5hamdSQXJ4THhmWFlkLW9FSE1OMHJfR3M2VE5XbW9fQ21XOTlfV21uYWFpd012RTR2RHlzbjBycmRTUmp6dnF5ZW1NMm1SVUptQVRLcjItanhIV1hsbHYyZ1pMTThDS1dJYWxpZ2RzYlhVbHE2MHl3WmRVUDlISXFTM09QZlVTRjlsaENabEE2ZzVMZ0g3TnBSQkU5Q2VqRkJoR3NXOHoycFIxUFFVOGt2cEVUdzJKbGRn?oc=5",
+          "tarih": "Wed, 11 Nov 2026 18:17:00 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261112_005020",
       "gun": "12.11.2026",
       "saat": "00:50",
