@@ -1,6 +1,36 @@
 {
   "reports": [
     {
+      "id": "20261113_004826",
+      "gun": "13.11.2026",
+      "saat": "00:48",
+      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 2,
+      "sonuclar": [
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Türkiye'yi alarma geçiren görüntü! - Bursada Bugün",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Türkiye'yi alarma geçiren görüntü! - Bursada Bugün",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQeE5zRHRrVHdkSGFDUzJOd1RjODN3SjdTcFBrb0RtVHVqYWJIeHZVZEFlaVEtZ19oLUUtc3hURnRpUUhuYkhuaERUMldjYXRQajY1TFJVZE5mRzN4NlV3Z2JQYU9OOGdLMnRDNmdhSVFwdl9ZOXhCQVVNOUpDLVNwR0dYejFHMG1K0gGLAUFVX3lxTE9seXV6R2h5dDF2Q0hWQnBqc0dzNjNhYlBIU2NxYVF6TndwQWNmSDJUTmhnN2VKX0lEaFgzdjFhcFJOMXY1VUktMmkzNHJFWk92YmZtTklHTnRxdXZma0Q5UXFWSjZRN3FRX2tmNnY5VDhjWXpXcnNFaUh6UUlIV3E2S28yYW5DWHE5T1U?oc=5",
+          "tarih": "Fri, 30 Oct 2026 07:00:00 GMT"
+        },
+        {
+          "kelime": "GIS",
+          "dil": "İNGİLİZCE",
+          "konum": "ÖZBEKİSTAN",
+          "kaynak_tipi": "LinkedIn (Uygulama İçi Yeni İlan)",
+          "baslik": "GIS ANALYST - GIS DEPARTMENT 26-11-1 — Leavenworth County Kansas",
+          "ozet": "GIS ANALYST - GIS DEPARTMENT 26-11-1 (Leavenworth County Kansas) — TITLE: GIS Analyst DEPARTM...",
+          "url": "https://uz.linkedin.com/jobs/view/g%C4%B1s-analyst-g%C4%B1s-department-26-11-1-at-leavenworth-county-kansas-4490517222",
+          "tarih": "Yayın Tarihi: 2026-11-12"
+        }
+      ]
+    },
+    {
       "id": "20261112_205139",
       "gun": "12.11.2026",
       "saat": "20:51",
