@@ -1,6 +1,56 @@
 {
   "reports": [
     {
+      "id": "20261113_154528",
+      "gun": "13.11.2026",
+      "saat": "15:45",
+      "ogun": "13:00 Öğle Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 4,
+      "sonuclar": [
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Odunpazarı Belediyesi İmar Durumu Sorgulama Rehberi: Eskişehir Parsel İmar Bilgisi Nasıl Alınır? - Esgazete",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Odunpazarı Belediyesi İmar Durumu Sorgulama Rehberi: Eskişehir Parsel İmar Bilgisi Nasıl Alınır? - Esgazete",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOc3drY3FRUEF6U0dEbnhmU2tKT19ubm94RXdidElTd3Z2bVZ5QVI3M3YwWjVVZ05TSUpwMEo1T1BENk1xYWR6RFdabmZNeS1aT2ZXV2JFLXFoTzdnMEc1amRvbk5RbTliaG5ocFBTOVVRYVdBRmZNOExfaE9JN0NObnF6c0FxeUEzZHFYY25oNG5oTHQtRUtNVjNrNkFnc0FnRTUwSzgwRFJiUXpZRW9KR0QtUk1MTERBdWRJ?oc=5",
+          "tarih": "Fri, 13 Nov 2026 08:12:00 GMT"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Elazığ’ın toprak varlığı dijital haritalarla bilimsel temele taşınıyor - Aksiyon.com.TR",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Elazığ’ın toprak varlığı dijital haritalarla bilimsel temele taşınıyor - Aksiyon.com.TR",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPdEFCUG04WXFIbWJXTlNzQWpGQVNhX0g5ZkZqWlRTVzJhOXNIcGhyaWFuRzRnekNldXVNbHVrM2prdTIwOXJoMU8zYmN0aDAxcXR3UVZrVERXRXJ2TW1JQ0R4SlFET1JCemxqdVJuVU1FYUVOcGZfaEJ0LVN0N3JkN19kSEVRVUZXSWRmaFFHTkFsYlZBaU5OVHJfU3BPbzNpVFdDQ2hiTdIBrAFBVV95cUxOQW5ZZGZ1VUxRbFNXeDlCWUNvOFp5ZHRYcndKQkhuR28tclRkbFNVNHZuSWZnUFZ4U2ozUkNiUy1XanZ0OWJlcEhYZjY1ZGp0TTVrTHcxRm9mNlVaRFNPc0ViM1ZQSkpQcHpiMnpzOXBXY1g4cnNZeXlVbTRxNDFFMDE4WHRHNHozUEtvVGZEWG9fRWh6bTl2Zy05UXVYUUZSamtqQVNqRmRuaVR2?oc=5",
+          "tarih": "Fri, 13 Nov 2026 09:07:46 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Ahtapot Holding, yatırımlarıyla teknolojinin geleceğine odaklanıyor - Kent Gazetesi",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Ahtapot Holding, yatırımlarıyla teknolojinin geleceğine odaklanıyor - Kent Gazetesi",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZzZaN2VFajQ3YkxLaDFYWFp5cGJmekN4d2NTU2VpLUNOMTYyaFBxRmNTaVdzRG9nWmI1cEVEd1ZYTzU2SmNWSVdxX1hoRU0zQ1dKa21mMmNVRm9za0w3Y0NXaFRKdU1VdW80QmNmTk1BRWZRaTJzWGtVVGZMY0pfcUJ2S0RHdDU4YnRGYUVwN3lTd1BoRV9odWFjaGY?oc=5",
+          "tarih": "Thu, 12 Nov 2026 14:19:10 GMT"
+        },
+        {
+          "kelime": "GEOGRAPHIC INFORMATION SYSTEMS",
+          "dil": "İNGİLİZCE",
+          "konum": "AZERBAYCAN",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Uzbekistan, Azerbaijan plan joint environmental projects for 2027–2029 - Trend News Agency",
+          "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: Uzbekistan, Azerbaijan plan joint environmental projects for 2027–2029 - Trend News Agency",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4tNXFGVWxjVTJmRnN4ZnhJUk1CaDU0UG5LbWJsN1M1cU5wZ2M3VUNvcTJOSUhNeDIteHUtME1mWDRaZlBkSjZBVWgxRFRZVTQ0S0diS3VERFZYdVMzazY4?oc=5",
+          "tarih": "Fri, 13 Nov 2026 10:39:07 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261113_004826",
       "gun": "13.11.2026",
       "saat": "00:48",
