@@ -1,6 +1,36 @@
 {
   "reports": [
     {
+      "id": "20261113_202806",
+      "gun": "13.11.2026",
+      "saat": "20:28",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 2,
+      "sonuclar": [
+        {
+          "kelime": "GEOGRAPHIC INFORMATION SYSTEMS",
+          "dil": "İNGİLİZCE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Clean power, climate tracking takes center stage at COP31 in Turkey - The Manila Times",
+          "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: Clean power, climate tracking takes center stage at COP31 in Turkey - The Manila Times",
+          "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQZU5JUXYtVlV4TUpLcU85N3JaWnRCREwtbkIwWTZJQzJJbFZ6QVZfdnlYcHFxVDdfWmQ2U0JkeTFjVmJvZzZjNmFvVUZQdERrOENMaHlyb210d1RsT1RIRlFZZXBiVlpzb2pvaXY5ZEdrLTVFb2xkMGhoUlJmT2tIS244SmZqVjJYM0Q0UmdCZ1ZKQWtPNC0xU3BSd1VrRjBtQ2hWaW44WlQ3QmZUVnJFaDRBVnE0ZDVJNlpVLXlVUU1tY29iUC1Ld0VnUXhTQ0NwaXhGOHFZSVnSAd4BQVVfeXFMTldxM0NmWURicE9VVjRlLXc0Sl9rUDZYUUIzWUVCM2tNV0tkNEZSejVqblhWN09Wd2lpamdabUxxTV9PR2JpUEFTc2NRaHR6MXRBc2tySy1NcnhUUnFzazNDcER1Ylh0SWI2X0pJbDByQ0c4ZXctVWREbVFKS0drYTlFcjFiR0FxUm9vSXhiT2VMVVJKVm91OExpeERRTTdvbG5fTjZVMnlwT3RCMDFvUjJrM2pmSGpUSDNIWEc3NGRreHRTcS1NaVI3b2FkVVZQeTBmNzBlckIyYUE0STFR?oc=5",
+          "tarih": "Fri, 13 Nov 2026 16:02:00 GMT"
+        },
+        {
+          "kelime": "GEOGRAPHIC INFORMATION SYSTEMS",
+          "dil": "İNGİLİZCE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "LinkedIn (Uygulama İçi Yeni İlan)",
+          "baslik": "Officer, Information Management and Data Visualization (TRC Secondment) — International Federation of Red Cross and Red Crescent Societies - IFRC",
+          "ozet": "...of other departments, data management, reporting practices, statistical analysis methods, Geographic Information Systems (GIS), and machine learning techniques is considered as an asset. Job Duties And Responsi...",
+          "url": "https://tr.linkedin.com/jobs/view/officer-%C4%B1nformation-management-and-data-visualization-trc-secondment-at-%C4%B1nternational-federation-of-red-cross-and-red-crescent-societies-%C4%B1frc-4490736502",
+          "tarih": "Yayın Tarihi: 2026-11-13"
+        }
+      ]
+    },
+    {
       "id": "20261113_154528",
       "gun": "13.11.2026",
       "saat": "15:45",
