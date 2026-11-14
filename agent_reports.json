@@ -1,6 +1,26 @@
 {
   "reports": [
     {
+      "id": "20261114_145300",
+      "gun": "14.11.2026",
+      "saat": "14:53",
+      "ogun": "13:00 Öğle Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 1,
+      "sonuclar": [
+        {
+          "kelime": "GIS",
+          "dil": "İNGİLİZCE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "LinkedIn (Uygulama İçi Yeni İlan)",
+          "baslik": "Full Stack Engineer (GO,Golang) — Calico Teknoloji",
+          "ozet": "...• Previous experience of QGIS • Understanding of Geospatial concepts and familiarity with GIS technologies • Understanding of imagery data, its processing, storage, and retrieval • Ex...",
+          "url": "https://tr.linkedin.com/jobs/view/full-stack-engineer-go-golang-at-calico-teknoloji-4489334451",
+          "tarih": "Yayın Tarihi: 2026-11-14"
+        }
+      ]
+    },
+    {
       "id": "20261114_002136",
       "gun": "14.11.2026",
       "saat": "00:21",
