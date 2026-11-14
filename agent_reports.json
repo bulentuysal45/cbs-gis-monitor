@@ -1,6 +1,26 @@
 {
   "reports": [
     {
+      "id": "20261114_225109",
+      "gun": "14.11.2026",
+      "saat": "22:51",
+      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 1,
+      "sonuclar": [
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Bingöl'ün yol haritası: üniversite ve belediyeden veri odaklı akıllı şehir raporu - Aksiyon.com.TR",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Bingöl'ün yol haritası: üniversite ve belediyeden veri odaklı akıllı şehir raporu - Aksiyon.com.TR",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQQW8wTzhjU29Ga184QTVoZWpxVS1BdWhEMUNFdTZyY1J5dnZRT2NyeHpod1A4V0JOa204a19BRllxTzBqaGJaek5LUzNJZWRMRlN1QXh2Qlp1eWUxU3FPWlU5OUE0cjRjVnBGeldsM09pV3lBTkE4NFVvN2Yxb2oxTmhPTXNjXzZIZE1HQTN0OTNnNm1VWE1lQ1B6UUgxdmt6WEFLdHVIM2I5SFJWV0R2eFpmRmZOLVd6eUHSAboBQVVfeXFMUEFvME84Y1NvRmtfOEE1aGVqcVUtQXVoRDFDRXU2cmNSeXZ2UU9jcnh6aHdQOFdCTmttOGtfQUZZcU8wamhiWnpOS1MzSWVkTEZTdUF4dkJadXllMVNxT1pVOTlBNHI0Y1ZwRnpXbDNPaVd5QU5BODRVbzdmMW9qMU5oT01zY182SGRNR0EzdDkzZzZtVVhNZUNQelFIMXZrelhBS3R1SDNiOUhSVldEdnhaZkZmTi1XenlB?oc=5",
+          "tarih": "Wed, 11 Nov 2026 18:21:28 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261114_192007",
       "gun": "14.11.2026",
       "saat": "19:20",
