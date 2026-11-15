@@ -1,6 +1,26 @@
 {
   "reports": [
     {
+      "id": "20261115_194513",
+      "gun": "15.11.2026",
+      "saat": "19:45",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 1,
+      "sonuclar": [
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "KBÜ'nün ev sahipliğindeki akıllı şehirler konferansında 253 bildiri kabul edildi - Son Dakika",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: KBÜ'nün ev sahipliğindeki akıllı şehirler konferansında 253 bildiri kabul edildi - Son Dakika",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQY1NtM2FGaEM5TUVTaGU5ZFEybUNWTHl2SWNPckxUYzEwRTRiUElQZUxTUDVlQml5VnNPdVRuSUFiWkJOOEFfSGNoYUs1YzZ0R0JfaW94M2RNdlVnM3JsS0d2ZGxwQXU1dk9DejRMd2FlUFZqcC0wZGdNTmlRQ0Q5eklOR0hlX0pqczNIRFhMS2I5U0JBNWlGTzdobWTSAZwBQVVfeXFMUGNTbTNhRmhDOU1FU2hlOWRRMm1DVkx5dkljT3JMVGMxMEU0YlBJUGVMU1A1ZUJpeVZzT3VUbklBYlpCTjhBX0hjaGFLNWM2dEdCX2lveDNkTXZVZzNybEtHdmRscEF1NXZPQ3o0THdhZVBWanAtMGRnTU5pUUNEOXpJTkdIZV9KanMzSERYTEtiOVNCQTVpRk83aG1k?oc=5",
+          "tarih": "Sat, 14 Nov 2026 09:38:06 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261115_152513",
       "gun": "15.11.2026",
       "saat": "15:25",
