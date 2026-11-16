@@ -1,6 +1,15 @@
 {
   "reports": [
     {
+      "id": "20261117_024144",
+      "gun": "17.11.2026",
+      "saat": "02:41",
+      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 0,
+      "sonuclar": []
+    },
+    {
       "id": "20261116_225806",
       "gun": "16.11.2026",
       "saat": "22:58",
