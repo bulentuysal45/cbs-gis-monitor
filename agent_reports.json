@@ -1,6 +1,46 @@
 {
   "reports": [
     {
+      "id": "20261116_225806",
+      "gun": "16.11.2026",
+      "saat": "22:58",
+      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 3,
+      "sonuclar": [
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Gümüşhane’nin Heyelan Duyarlılığını Haritalandırdı, Türkiye Üçüncüsü Oldu - Gümüşkoza Gazetesi",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Gümüşhane’nin Heyelan Duyarlılığını Haritalandırdı, Türkiye Üçüncüsü Oldu - Gümüşkoza Gazetesi",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPQ2U4OUplVXpyd1p6empiSUc4cnQtdV9HQjFkYW9jSTV0b1FxTUxkUEhXRWYyYXBGVVllSGFEbWR4cGRrSlQ5RW9lZnJ5OXVCUXJRdmdLZXVqQnV1dkxoUkJqNlhsa2xacTRXOW1RYTVVR1YzOElDRTVxZ0pvX3E5SFRKOGZ1MjBpdTF0TWJGOTJSZ0xwcFhRYklXd28yZTlHb3EyVmFHRV83YXFXZFRRQUxlcjlfZ9IBuwFBVV95cUxOQ1BhYkh4STRMVkIzX3dpZzdIVmpEbjhOMXV5WTBzTGVMSzRYWnVtb0ZlM2RjWlF4NWxudVgyX1RpUWtDVEl4c1dSVGg2ZVAxU2JZT2V0a3hibFNMS0xZaGcwVks3U3BjaE1yZ2w0V2p3ZGFVY0gyWGhxcDRubkdBbVVZTUV0cEVtMldoeWJITllIRmhMSnJkLW92ZmlTREFhX3o2X0FPd1pQOC1iY2Q1QVM1cFQ3eHRqU0hr?oc=5",
+          "tarih": "Mon, 16 Nov 2026 18:30:00 GMT"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Balıkesir'in CBS tecrübesi üniversitelilerle buluştu - Ereğli Önder Gazetesi",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Balıkesir'in CBS tecrübesi üniversitelilerle buluştu - Ereğli Önder Gazetesi",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNWFZKa191UFRmTklNdkFkUDhBU2VIbXhMX2ctdGlOQmhjcFlOZFNONWwwakZua01tUE9Da2ZlQzNWSFZNWnFoSEpUaXdHalkxWTJHbkZNWHM3Qkhza0xtaXdCRms2STZSR1ZFeGxPblB1dHVWdGJia0k2WlI4TG1rdEhTbHZMWUZHRnc?oc=5",
+          "tarih": "Mon, 16 Nov 2026 07:57:00 GMT"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "LinkedIn (Uygulama İçi Yeni İlan)",
+          "baslik": "Coğrafi Bilgi Sistemleri (CBS) Uzmanı — PiriReis Bilişim",
+          "ozet": "Coğrafi Bilgi Sistemleri (CBS) Uzmanı (PiriReis Bilişim) — GENEL NİTELİKLER ODTÜ Teknokent bünyesinde faaliyet gösteren...",
+          "url": "https://tr.linkedin.com/jobs/view/co%C4%9Frafi-bilgi-sistemleri-cbs-uzman%C4%B1-at-pirireis-bili%C5%9Fim-4489739553",
+          "tarih": "Yayın Tarihi: 2026-11-16"
+        }
+      ]
+    },
+    {
       "id": "20261116_161752",
       "gun": "16.11.2026",
       "saat": "16:17",
