@@ -1,6 +1,106 @@
 {
   "reports": [
     {
+      "id": "20261116_161752",
+      "gun": "16.11.2026",
+      "saat": "16:17",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 9,
+      "sonuclar": [
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Tarım personeline CBS eğitimi verildi - Yeniufuk Gazetesi",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Tarım personeline CBS eğitimi verildi - Yeniufuk Gazetesi",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5CcTdJUUh3LWp6b20yNTlLODY4TklHOG1RM0I0cVMwc0F5WktyLW52Y0ZVVHhtLXFVVm53bFBPM3JGSi0xTDBGN2tfSVRjVnZiOXR2WnNZLWxqWjV0VTNsTnlQZmJMNzlIMlNKQ3NJdU5wNm1TTTdfRUVWcXU?oc=5",
+          "tarih": "Mon, 16 Nov 2026 11:45:09 GMT"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Denizli Büyükşehir Belediyesi’nden en özel eğitim desteği - Egeyön Haber",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Denizli Büyükşehir Belediyesi’nden en özel eğitim desteği - Egeyön Haber",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPR09WOTV5QUlMSVF5UWdoc1VBM29DOXJZOU5MTmlwZUtfRjI0a0FLNk5VaFVoYy1yTUR4ak9Eek9RNktta19DZFpJUWdTYW8xZnRuUXFCZk1JWmlHaXR1MnpOVUF0cmdxXzNneEZEcE9DU0FqVTVoNzI0d1lpQ0ZsdlJWdC1Kc2dDRVhoR3RjRjF1Rk9IWUxN?oc=5",
+          "tarih": "Mon, 16 Nov 2026 07:59:00 GMT"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Denizli Büyükşehirden şehit çocukları, yetim, öksüz ve engelli öğrencilere 3.500 TL’lik eğitim İhlas Haber Ajansı - İhlas Haber Ajansı",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Denizli Büyükşehirden şehit çocukları, yetim, öksüz ve engelli öğrencilere 3.500 TL’lik eğitim İhlas Haber Ajansı - İhlas Haber Ajansı",
+          "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNRWhxcUQ0emdldnlxX040b1FrU1JOXzd2aWVydnhRYVczeDN1R0plaTZvcTlyNDFYN1N5dU8xUFlvNmMtaFI1ZXh4emF5c2VTOTNDU1JjYmppYTNxVUlhQUhENzBqb1prbTJnMldGTTg2b1hHcTY0dk9Eb19nbll0aHZsbGptTnpnNzBxUVNYeWxZSXk1OFMxT0s5M1owS1R0dXJhMTJMT2dXNnhQYTVUamhDQTYtcmtBZlFKVlNieTBhT0VGQVdpYlpKUFFyT1c4SEN3aFJhTms?oc=5",
+          "tarih": "Mon, 16 Nov 2026 07:52:39 GMT"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Yozgat’ta tarım personeline coğrafi bilgi sistemleri eğitimi verildi - İleri Gazetesi",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Yozgat’ta tarım personeline coğrafi bilgi sistemleri eğitimi verildi - İleri Gazetesi",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPSXV0WU1PZ1NzanZ5bE9TTjduaG5Xb180dkwzMTZBYzl4b1VZTHJGelhMdjVLanE0SnNYMGxIYmY4ZG9zampzNm9PQ2lCRlRWX3RrNlBhVHhpZlAwZ0VKdC1xdEdYTldhZGpPWVV0eHBmTGlvR1NrN1hxVzJtZDlBQUx6NEZsdy1UdXpWQ3d3ZHlzQzhKYlZCV19BUjNSZzMwUGc?oc=5",
+          "tarih": "Mon, 16 Nov 2026 12:58:00 GMT"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Yozgat’ta Tarım Personeline CBS Eğitimi Verildi - Yozgat Hakimiyet",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Yozgat’ta Tarım Personeline CBS Eğitimi Verildi - Yozgat Hakimiyet",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPN1BTWnpkZWZ6RGl6LTVyOUxsN2M3LWRJZURvQ3paWXpZZjFURUtTa0lEaUs0YUM0cVpwZHRPTlBacWZ4eGJ5ZnQtNXBOWFREc1FrMDcyUkVvZ2hmWlFFcm1XaGxQM2V0TFhERmZtcUJJbnB3X095dWkzbkljYzZ0WmNnN1Y0ay01?oc=5",
+          "tarih": "Mon, 16 Nov 2026 07:46:00 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Balıkesir'in CBS tecrübesi üniversitelilerle buluştu - bursa.news",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Balıkesir'in CBS tecrübesi üniversitelilerle buluştu - bursa.news",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVTB1RVVKVzhITEN6U2t4cmpJMU1hZEJOQmxONWRwQ0ZFSDEzQVZrdHpUX3gzQmlCSERwcnBVUS1vdVBfRXZoYzVEZkpCdnRJX3lyOEZfMldFSVB3UmJWVldMRDBTLVRUZGNXMVFFdUhlR0lrRnB2QkNUVlQ3bzJUcU5rR0xwbElCVTczaUctSHpMajV0eC1WcA?oc=5",
+          "tarih": "Mon, 16 Nov 2026 08:41:22 GMT"
+        },
+        {
+          "kelime": "GEOGRAPHIC INFORMATION SYSTEMS",
+          "dil": "İNGİLİZCE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Enlit Europe 2026: Turkey’s Energy Sector Takes The International Stage In Vienna – OpEd - Eurasia Review",
+          "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: Enlit Europe 2026: Turkey’s Energy Sector Takes The International Stage In Vienna – OpEd - Eurasia Review",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPYjVueEt3M0h6UkI3eXVWSXFSdy1fbmRKcTVldU1jVUhjRVZkdEUyRko3QTNzRWZfVWEtVld4b3M0aWNlbERVM3dBNURSdHQtOG5MbEU3cmluUjlYYk8xTEcwUkFvVkxsc3RGakRiNXNRXzB2VEU4SnpzMmhyTmR0SGhQd3ptUnlWT3h4LWJDc3J6Q3U5VWJJYmxoMGRYX1AzZThNSl9fbTduUE10bW9XcjVIaGRYM05SOFNtNm1BM0VmQQ?oc=5",
+          "tarih": "Sun, 15 Nov 2026 20:57:32 GMT"
+        },
+        {
+          "kelime": "GEOGRAPHIC INFORMATION SYSTEMS",
+          "dil": "İNGİLİZCE",
+          "konum": "AZERBAYCAN",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Caspian coastal zone management assigned to State Property Service in Azerbaijan - Report.az",
+          "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: Caspian coastal zone management assigned to State Property Service in Azerbaijan - Report.az",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPMm5ocnlFRU5UTGFrdkx2Vjdib2NSd01pcHUyUzJ5dUVSNVl3bnpCYkx0MFFGNFNTU1FEcF9HNFg1cGttdzNIUjJSbkNBMHBuNHJfeUlRd0hmdFRFZVlOd2VQUkY3b0plQmZnMDFkVG93QnI5Y1BsQXEzTmxxVUZGd1JRa2dYS2QwX2dzaUdkcFJzUm5tanF6ZTV4UEpydlAtelZqSGhiMmtIc3liQzZURkZlNzFLYUU?oc=5",
+          "tarih": "Mon, 16 Nov 2026 09:57:23 GMT"
+        },
+        {
+          "kelime": "GEOGRAPHIC INFORMATION SYSTEMS",
+          "dil": "İNGİLİZCE",
+          "konum": "AZERBAYCAN",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Azerbaijan introduces unified management of Caspian Sea coastal areas - Trend News Agency",
+          "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: Azerbaijan introduces unified management of Caspian Sea coastal areas - Trend News Agency",
+          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE50Wk8wVlExWGcxdzNQT3Njek5sNkdNbTlhU0FjTldNM2ZvZnpRNnZ3dUVzRlI3Q2lSclpxeDJ3UWpiTkQ5cnJGRmhCcEExYlk4X05FUXh0NA?oc=5",
+          "tarih": "Mon, 16 Nov 2026 10:02:00 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261115_231626",
       "gun": "15.11.2026",
       "saat": "23:16",
