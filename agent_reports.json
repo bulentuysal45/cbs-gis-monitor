@@ -1,6 +1,15 @@
 {
   "reports": [
     {
+      "id": "20261117_215438",
+      "gun": "17.11.2026",
+      "saat": "21:54",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 0,
+      "sonuclar": []
+    },
+    {
       "id": "20261117_170150",
       "gun": "17.11.2026",
       "saat": "17:01",
