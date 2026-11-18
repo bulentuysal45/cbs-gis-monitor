@@ -1,6 +1,96 @@
 {
   "reports": [
     {
+      "id": "20261118_163637",
+      "gun": "18.11.2026",
+      "saat": "16:36",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 8,
+      "sonuclar": [
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Bingöl Üniversitesi'nde Coğrafi Bilgi Sistemleri Günü Düzenlenecek - Çapakcur Gazetesi",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Bingöl Üniversitesi'nde Coğrafi Bilgi Sistemleri Günü Düzenlenecek - Çapakcur Gazetesi",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNVl90dWpkc3JPV0IycXd0TkJpY3ZVMTN1UkotY1JOYmxvMGJqR1IycGpqMWJyZnR5NnFVWWNsX0thck9SczZuQmx1RmNGYTBSVDRrNVM2RE82bFIyS0RpNVRYUHhJbGF2dXptYU1XNXJLc0JYMXY0N01ZMWtUUGpDRjlJWDhka3dRQjRBREJhTFdNTVg5a3h5SEYtQVBpelNBNER5Y2NDRWpmUk04aDBv0gG8AUFVX3lxTFBjbS1FXzFBLWZpOXJ5WmQ3ZGUwLWVLN1QwTmI2eEp1cWkzcUxmTmN6cWJ3WGhrTjRpNGVmTkJ5ang0dWhlWjhwR3FDNXJ2bjFzM2hyQzg1RE9rNWFJZUtYd3k4WGt5a1cyYUtjZnV6WXhDZHREWDJENmZnNWtfUFZ3RDN6c2t3T3FWLUxKejhKUldjQzRiUkhCbHoweXJIZnV3OVZjRFBRSTFmME9QQ3BmalBLS2ttMjNhWXpO?oc=5",
+          "tarih": "Tue, 17 Nov 2026 10:35:56 GMT"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Balıkesir'in CBS tecrübesi üniversitelilerle buluştu - yeniufuk.com.tr",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Balıkesir'in CBS tecrübesi üniversitelilerle buluştu - yeniufuk.com.tr",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOaVg4TEQtTjRLZjMtTEEyZWZpWVFfb0Nkc3VuVllrTHlxX0wxUU1KZktPN2tBbEpOM3h2MGQ5ZHFqN216eWtDZkdLeGpOdXVjVktGSVE1MzlFVTRnbmFHYTVkYkpXME9CdXVuMmc1d2stUWxMcFdUMWtVZE1OT3ZEb2lrYkxwQXVYN0xNOFh4dHh4UnRBLTlLZlRR?oc=5",
+          "tarih": "Mon, 16 Nov 2026 09:05:33 GMT"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Balıkesir Belediyesi CBS çalışmalarını öğrencilerle paylaştı - Alparslan Diyarı",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Balıkesir Belediyesi CBS çalışmalarını öğrencilerle paylaştı - Alparslan Diyarı",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObmVPQVVJYkhLQnlSSEw4ZURvR0xVdWRtYVpkZmFLN0xaSkpqcllEbEtyc09NZE81WmRkcVRxQ0lkQXlHQmtCcUpoSlpWVzBxX1BVZTRaSnI2QzZ2aDNXN3pxM044c19reVdkclplU1k1UThmRzFTY19rZE5WXzZEZEhOVW5ZcjEyQmVYMnp1UGU5ZDNPaGRpN0VDSHhWZ2E1VnE3MlZNRGo?oc=5",
+          "tarih": "Tue, 17 Nov 2026 02:33:00 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Gümüşhane’nin Heyelan Duyarlılığını Haritalandırdı, Türkiye Üçüncüsü Oldu - Gümüşkoza Gazetesi",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Gümüşhane’nin Heyelan Duyarlılığını Haritalandırdı, Türkiye Üçüncüsü Oldu - Gümüşkoza Gazetesi",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOQ1BhYkh4STRMVkIzX3dpZzdIVmpEbjhOMXV5WTBzTGVMSzRYWnVtb0ZlM2RjWlF4NWxudVgyX1RpUWtDVEl4c1dSVGg2ZVAxU2JZT2V0a3hibFNMS0xZaGcwVks3U3BjaE1yZ2w0V2p3ZGFVY0gyWGhxcDRubkdBbVVZTUV0cEVtMldoeWJITllIRmhMSnJkLW92ZmlTREFhX3o2X0FPd1pQOC1iY2Q1QVM1cFQ3eHRqU0hr0gG7AUFVX3lxTE5DUGFiSHhJNExWQjNfd2lnN0hWakRuOE4xdXlZMHNMZUxLNFhadW1vRmUzZGNaUXg1bG51WDJfVGlRa0NUSXhzV1JUaDZlUDFTYllPZXRreGJsU0xLTFloZzBWSzdTcGNoTXJnbDRXandkYVVjSDJYaHFwNG5uR0FtVVlNRXRwRW0yV2h5YkhOWUhGaExKcmQtb3ZmaVNEQWFfejZfQU93WlA4LWJjZDVBUzVwVDd4dGpTSGs?oc=5",
+          "tarih": "Mon, 16 Nov 2026 18:30:00 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Türkiye enerji sektörü Viyanada boy gösterdi - Enerji Günlüğü",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Türkiye enerji sektörü Viyanada boy gösterdi - Enerji Günlüğü",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQZV9TU1ZfMndfeXlyS0JpbnlIMlFyeHpIS0VaWktZclNDZmF0RkZNYmh0TzZuU2tWWUtjTHdrZWUtRzM3MmFYbnFVWTA1MHFsR3hjSGhkLWVBSjZackNidTZORktxYnlURXFwYXRCbnVmR1FyVXNLeDFkZXV2ZHN3QjBwUmhLM0xOcmFUNDlmdjhaZzBpS0ZkSGlRcVZBX2PSAZ8BQVVfeXFMUGVfU1NWXzJ3X3l5cktCaW55SDJRcnh6SEtFWlpLWXJTQ2ZhdEZGTWJodE82blNrVllLY0x3a2VlLUczNzJhWG5xVVkwNTBxbEd4Y0hoZC1lQUo2WnJDYnU2TkZLcWJ5VEVxcGF0Qm51ZkdRclVzS3gxZGV1dmRzd0IwcFJoSzNMTnJhVDQ5ZnY4WmcwaUtGZEhpUXFWQV9j?oc=5",
+          "tarih": "Mon, 16 Nov 2026 06:44:00 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ UZMANI",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "COP31'de Deniz Çayırları İçin Kritik Çağrı - Bodrum Kent TV",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ UZMANI' ifadesi tam eşleşme olarak geçmektedir: COP31'de Deniz Çayırları İçin Kritik Çağrı - Bodrum Kent TV",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNdjBycERyV3FXcUxCcU9tMmtqVXRzaWVhVExJYXcxdkUtdkxpS3VHdFlIUE5BZTNYTlFnVThtVFlqS0FFZ2E2YndqOGJRaXZnaDIyWlRzaFpRSzc0MlFBaXd6NVFtb1p3VDVIRDdFTHhOWTducWdOMGo3TjUzV3pMcDU2akpjd9IBhgFBVV95cUxNdjBycERyV3FXcUxCcU9tMmtqVXRzaWVhVExJYXcxdkUtdkxpS3VHdFlIUE5BZTNYTlFnVThtVFlqS0FFZ2E2YndqOGJRaXZnaDIyWlRzaFpRSzc0MlFBaXd6NVFtb1p3VDVIRDdFTHhOWTducWdOMGo3TjUzV3pMcDU2akpjdw?oc=5",
+          "tarih": "Wed, 18 Nov 2026 07:47:00 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ UZMANI",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "COP31'de Bodrum'daki 2 bin 185 hektarlık deniz çayırının korunması ele alındı - Haberler",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ UZMANI' ifadesi tam eşleşme olarak geçmektedir: COP31'de Bodrum'daki 2 bin 185 hektarlık deniz çayırının korunması ele alındı - Haberler",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQOWZZbjhyUHVqcUJZeGptdVBnTGRTcDJzdzlmTnJMRGxqejhYTkp6azBJZk5TWTVuNTVyd3pLbWU2dV9mOXBkTWtBazZ5WVN4Z3dmY2drLXpPZGowNVpjOE5GLW01VW8xbVV3MUJMUFQtQnBBdHN3ajlBWkY0azNXcXVndzZXNko5Nm9JMVhOSzFyakdiVHdTX2NTWdIBlwFBVV95cUxNVjJDeE03XzFqckdlNzlqRHFKMGpQM2RTQzVKcUxTbGM5ZkVNb2FFOWJsMjhvT244UXptTHN4TnlNZHIwYlpkZlFHT3RHT3ZnZlppd2pKV2R5Ui1MY1Y4Q1gxQUkzVGcyTl9aazdYSTJ3cVRjVlFpeEJEZTZDTmtQNF9lbDl5QjN0TWJMaGphbl9VNDhwdFYw?oc=5",
+          "tarih": "Wed, 18 Nov 2026 11:13:25 GMT"
+        },
+        {
+          "kelime": "GEOGRAPHIC INFORMATION SYSTEMS",
+          "dil": "İNGİLİZCE",
+          "konum": "ÖZBEKİSTAN",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Uzbekistan and Oman aim to increase trade turnover to $1 billion – News from Uzbekistan - Газета.uz",
+          "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: Uzbekistan and Oman aim to increase trade turnover to $1 billion – News from Uzbekistan - Газета.uz",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4tekpvWjNhWllHWWZBWW1wVWM4RVVISTBtYllReEhseHRYRWxHSE1IUmx2TWdVRFprX21HVjU5RVNHdVJBRDFkV1NYM3c4bWtDZC1TTQ?oc=5",
+          "tarih": "Wed, 18 Nov 2026 06:12:47 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261118_015025",
       "gun": "18.11.2026",
       "saat": "01:50",
