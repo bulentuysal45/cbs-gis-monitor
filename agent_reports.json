@@ -1,6 +1,26 @@
 {
   "reports": [
     {
+      "id": "20261118_213617",
+      "gun": "18.11.2026",
+      "saat": "21:36",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 1,
+      "sonuclar": [
+        {
+          "kelime": "GIS",
+          "dil": "İNGİLİZCE",
+          "konum": "AZERBAYCAN",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Azerbaijan to tighten liability for illegal seizure of Caspian coastal lands - 1News.az",
+          "ozet": "Haber içeriğinde 'GIS' ifadesi tam eşleşme olarak geçmektedir: Azerbaijan to tighten liability for illegal seizure of Caspian coastal lands - 1News.az",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPb0RzNzRGY2wzZW9DVHJBbjExSTRRWEtfbG1hVnpoMDVDSGxVd3J3VURlczhRemJFTnpXY0hvWHdhVk5JYlN3OEdkcHpBTHZMQVBQVVNXZjE0MWl3MFhGUTRQZzNybHJpMkVzVk5RYWp5bjM2Z1NueldBTE5jLTFGb3l0SEFWNGdEaFF0R1daeFZQNXU2TVYxNEwtd0VOX011dVhCZjltR0V3ZXhNamJnS2ViV1VMLWxWdWFv?oc=5",
+          "tarih": "Mon, 16 Nov 2026 09:50:10 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261118_163637",
       "gun": "18.11.2026",
       "saat": "16:36",
