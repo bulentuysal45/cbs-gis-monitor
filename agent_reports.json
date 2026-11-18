@@ -1,6 +1,26 @@
 {
   "reports": [
     {
+      "id": "20261119_013215",
+      "gun": "19.11.2026",
+      "saat": "01:32",
+      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 1,
+      "sonuclar": [
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ UZMANI",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "COP31'de Bodrum kıyılarındaki deniz çayırları gündeme alındı - Fethiye Haber",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ UZMANI' ifadesi tam eşleşme olarak geçmektedir: COP31'de Bodrum kıyılarındaki deniz çayırları gündeme alındı - Fethiye Haber",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOOGUzeEV2Yl9yeklXNm9pb245b05ncHFybDlQWUQ3Tm9pUjlWT3NSMWlNd3NfOUhEaVlMUF9SUXgxMHJhdDlwQ2V0RWlKdEVmd2d6ZW9fdWxoeFhLYXlTTmwtYk0xZG9XZDJ0ZVZ6VndWMXdYN2dWdFJGZkFqZG1nNmg1eWRXWFVpWTIweUZYMEF6T0hnakFLVHUwOVpHLTBBclJVStIBpAFBVV95cUxOOGUzeEV2Yl9yeklXNm9pb245b05ncHFybDlQWUQ3Tm9pUjlWT3NSMWlNd3NfOUhEaVlMUF9SUXgxMHJhdDlwQ2V0RWlKdEVmd2d6ZW9fdWxoeFhLYXlTTmwtYk0xZG9XZDJ0ZVZ6VndWMXdYN2dWdFJGZkFqZG1nNmg1eWRXWFVpWTIweUZYMEF6T0hnakFLVHUwOVpHLTBBclJVSg?oc=5",
+          "tarih": "Wed, 18 Nov 2026 17:02:02 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261118_213617",
       "gun": "18.11.2026",
       "saat": "21:36",
