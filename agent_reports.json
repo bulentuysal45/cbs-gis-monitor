@@ -1,6 +1,56 @@
 {
   "reports": [
     {
+      "id": "20261119_214712",
+      "gun": "19.11.2026",
+      "saat": "21:47",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 4,
+      "sonuclar": [
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "ASAT, COP31’de dijital su yönetimi ve akıllı altyapı vizyonunu paylaştı - DHA | Demirören Haber Ajansı",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: ASAT, COP31’de dijital su yönetimi ve akıllı altyapı vizyonunu paylaştı - DHA | Demirören Haber Ajansı",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPQkpGRHdJSjEzNmIxNjMyUG5SZE5VdTM0ZmpwalU5SXFoTFNZUkNMc1A1eWlxYVRfMW85c1kyQzZVY3YyU01ObEZ6M29neGJwT01jLWIyNHJaemZKT0ppTE9laDgzaDJBOWcwMGJXVUFKVy0teGRpc3Y2STVmX1N6bTl0eEFaLVQtNVVpOEtyUGRzc3BuS1dRTnk5UjVVcTla?oc=5",
+          "tarih": "Thu, 19 Nov 2026 10:12:56 GMT"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Bingöl'de coğrafi bilgi sistemleri geleceği şekillendirecek - Saray Medya",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Bingöl'de coğrafi bilgi sistemleri geleceği şekillendirecek - Saray Medya",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQNWRTbnE5TEVlWlB6R2EtQ3dMOUlkTzBxWDF6NU9pRE16UVJSdG42a0RRYkhTLUhCdzM0c1FvZnplUC1yRWFzLUJtTWhTNURmODMzTjAtRmlhRU83SE5aeXM1ZFFhbVBlQlUwemF5X3RpdjJPYVAtczllZm9YLUpwaUZBdnhaT3FXYlZjSFdCSGRKcUNsNXdhTkNBaENCTWVE?oc=5",
+          "tarih": "Thu, 19 Nov 2026 18:40:00 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Bingöl'de Coğrafi Bilgi Sistemleri ve Geleceğin Şehirleri Tartışıldı - Van Postası Gazetesi",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Bingöl'de Coğrafi Bilgi Sistemleri ve Geleceğin Şehirleri Tartışıldı - Van Postası Gazetesi",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNVUFnNXZHazJaR01HakU1RlNjTU5qeHJEWTd3RF81eHdwTlZpS0djUXd3aFhKS215Z3RydmhnSmV2RnRrdWhyOEs2bzJlWEtsNUc5d0RjcnpPbkotY1UzRHpKd3Bra1NkcWJ5cWMyQUE3cnpZcGpENnVpZlZMcUlMMWlQYWNZbVZiUE1IMldUY0FKQ0JJMzNaVFR4d2FtLUpiNUJzeGFZUmY0X1VyVnVRcNIBtgFBVV95cUxQa1Fpckx3V3F3MGJFbGo5eWVuQmJFMEJsN2lzcVBnMDJldGdNcXJFTFFNcUJyU05ZTUszMk4ta2VGS09vVEFXUmNBZjNmRWpTNk1qY1p0OXJabUpMN01LdUhXc1ZOLUt0bDluM25xdHl2aUpmYW5OUklNQTJBeXR2N1NwbkZzOUk4YTh4emZFSWN4QzIxMDlJYnJpSjRQb3ZkWlRxek0zS2F4N0g1TGFKRkFzeGhmUQ?oc=5",
+          "tarih": "Thu, 19 Nov 2026 12:03:08 GMT"
+        },
+        {
+          "kelime": "GEOGRAFIK AXBOROT TIZIMLARI",
+          "dil": "ÖZBEKÇE",
+          "konum": "ÖZBEKİSTAN",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Islohotlardan milliy yuksaliş sari – Yangi Özbekistonning taraqqiyot yöli - UZA.uz",
+          "ozet": "Haber içeriğinde 'GEOGRAFIK AXBOROT TIZIMLARI' ifadesi tam eşleşme olarak geçmektedir: Islohotlardan milliy yuksaliş sari – Yangi Özbekistonning taraqqiyot yöli - UZA.uz",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZnBjbFk2MFphRmR1Zjh2VGZjcGV0MUZoVm83NkhsUnRPU3FwWlpFWnZHbmZxY0pFQlIzbF9udUZiX1hWdklNUEdLVWNYWmtGeTJ2RzlHd0hBczlxMXl5UmVUWnZLTS0yWVMyeDR1MHFXRl90bUFBMTRIcDdiYkZIM3d2eEowbkd5RE1ya0xoVHBPd0ZxR2haZUVrOFJ0TTFJdFR0SkFB?oc=5",
+          "tarih": "Thu, 19 Nov 2026 12:28:59 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261119_170223",
       "gun": "19.11.2026",
       "saat": "17:02",
