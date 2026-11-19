@@ -1,6 +1,86 @@
 {
   "reports": [
     {
+      "id": "20261119_170223",
+      "gun": "19.11.2026",
+      "saat": "17:02",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 7,
+      "sonuclar": [
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "ASAT, COP31’de dijital su yönetimi ve akıllı altyapı vizyonunu paylaştı - Antalya Hürses",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: ASAT, COP31’de dijital su yönetimi ve akıllı altyapı vizyonunu paylaştı - Antalya Hürses",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOaHhNejJ0eGJRRHJOQTlxSFA4TmFlMjlqaVBqNFBtVmhKN09OY28zWkdQemdIa0dzbGJ1ZGlKZTRjYXAxc2ZMbXM1cXI4WGI5TXdNTUZoU2w2SElOMTJ2ekJKamNpMmhFS3AtYWh0eC1hQ3pTSk5wdjJFVGZpUWJSb3FETVZaLVNBQUI4YzBrT1RWcmhtbXcwUVVwLUpmUS1tNEtHRHFPdEtGQQ?oc=5",
+          "tarih": "Thu, 19 Nov 2026 10:50:42 GMT"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Coğrafi verilerle şehir planlaması: Bingöl’de yoğun katılımlı CBS buluşması - Aksiyon.com.TR",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Coğrafi verilerle şehir planlaması: Bingöl’de yoğun katılımlı CBS buluşması - Aksiyon.com.TR",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOelFkX3VrczYzb3hYSVU1Rk8xZ3NURzhpSGFjMUpSZFk5RHlJMGZJTnF5YTE5RnI3SjVZWXFDMkoteFdIcFctbnJ1SktrTWNxdUhtZTZyTlJiaEV5T1VKUTluQzVfeGVybnplMkE2LWFjYUdaR1B3TGVHUVdEVXI4TTkzUkdQYnVzaG94am1kVEJISWhFRnBEZjRYbW1YTnVvYWdlRTVxZGZZQzMx0gGyAUFVX3lxTE95VlUxRlNpX3ZFT2JUai04ZFo5WllYak0wcGxvQWtaUi1lZjZMNnAtQW5KcXdrQkJYb0w5RDVvbXotV3R6WGFvQmdvTDFMd1lDdjdXMzJOaTduWWNWRENoSmR5TllEd2xBOHRCOTFxenQ3TC1TLWpKb2lNTGV2V0o1d0xiOUx0bVVWaTlPbmhhVURpUGI4THpUUFRnZTdSamd0RFhMcjhIYS1BVEhPcF9Ia0E?oc=5",
+          "tarih": "Thu, 19 Nov 2026 11:23:51 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Bingöl’de geleceğin şehirleri masaya yatırıldı - Kars Hakimiyet",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Bingöl’de geleceğin şehirleri masaya yatırıldı - Kars Hakimiyet",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPTFdLNFN1Z3EyZWo3MzdwYXdmYy01VHdKd25LRFEzVWJTLWxPaVdYQXJwUVczR3g3VUxDQzJ3UDA4aGV2OXlMdTdqc1FoNXdNTEMwRFlXR01lVXVvYjhaMm1KMlhhM0VwbjlxRlVTNVVENVhqend5SXlXY3dZdE4tUzlEQlFhcmlFcEFNaHNOelNELS1zN2NtRG04dF94RWFH0gGgAUFVX3lxTE9MV0s0U3VncTJlajczN3Bhd2ZjLTVUd0p3bktEUTNVYlMtbE9pV1hBcnBRVzNHeDdVTENDMndQMDhoZXY5eUx1N2pzUWg1d01MQzBEWVdHTWVVdW9iOFoybUoyWGEzRXBuOXFGVVM1VUQ1WGp6d3lJeVdjd1l0Ti1TOURCUWFyaUVwQU1oc056U0QtLXM3Y21EbTh0X3hFYUc?oc=5",
+          "tarih": "Thu, 19 Nov 2026 11:41:00 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ UZMANI",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "İKLİM ZİRVESİ COP31 ANTALYA - COP31'de Bodrum kıyılarındaki deniz çayırları gündeme alındı - Habertürk",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ UZMANI' ifadesi tam eşleşme olarak geçmektedir: İKLİM ZİRVESİ COP31 ANTALYA - COP31'de Bodrum kıyılarındaki deniz çayırları gündeme alındı - Habertürk",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOWUtMbmJ3OXVlUnpDaXhZenB0OUxzcWFuaEdjeWlzWDlfbFM0c3RpQkVoYkdzSU5nWUdWWEU3elIyeVR5eEpmNzdUSG1LTVlkOEE1cHFoSlVXbDMta29zZXYyUjJJM29HRGxhQkdBWE1vOUhqNmxRY1BTZ2VxRkR4MjRCcFd6ZjNRUjZHUndpSFFhdExLa0V1bG5KbGFlTG1Yc0FuaWVDWkVSNlI3WFZBbGNsMHVITWkzR0hrczFJclFxRzd5T2hFNEFscVlLZ1hFMkVmSDU4b2lTZEltcnA0YUVZZ0E?oc=5",
+          "tarih": "Wed, 18 Nov 2026 11:13:23 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ UZMANI",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Bolu’da biyolojik türler kaydedilecek! Son yılların en büyük projesi! - Köroğlu Gazetesi",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ UZMANI' ifadesi tam eşleşme olarak geçmektedir: Bolu’da biyolojik türler kaydedilecek! Son yılların en büyük projesi! - Köroğlu Gazetesi",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPRGJlTlFWcnltUDBTSXgxeG9Rd3NTdzVoUUllZWpZVndETkgzcTlwdlg4Y0ZZVHVsemZYdFlSVmNnMnVKNkQ4M1NlZF92clA2WklMcjJSQjctSjViVW9lZXdkdUYxcnVxUWtSb3hNZHZ6ZXlUczU1MTBKZVN3eHNxVTgwSDFXUzJGUFVFQWc3WEJHWEpCUmllYWRIRWREOXc?oc=5",
+          "tarih": "Thu, 19 Nov 2026 07:35:00 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ UZMANI",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "COP31'de deniz çayırları için kritik çağrı: Haritalamadan korumaya geçilmeli - Ekonomim",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ UZMANI' ifadesi tam eşleşme olarak geçmektedir: COP31'de deniz çayırları için kritik çağrı: Haritalamadan korumaya geçilmeli - Ekonomim",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQazFXWmktRkFDc1pjNTdEMDF0ektSWWVSWkEwakh3Tl9pdm9Jc01IdGpBSmtGNDhHdXhjTGJLMnV5RkRUV2k3RkR4WFFDZjdTa2dfMm94eVJXelFnbGpjTkRteXppQmpJbDZLbkpRajRGVThyNFRIQkVYZWNmTDNQWkVTOXFoZUllVThWcnB3d3Nkc3dDSVBPR2lGaWNrRGVKZkp0LVFGRkNPVXF2c0NLaXJUeE1qckRpU05WRDFZMA?oc=5",
+          "tarih": "Thu, 19 Nov 2026 12:19:00 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ UZMANI",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Bolu'nun biyolojik çeşitliliği mercek altına alınacak! - TV Bolu",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ UZMANI' ifadesi tam eşleşme olarak geçmektedir: Bolu'nun biyolojik çeşitliliği mercek altına alınacak! - TV Bolu",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPbHVIQ2xsZVFIeDJIeVRtRGt5Vi1TdWRPVkUyTFVmQkt4emJ1cFhHNmVPcG9GTHpfdkVhTGk2YzRvOWYzMlcyZHg1azdYMkdwbUJiMmFRc2pFU2RJTUpzekJBX1hLWWVJRGVkUGRpTkNERV9mOUhlOU8tV21FYXRadW9HMFgwaFU?oc=5",
+          "tarih": "Thu, 19 Nov 2026 11:41:00 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261119_013215",
       "gun": "19.11.2026",
       "saat": "01:32",
