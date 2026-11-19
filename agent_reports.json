@@ -1,6 +1,36 @@
 {
   "reports": [
     {
+      "id": "20261120_013748",
+      "gun": "20.11.2026",
+      "saat": "01:37",
+      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 2,
+      "sonuclar": [
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "2027 Ulusal CBS Günü İçin Bayrak Gümüşhane’ye Teslim Edildi - Gümüşkoza Gazetesi",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: 2027 Ulusal CBS Günü İçin Bayrak Gümüşhane’ye Teslim Edildi - Gümüşkoza Gazetesi",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWm9PVTl6RzYzaHRlYWxaWVBZZk0zOHBLZ1hBUldiVENROGhXTS05LW55eUtITW9pa25OOF9MLU4xUGVEMkVRcm43MGF6OUNEVGc0cFR0TXNlLW9VNTU3b3BaeTFtSXpEMmpxSzRSaWhoM19ZRzVuaW1KaGZNM2g4TkNMTEZVeVk2cWU4Y3VVa3haUDNLamplSG9qbDZjdW1rVVJTS9IBqgFBVV95cUxNWTd0N0tWX1Y2MWJnRXhKd21abTB1NTE2YmwtR1dnR3ZuN2d2SVlnaGFTMFkybFB3azRUZk5EYlhjZDhrWVFlamRVY01fV2JBU3ZGcTdXdjJKNjNZamowZTd4cUZ5Mmg1VXNxSzR3MVg3eXNkaXg5MG5sbmNPclA1MGs3d0xDTk1tV2t2SjVuM0lNYVNpUk5VYTBNSC1XVXJlajlwTG9xZlFjZw?oc=5",
+          "tarih": "Thu, 19 Nov 2026 20:57:00 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Antalya Su ve Atıksu İdaresi (ASAT), COP31’de dijital su yönetimi ve akıllı altyapı vizyonunu paylaştı - Anka Haber",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Antalya Su ve Atıksu İdaresi (ASAT), COP31’de dijital su yönetimi ve akıllı altyapı vizyonunu paylaştı - Anka Haber",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPSlZJcWdyYWRMS3c5TnBBNnlia1NEMDRSSzR0NFk4eUkxdlh0YWViUlpwNjVnUW5xd2hWV2JWbUY5QUFDZEhSM2dhYlhKQ2JRLXljbExDRmR3UVhHejNvYnVNQUhRRkdaT0FjM1FJTXVUcWN3SEdLdmpQbGs4ZFp3QzFuR2hKa0ZMVXJzVXlfV2RUUkpZcV9CalFBdzR5Z1ZueGFoN1Q1ZmY0SkY4aG9UUnliWUR1VVlVOWtGRHdodzExSngwcGRueUNnSkwyRGI2dUE?oc=5",
+          "tarih": "Thu, 19 Nov 2026 09:30:19 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261119_214712",
       "gun": "19.11.2026",
       "saat": "21:47",
