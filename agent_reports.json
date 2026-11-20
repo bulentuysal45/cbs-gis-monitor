@@ -1,6 +1,66 @@
 {
   "reports": [
     {
+      "id": "20261120_211424",
+      "gun": "20.11.2026",
+      "saat": "21:14",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 5,
+      "sonuclar": [
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "2027 Ulusal CBS Günü İçin Bayrak Gümüşhane’ye Teslim Edildi - Gümüşkoza Gazetesi",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: 2027 Ulusal CBS Günü İçin Bayrak Gümüşhane’ye Teslim Edildi - Gümüşkoza Gazetesi",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNWTd0N0tWX1Y2MWJnRXhKd21abTB1NTE2YmwtR1dnR3ZuN2d2SVlnaGFTMFkybFB3azRUZk5EYlhjZDhrWVFlamRVY01fV2JBU3ZGcTdXdjJKNjNZamowZTd4cUZ5Mmg1VXNxSzR3MVg3eXNkaXg5MG5sbmNPclA1MGs3d0xDTk1tV2t2SjVuM0lNYVNpUk5VYTBNSC1XVXJlajlwTG9xZlFjZ9IBqgFBVV95cUxNWTd0N0tWX1Y2MWJnRXhKd21abTB1NTE2YmwtR1dnR3ZuN2d2SVlnaGFTMFkybFB3azRUZk5EYlhjZDhrWVFlamRVY01fV2JBU3ZGcTdXdjJKNjNZamowZTd4cUZ5Mmg1VXNxSzR3MVg3eXNkaXg5MG5sbmNPclA1MGs3d0xDTk1tV2t2SjVuM0lNYVNpUk5VYTBNSC1XVXJlajlwTG9xZlFjZw?oc=5",
+          "tarih": "Thu, 19 Nov 2026 20:57:00 GMT"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "CBS Destekli Arazi Kontrolleri Yapıldı - Aksaray Haber",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: CBS Destekli Arazi Kontrolleri Yapıldı - Aksaray Haber",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNNzY4dTVVeHRVVUJKeHMtZzdvLUtOUnl0anZYTzhWVWpEcVlMLW5fb295YURFUHdzTTdqS1JTSTEyMG1WbnQ2Njdvcy1NSWM4c1h5RWRDZVZJR19zdURjOGl1ZUxUNmQ4TlZKSlhWbHhEelJJTThkWWRHMTVaOU5IMlM2Zl8?oc=5",
+          "tarih": "Fri, 20 Nov 2026 11:26:46 GMT"
+        },
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Bingöl'de coğrafi bilgi sistemleri geleceği şekillendirecek - Saray Medya",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Bingöl'de coğrafi bilgi sistemleri geleceği şekillendirecek - Saray Medya",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNS2xQZTVVRm5UQU5PaXNrak1sc2dOTUFkVUtmYzFZcFhPTXoybnBKY3RvWWtKZ056YkFvTGtvemV0UUZublV1eE16YnAyZEU4SktoRmNXbzVvYzdGS1ZsVWFLWEsybFc0QXRBblg4X0ItZ1F6cWpxX2h5UE1IdTJycFdwYzNDYXlUNkQxS2NXQVB4d29MYy1BSEh1UjRRZ2dJTlE?oc=5",
+          "tarih": "Thu, 19 Nov 2026 18:40:00 GMT"
+        },
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ UZMANI",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "COP31'de deniz çayırları için kritik çağrı: Haritalamadan korumaya geçilmeli - Deniz Haber",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ UZMANI' ifadesi tam eşleşme olarak geçmektedir: COP31'de deniz çayırları için kritik çağrı: Haritalamadan korumaya geçilmeli - Deniz Haber",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ZQ2hXX3BTcmI5ZU45ZlVHcXl2ek16S3JaNGJWdHNwRFNkcE50Zm1RUkRrUC1sb09oM0o0UGk1Mm96UzhxenZURHAyak1ReWZ5amNJTGN4NVYyeTB4QmIxNUkwSm5UTTdI?oc=5",
+          "tarih": "Fri, 20 Nov 2026 12:55:59 GMT"
+        },
+        {
+          "kelime": "GEOGRAPHIC INFORMATION SYSTEMS",
+          "dil": "İNGİLİZCE",
+          "konum": "AZERBAYCAN",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Machine Learning and GIS Map Gastric Cancer Risk Zones Across East Azerbaijan - Bioengineer.org",
+          "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: Machine Learning and GIS Map Gastric Cancer Risk Zones Across East Azerbaijan - Bioengineer.org",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOdnZUandXUTdDMXdydzVJTkpvOWNzdVRFLTJGTnlaTTBXUEswYS1HVEVWRHpQbS1ibUpUU1psWUZsaWJXMkVITG90TzlqUjZUd1hpWTM2WGtDbHlaREY2YVdUNGFpRHBncDRIMkV4dGQxVDJ0MUNfV20yZENyajVqbExqMzcwbzFyLVZTb0pfejBfeGh5Q2NPQjJ4U0lRSWNSRXd6Xw?oc=5",
+          "tarih": "Thu, 19 Nov 2026 23:05:52 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261120_164547",
       "gun": "20.11.2026",
       "saat": "16:45",
