@@ -1,6 +1,26 @@
 {
   "reports": [
     {
+      "id": "20261122_235900",
+      "gun": "22.11.2026",
+      "saat": "23:59",
+      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 1,
+      "sonuclar": [
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ UZMANI",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "COP31'de Deniz Çayırları İçin Kritik Çağrı - Bodrum Kent TV",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ UZMANI' ifadesi tam eşleşme olarak geçmektedir: COP31'de Deniz Çayırları İçin Kritik Çağrı - Bodrum Kent TV",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQM2xyVHB6MnF6Y0ZXOXozWnM5TGF3YU5EQmhYR2pZUFNwSU1uZmNMNXV4ZVhnak0yc0gwanNCZGtqaElpbTB2TG8yUy1ZQ3VPTnJsMGVNcXdXME9NLXFaUUhqYk9iUzUxQVZubkdqeklwTi1JMnItcUR6M2ZYZlBladIBhgFBVV95cUxNdjBycERyV3FXcUxCcU9tMmtqVXRzaWVhVExJYXcxdkUtdkxpS3VHdFlIUE5BZTNYTlFnVThtVFlqS0FFZ2E2YndqOGJRaXZnaDIyWlRzaFpRSzc0MlFBaXd6NVFtb1p3VDVIRDdFTHhOWTducWdOMGo3TjUzV3pMcDU2akpjdw?oc=5",
+          "tarih": "Wed, 18 Nov 2026 07:47:00 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261122_203438",
       "gun": "22.11.2026",
       "saat": "20:34",
@@ -1206,15 +1226,6 @@
           "tarih": "Fri, 30 Oct 2026 07:00:00 GMT"
         }
       ]
-    },
-    {
-      "id": "20261107_222003",
-      "gun": "07.11.2026",
-      "saat": "22:20",
-      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
-      "mail_gonderildi": true,
-      "toplam_sonuc": 0,
-      "sonuclar": []
     }
   ]
 }
