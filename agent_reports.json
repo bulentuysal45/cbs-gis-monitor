@@ -1,6 +1,26 @@
 {
   "reports": [
     {
+      "id": "20261122_155819",
+      "gun": "22.11.2026",
+      "saat": "15:58",
+      "ogun": "13:00 Öğle Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 1,
+      "sonuclar": [
+        {
+          "kelime": "GIS",
+          "dil": "İNGİLİZCE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "LinkedIn (Uygulama İçi Yeni İlan)",
+          "baslik": "Full Stack Engineer (GO,Golang) — Calico Teknoloji",
+          "ozet": "...• Previous experience of QGIS • Understanding of Geospatial concepts and familiarity with GIS technologies • Understanding of imagery data, its processing, storage, and retrieval • Ex...",
+          "url": "https://tr.linkedin.com/jobs/view/full-stack-engineer-go-golang-at-calico-teknoloji-4491914888",
+          "tarih": "Yayın Tarihi: 2026-11-20"
+        }
+      ]
+    },
+    {
       "id": "20261121_235118",
       "gun": "21.11.2026",
       "saat": "23:51",
@@ -1224,46 +1244,6 @@
           "ozet": "Haber içeriğinde 'GIS' ifadesi tam eşleşme olarak geçmektedir: Geographers Map Multi-Scalar Spatial Dynamics of Turkey’s Menzil Religious Community - Bioengineer.org",
           "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQSjZZNzV2MjBrM2QzSXAwRkRWTG5vLWUxX1FmejZfdDJGUmpMNkpEY1JKUGVlUHZiUmtXZzNINHo1cHVGOTJDRlNVZUcteTBPMXptTFBlTzdiMnBLc0g0SkJtWlBNVVR1UUkzV05ZQnpJb0lIZVBoVzdSRkVZVG9Mc3pseFVhT1ZmazBYcHRGeXVTNkxwNVNOVlFiSjlxRVBJd0Nwa2lBOVN0dkRL?oc=5",
           "tarih": "Sat, 07 Nov 2026 12:54:00 GMT"
-        }
-      ]
-    },
-    {
-      "id": "20261107_142531",
-      "gun": "07.11.2026",
-      "saat": "14:25",
-      "ogun": "13:00 Öğle Maili",
-      "mail_gonderildi": true,
-      "toplam_sonuc": 3,
-      "sonuclar": [
-        {
-          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
-          "dil": "TÜRKÇE",
-          "konum": "TÜRKİYE",
-          "kaynak_tipi": "Google Haber / Basın Duyurusu",
-          "baslik": "Daha yaşanabilir Kayseri için harekete geçildi: Erciyes Üniversitesi o etkinliğe ev sahipliği yaptı! - Kayseri Anadolu Haber",
-          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Daha yaşanabilir Kayseri için harekete geçildi: Erciyes Üniversitesi o etkinliğe ev sahipliği yaptı! - Kayseri Anadolu Haber",
-          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQcFRhV1JOdUM4MGJnTi1KTXhzRE1ZX3pRMDZzY0VaQ2pZaWE5M1Q5dlVZeDJ4Q0ZvUFNWTmhRMmV1VERGQWhpbmlZaFc1S0pvNWQ0TldpNDZBaGUzVnVDZWVNSzNwVHlWRlp2M0ViZ0M1OXFfUDYyQjJYNDV3WkF6VXRkdDhIYW8yWXFYeFM3THpxMmRYYWVVMEptRk5GVlhyUW8wNUtBRWVDeHNHR0M3TGU2UGJoZjJVRUFac25aYWUxMmRTc1VsZW5Kanl3Q1RobFBzNmROU2pGQldhZVE?oc=5",
-          "tarih": "Thu, 05 Nov 2026 04:42:52 GMT"
-        },
-        {
-          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
-          "dil": "TÜRKÇE",
-          "konum": "TÜRKİYE",
-          "kaynak_tipi": "Google Haber / Basın Duyurusu",
-          "baslik": "Kahramanmaraş’ın afet çalışmaları Ankara’da tanıtıldı - Kahramanmaraş Haber | Son Dakika Maraş Haberleri - Kahramanmaraş Bugün Gazetesi",
-          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Kahramanmaraş’ın afet çalışmaları Ankara’da tanıtıldı - Kahramanmaraş Haber | Son Dakika Maraş Haberleri - Kahramanmaraş Bugün Gazetesi",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTHRvbGtyWGFwZTVHWEk3Y3BqamMzXzJJenlKelRPYnhjVThFMWxKSmUzS2dKMmFralcyR0t4bXRyNURFWkdmWF96YnpQN3Vwc3JhOE5aQzlnaWNaSU9WZU80U0xuME5hek9waTZlQ0hZRktIWkEwaFpYMXBxbXdtVjJIYnJKY01z?oc=5",
-          "tarih": "Wed, 04 Nov 2026 08:24:00 GMT"
-        },
-        {
-          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ",
-          "dil": "TÜRKÇE",
-          "konum": "TÜRKİYE",
-          "kaynak_tipi": "Google Haber / Basın Duyurusu",
-          "baslik": "Ankara’daki Kongrede Kahramanmaraş’ın Afet Teknolojileri Tanıtılıyor - Haber46",
-          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ' ifadesi tam eşleşme olarak geçmektedir: Ankara’daki Kongrede Kahramanmaraş’ın Afet Teknolojileri Tanıtılıyor - Haber46",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOV0FtcWhFOFRvTjlTa05Fc3hHNjd0S2dCYlRid3pSSDR2ZUVSWHF0aEpvLTdJSFRRLXEtRjV4Q3NGMWZlWXJ5Skt0ZFNnV29rQk9xZGFMVEVrdTIxVVkzZEQ5eXFObUg1dU1WQkpmVHBTYmhieXVSaHZGWjRpQVNsZkZtdVVZeVctZ0tocE1DZkhaQVVoenliRA?oc=5",
-          "tarih": "Wed, 04 Nov 2026 09:49:00 GMT"
         }
       ]
     }
