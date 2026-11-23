@@ -1,6 +1,26 @@
 {
   "reports": [
     {
+      "id": "20261124_005152",
+      "gun": "24.11.2026",
+      "saat": "00:51",
+      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 1,
+      "sonuclar": [
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "LinkedIn (Uygulama İçi Yeni İlan)",
+          "baslik": "Harita Mühendisi — Gizli",
+          "ozet": "...de görev almak üzere; saha ölçümleri, haritalama çalışmaları ve Coğrafi Bilgi Sistemleri (CBS) uygulamalarını yürütecek, teknik süreçlerin etkin şekilde yönetilmesine katkı sağlayacak...",
+          "url": "https://tr.linkedin.com/jobs/view/harita-m%C3%BChendisi-at-gizli-4493641343",
+          "tarih": "Yayın Tarihi: 2026-11-23"
+        }
+      ]
+    },
+    {
       "id": "20261123_183553",
       "gun": "23.11.2026",
       "saat": "18:35",
@@ -1217,15 +1237,6 @@
           "tarih": "Sat, 07 Nov 2026 11:54:00 GMT"
         }
       ]
-    },
-    {
-      "id": "20261108_192916",
-      "gun": "08.11.2026",
-      "saat": "19:29",
-      "ogun": "18:00 Akşam Maili",
-      "mail_gonderildi": true,
-      "toplam_sonuc": 0,
-      "sonuclar": []
     }
   ]
 }
