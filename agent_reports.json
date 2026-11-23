@@ -1,6 +1,26 @@
 {
   "reports": [
     {
+      "id": "20261123_183553",
+      "gun": "23.11.2026",
+      "saat": "18:35",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 1,
+      "sonuclar": [
+        {
+          "kelime": "CBS",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Üniversitemiz, 2027 Ulusal CBS Günü’ne Ev Sahipliği Yapacak - Gümüşhane Üniversitesi",
+          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Üniversitemiz, 2027 Ulusal CBS Günü’ne Ev Sahipliği Yapacak - Gümüşhane Üniversitesi",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQVGFqTE9scG9XdC1tVFFDbUV1M1VCbTZSTDRyTS1rZ1lIZDBNOVRkM0c4SkhhQXFBQ1Jra05ULTg5Sk00cWlFek85WVBrT2RHTTlTSTRKQ2RrQUV3emo5NzA5WEREbTJFdW1Cc3ROSWxXYXVibUMtZVNsNGw3OVMyVDZkTDR2WDczdHE5RTY0NHhrNXVSN2VQUEI2eno0a00?oc=5",
+          "tarih": "Fri, 20 Nov 2026 09:27:12 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261122_235900",
       "gun": "22.11.2026",
       "saat": "23:59",
@@ -1206,26 +1226,6 @@
       "mail_gonderildi": true,
       "toplam_sonuc": 0,
       "sonuclar": []
-    },
-    {
-      "id": "20261108_143749",
-      "gun": "08.11.2026",
-      "saat": "14:37",
-      "ogun": "13:00 Öğle Maili",
-      "mail_gonderildi": true,
-      "toplam_sonuc": 1,
-      "sonuclar": [
-        {
-          "kelime": "GIS",
-          "dil": "İNGİLİZCE",
-          "konum": "ÖZBEKİSTAN",
-          "kaynak_tipi": "Google Haber / Basın Duyurusu",
-          "baslik": "Ronaldo to Sit Out Al Nassr's AFC Champions League Match in Uzbekistan - Lokmat",
-          "ozet": "Haber içeriğinde 'GIS' ifadesi tam eşleşme olarak geçmektedir: Ronaldo to Sit Out Al Nassr's AFC Champions League Match in Uzbekistan - Lokmat",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPNEV0eDNCYmNFTTdYUkttUklBWkVxWkZGczNQOTdfeXRUWmM5SU9hRHRhVDA4NXdkenp6RU9ZTnBkODhkTDlyZmxUbk9GV2FrQTlGTTQ1ZnpRRGFfTjh2a1M0Wmp2U2xtbUtUaFl3YkRoNTBoTC1sbkNPQTVPamxmQVJnMTJPMkViSkxmcXJ5b2hVM0NlQmFJdEtfRHRyRGdmU3BTcXpLWHVNdndMQjB6LVZRYzdVSlk?oc=5",
-          "tarih": "Fri, 30 Oct 2026 07:00:00 GMT"
-        }
-      ]
     }
   ]
 }
