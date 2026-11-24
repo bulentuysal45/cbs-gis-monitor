@@ -1,6 +1,15 @@
 {
   "reports": [
     {
+      "id": "20261125_025021",
+      "gun": "25.11.2026",
+      "saat": "02:50",
+      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 0,
+      "sonuclar": []
+    },
+    {
       "id": "20261124_232807",
       "gun": "24.11.2026",
       "saat": "23:28",
@@ -1165,15 +1174,6 @@
           "tarih": "Wed, 04 Nov 2026 09:50:00 GMT"
         }
       ]
-    },
-    {
-      "id": "20261110_024434",
-      "gun": "10.11.2026",
-      "saat": "02:44",
-      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
-      "mail_gonderildi": true,
-      "toplam_sonuc": 0,
-      "sonuclar": []
     }
   ]
 }
