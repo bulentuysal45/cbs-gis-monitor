@@ -1,6 +1,15 @@
 {
   "reports": [
     {
+      "id": "20261126_023219",
+      "gun": "26.11.2026",
+      "saat": "02:32",
+      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 0,
+      "sonuclar": []
+    },
+    {
       "id": "20261125_224301",
       "gun": "25.11.2026",
       "saat": "22:43",
@@ -1142,26 +1151,6 @@
           "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: Uzbekistan Agriculture: Higher Yields, Drip Irrigation and Digital Tools - News and Statistics - IndexBox",
           "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPcHo5X1luelZGM0thYVhLRUkyTEpwejIyVHR2UGYweVAwVDFGZldBYVpmS09aY0xYTFFoRm9ZeVFPWDUxblhuNWpvTko5R1hsaWcxVXkxemZSUWVWaWUzSVJaSjM0WUFxeWhUU2JMNHdwWGc4WGNPcEotMFcxLW15YklRRWUxcXJ0VHVCTllmNWpaeldqbkp1dHhhYUJPMDZIUVlEMXRMQlc?oc=5",
           "tarih": "Tue, 10 Nov 2026 15:31:29 GMT"
-        }
-      ]
-    },
-    {
-      "id": "20261111_001525",
-      "gun": "11.11.2026",
-      "saat": "00:15",
-      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
-      "mail_gonderildi": true,
-      "toplam_sonuc": 1,
-      "sonuclar": [
-        {
-          "kelime": "GEOGRAPHIC INFORMATION SYSTEMS",
-          "dil": "İNGİLİZCE",
-          "konum": "ÖZBEKİSTAN",
-          "kaynak_tipi": "Google Haber / Basın Duyurusu",
-          "baslik": "Uzbekistan aims for $10 billion in food exports by 2030: 26 million tonnes of fruit and vegetables to 92 markets - KOHA JONË",
-          "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: Uzbekistan aims for $10 billion in food exports by 2030: 26 million tonnes of fruit and vegetables to 92 markets - KOHA JONË",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFA3dXF2VFFKQWNqYnZoS2ZTZjV3Y2lJZUk5YmVaWVlXdl9jV1R3WXR1d2pzTnNGRzR6Y1ViSHdvUWFMelUxWWlaZUwwTnR4dTR4SmYwMjlnTkVWNlFZdHVyUkJtQ2ljMWk4TDgxUnpjWEQteWZ1emoxYnV2OHFIZw?oc=5",
-          "tarih": "Tue, 10 Nov 2026 14:32:00 GMT"
         }
       ]
     }
