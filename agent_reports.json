@@ -1,6 +1,26 @@
 {
   "reports": [
     {
+      "id": "20261125_224301",
+      "gun": "25.11.2026",
+      "saat": "22:43",
+      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 1,
+      "sonuclar": [
+        {
+          "kelime": "COĞRAFİ BİLGİ SİSTEMLERİ UZMANI",
+          "dil": "TÜRKÇE",
+          "konum": "TÜRKİYE",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "Turizm Cenneti Bodrum'da Deniz Çayırlarını Eden Yapılaşma, Kirlilik ve Yoğun Tekne Trafiği COP31 Gündemine Taşındı - Muğla Gazetesi",
+          "ozet": "Haber içeriğinde 'COĞRAFİ BİLGİ SİSTEMLERİ UZMANI' ifadesi tam eşleşme olarak geçmektedir: Turizm Cenneti Bodrum'da Deniz Çayırlarını Eden Yapılaşma, Kirlilik ve Yoğun Tekne Trafiği COP31 Gündemine Taşındı - Muğla Gazetesi",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxObXhzQ1ZjUEplbk84U3ZQbzR2azdWR2dhbHl0bVg3TkdCYXRlWGpGdEZoVzNPcldBc3FsZ1lteUNKai1meUYtSmtlU09TTnFFVHU5bXlNc3RwY2UtSXNtRm8ybjRHY0N5LUR3TjltYTFNX1gwZWduc0xQdmZTMWNBN3pGNlJjeEdsYURaY1dMbkdCMjUyTE9MNmRaOWR5aTRlZEF1SFB4RDE4VjIwYlM3SFhUU0o5QjBJa3VRYXViWUlQZlho?oc=5",
+          "tarih": "Thu, 19 Nov 2026 20:46:42 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261125_181301",
       "gun": "25.11.2026",
       "saat": "18:13",
@@ -1142,26 +1162,6 @@
           "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: Uzbekistan aims for $10 billion in food exports by 2030: 26 million tonnes of fruit and vegetables to 92 markets - KOHA JONË",
           "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFA3dXF2VFFKQWNqYnZoS2ZTZjV3Y2lJZUk5YmVaWVlXdl9jV1R3WXR1d2pzTnNGRzR6Y1ViSHdvUWFMelUxWWlaZUwwTnR4dTR4SmYwMjlnTkVWNlFZdHVyUkJtQ2ljMWk4TDgxUnpjWEQteWZ1emoxYnV2OHFIZw?oc=5",
           "tarih": "Tue, 10 Nov 2026 14:32:00 GMT"
-        }
-      ]
-    },
-    {
-      "id": "20261110_202553",
-      "gun": "10.11.2026",
-      "saat": "20:25",
-      "ogun": "18:00 Akşam Maili",
-      "mail_gonderildi": true,
-      "toplam_sonuc": 1,
-      "sonuclar": [
-        {
-          "kelime": "GEOGRAPHIC INFORMATION SYSTEMS",
-          "dil": "İNGİLİZCE",
-          "konum": "ÖZBEKİSTAN",
-          "kaynak_tipi": "Google Haber / Basın Duyurusu",
-          "baslik": "Uzbekistan invests in higher-yield farming and food security - Euronews",
-          "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: Uzbekistan invests in higher-yield farming and food security - Euronews",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbGk0TUZuT2p6eGNNcnFiMGJhX2k0cHp3QlpOeTRORGxzT2YySDU4NkVhZzR0MXp3akFuVnhnanRDQXV2LWVJenJZSmQ0bjdMYXdDaFpyNjhKcXZhWkY2bXFGUl9OcEdZREhsU3A1TWpVR2JHaHQxN3A4SHhjbEZVT1J1aDhfbC1QZWJPUmJWanFuMFdJb0w1RDNBN0gzVFZ3MkdfZ1RMREFjNmhaOVhlcldNM0M3WXltX1NLclZkWQ?oc=5",
-          "tarih": "Tue, 10 Nov 2026 14:00:56 GMT"
         }
       ]
     }
