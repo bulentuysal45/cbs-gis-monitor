@@ -1,6 +1,15 @@
 {
   "reports": [
     {
+      "id": "20261126_173831",
+      "gun": "26.11.2026",
+      "saat": "17:38",
+      "ogun": "18:00 Akşam Maili",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 0,
+      "sonuclar": []
+    },
+    {
       "id": "20261126_023219",
       "gun": "26.11.2026",
       "saat": "02:32",
@@ -1101,56 +1110,6 @@
           "ozet": "Haber içeriğinde 'GIS' ifadesi tam eşleşme olarak geçmektedir: Uzbekistan and GIZ agree to cooperate on statistical data - UzDaily.uz",
           "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNX0otczJpMjJ5SUNGeHBOcnhkWEZ6Vld6enBUS0JyVVNGbFlGWXd5bHppZXhweVl2aUhDZ2Ewbm96Ty1pMGg3eEwxWnhOVlJRU2FrbWhVcXd2UUttUDZxSnA5cWNxU3dhX2dJejM2WDlEay1lbHFSZy1NcWJ6d2JnT01Pa1Z0eUNPSm1lZQ?oc=5",
           "tarih": "Wed, 11 Nov 2026 13:43:52 GMT"
-        }
-      ]
-    },
-    {
-      "id": "20261111_151958",
-      "gun": "11.11.2026",
-      "saat": "15:19",
-      "ogun": "13:00 Öğle Maili",
-      "mail_gonderildi": true,
-      "toplam_sonuc": 4,
-      "sonuclar": [
-        {
-          "kelime": "CBS",
-          "dil": "TÜRKÇE",
-          "konum": "TÜRKİYE",
-          "kaynak_tipi": "Google Haber / Basın Duyurusu",
-          "baslik": "500’den fazla sarsıntı ile 124 yıllık deprem anatomisi: Malatya haritasında fay yoğunluğunun zirve yaptığı bölgeler! - Bu Sabah Malatya",
-          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: 500’den fazla sarsıntı ile 124 yıllık deprem anatomisi: Malatya haritasında fay yoğunluğunun zirve yaptığı bölgeler! - Bu Sabah Malatya",
-          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNVDZTam9uQm1MV0tnMzZ0LVJGbXVwSWxRTTZ2QVFtdGJTdVhyYnVCM25uTzNLa1hHWWlhZ0N5b1dqZHhJRV8yY2xFU182djlHRjMzS3RLaGtmVDItMjRUQjM1SlNQdlR3WFdSNHpFTk5JNWZocXdZLVRQYi01bXZOY3Qzd1plWmIzb2E5SGJqWE9rNFZLZUxlZ0lhUk5wTzNFVksySHVmYWpuUVZ1Z3Nuc3lqd2lLVGsxYlQ2d0pmRTlMeVJfYkNyaHk1eU9HaE9FdDc1U201X3Nod29V?oc=5",
-          "tarih": "Wed, 11 Nov 2026 09:10:00 GMT"
-        },
-        {
-          "kelime": "CBS",
-          "dil": "TÜRKÇE",
-          "konum": "TÜRKİYE",
-          "kaynak_tipi": "Google Haber / Basın Duyurusu",
-          "baslik": "Bugün Şanlıurfa’da elektrikler kesiliyor! DEDAŞ ilçe ilçe listeyi açıkladı - Urfa Değişim",
-          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Bugün Şanlıurfa’da elektrikler kesiliyor! DEDAŞ ilçe ilçe listeyi açıkladı - Urfa Değişim",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOWnBneEg3VWh4MHd2UF8zY0JJdGlWSnltTlEwSDV3cXg2QjJJa0ZBNnVCZVQ1ZEZ2OEhlanlpSGxCM0RsLUoxR0Jqa0hyQ0lDT1FaQ3BhMFAtSUI5OVhpeWtSdzBWQm82OTFlR2p6M0ZncEExeHVBOVFOMFVrc1VXU2R3S1F3ak5uRWpYMWU4aEZRcXI1SXpKeEFGTnUxMWgzWTg5NkF0RnlXMUFLcnNR?oc=5",
-          "tarih": "Wed, 04 Nov 2026 06:53:25 GMT"
-        },
-        {
-          "kelime": "CBS",
-          "dil": "TÜRKÇE",
-          "konum": "TÜRKİYE",
-          "kaynak_tipi": "Google Haber / Basın Duyurusu",
-          "baslik": "Tarım ve Orman Bakanlığı 130 bin TL maaşla personel alımı: İşte başvuru şartları 2026 - Kamu Son Dakika Haberleri",
-          "ozet": "Haber içeriğinde 'CBS' ifadesi tam eşleşme olarak geçmektedir: Tarım ve Orman Bakanlığı 130 bin TL maaşla personel alımı: İşte başvuru şartları 2026 - Kamu Son Dakika Haberleri",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPNmpuVm1QdmZZSVE1ZkIzQ2U0SkFHUHNNX1RxTDNzbmw5Zkp4RkNvanFaQ1lnS2pHckdqQkdJeWxBLWw3aU03QXV1THkza0lVSmZqaE9VY3FmcUNvNk5kLW9VLXVENXZyV3BpTjZOdmlCVDIxdXJRdzEyV2hyV1hZNDZ4UFpLaXl5ZUk1VHQ4M3NHN1VadkFnR0x5VFYzcUUzdnBnb0J6eTkzUnFUN05iTFJoWjk4S00?oc=5",
-          "tarih": "Sun, 01 Nov 2026 07:00:00 GMT"
-        },
-        {
-          "kelime": "GEOGRAPHIC INFORMATION SYSTEMS",
-          "dil": "İNGİLİZCE",
-          "konum": "ÖZBEKİSTAN",
-          "kaynak_tipi": "Google Haber / Basın Duyurusu",
-          "baslik": "Uzbekistan Agriculture: Higher Yields, Drip Irrigation and Digital Tools - News and Statistics - IndexBox",
-          "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: Uzbekistan Agriculture: Higher Yields, Drip Irrigation and Digital Tools - News and Statistics - IndexBox",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPcHo5X1luelZGM0thYVhLRUkyTEpwejIyVHR2UGYweVAwVDFGZldBYVpmS09aY0xYTFFoRm9ZeVFPWDUxblhuNWpvTko5R1hsaWcxVXkxemZSUWVWaWUzSVJaSjM0WUFxeWhUU2JMNHdwWGc4WGNPcEotMFcxLW15YklRRWUxcXJ0VHVCTllmNWpaeldqbkp1dHhhYUJPMDZIUVlEMXRMQlc?oc=5",
-          "tarih": "Tue, 10 Nov 2026 15:31:29 GMT"
         }
       ]
     }
