@@ -1,6 +1,26 @@
 {
   "reports": [
     {
+      "id": "20261127_024005",
+      "gun": "27.11.2026",
+      "saat": "02:40",
+      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
+      "mail_gonderildi": true,
+      "toplam_sonuc": 1,
+      "sonuclar": [
+        {
+          "kelime": "GEOGRAPHIC INFORMATION SYSTEMS",
+          "dil": "İNGİLİZCE",
+          "konum": "ÖZBEKİSTAN",
+          "kaynak_tipi": "Google Haber / Basın Duyurusu",
+          "baslik": "View from Belgrade: Efforts of Uzbekistan to ensure Environmental Sustainability deserve Recognition - Dunyo",
+          "ozet": "Haber içeriğinde 'GEOGRAPHIC INFORMATION SYSTEMS' ifadesi tam eşleşme olarak geçmektedir: View from Belgrade: Efforts of Uzbekistan to ensure Environmental Sustainability deserve Recognition - Dunyo",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOZWZrSGhkaHBpSE9tOHhyNnEyeUJ4WmE5LWExVXA0MVZVaWVaTTlySlNMc0Z4M1FZTEZKb2ZoWGg3NmhkWmk5d01NY2cwRmd2Mi1GRUNkS3ZOMllQOVA5X19pajZlMmtkdVpwdWVMZmJvQ1JlMU1kYlJqOGdYQUJsendzSjlPM3dWTl8xV2hXR1NyWFdab2NQeEV3?oc=5",
+          "tarih": "Thu, 26 Nov 2026 12:31:37 GMT"
+        }
+      ]
+    },
+    {
       "id": "20261126_222356",
       "gun": "26.11.2026",
       "saat": "22:23",
@@ -1093,15 +1113,6 @@
           "tarih": "Wed, 11 Nov 2026 18:17:00 GMT"
         }
       ]
-    },
-    {
-      "id": "20261112_005020",
-      "gun": "12.11.2026",
-      "saat": "00:50",
-      "ogun": "Otomatik AI Ajan Raporu (08:00 / 13:00 / 18:00)",
-      "mail_gonderildi": true,
-      "toplam_sonuc": 0,
-      "sonuclar": []
     }
   ]
 }
